@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_sap_data_int_integrations_service">
+    <sn_sap_data_int_integrations_service action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <flow display_value="Test Parallel Caller Subflow for Material Fetch">6197b7f887842d10a3e3cbb4dabb3553</flow>
+        <import_set_tables>sn_psm_sap_int_product_stg</import_set_tables>
+        <name>material</name>
+        <order/>
+        <properties>{"low":"1000","high":"","sign":"I","option":"EQ","full_pull":"true"}</properties>
+        <source display_value="Just for test">4b8c1f3087442d10a3e3cbb4dabb359c</source>
+        <sys_class_name>sn_sap_data_int_integrations_service</sys_class_name>
+        <sys_created_by>mayank</sys_created_by>
+        <sys_created_on>2022-12-26 12:05:29</sys_created_on>
+        <sys_id>50bc1f3087442d10a3e3cbb4dabb351d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>material</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sn_sap_data_int_integrations_service_50bc1f3087442d10a3e3cbb4dabb351d</sys_update_name>
+        <sys_updated_by>mayank</sys_updated_by>
+        <sys_updated_on>2022-12-27 14:34:30</sys_updated_on>
+    </sn_sap_data_int_integrations_service>
+</record_update>

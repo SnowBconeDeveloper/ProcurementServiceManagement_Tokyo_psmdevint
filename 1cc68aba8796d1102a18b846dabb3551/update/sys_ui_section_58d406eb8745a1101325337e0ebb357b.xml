@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="58d406eb8745a1101325337e0ebb357b" sys_domain="global" table="sn_psm_sap_int_prodct_stg" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d406eb8745a1101325337e0ebb3581</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>client</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd406eb8745a1101325337e0ebb3581</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_number</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>created_on</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_of_person_who_created_the_object</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_group</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_type</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_unit_of_measure</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>size_dimensions</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>purchase_order_unit_of_measure</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd406eb8745a1101325337e0ebb3582</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>basic_material</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>industry_standard_description_such_as_ansi_or_iso</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>purchasing_value_key</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>weight_unit</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>net_weight</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gross_weight</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>volume</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>container_requirements</element>
+            <position>17</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd406eb8745a1101325337e0ebb3583</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>volume_unit</element>
+            <position>18</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>storage_conditions</element>
+            <position>19</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hazardous_material_number</element>
+            <position>20</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>division</element>
+            <position>21</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>source_of_supply</element>
+            <position>22</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>procurement_rule</element>
+            <position>23</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>width</element>
+            <position>24</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>length</element>
+            <position>25</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd406eb8745a1101325337e0ebb3584</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>height</element>
+            <position>26</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d406eb8745a1101325337e0ebb3585</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_of_dimension_for_length_width_height</element>
+            <position>27</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d406eb8745a1101325337e0ebb3585</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_hierarchy</element>
+            <position>28</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>packaging_material_type</element>
+            <position>29</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_category</element>
+            <position>30</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>net_contents</element>
+            <position>31</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>manufacturer_number</element>
+            <position>32</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dangerous_goods_indicator_profile</element>
+            <position>33</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>relevant_for_hazardous_substances</element>
+            <position>34</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3548</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_is_locked</element>
+            <position>35</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_of_measure_for_maximum_packing_length_width_height</element>
+            <position>36</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>handling_unit_type</element>
+            <position>37</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>loading_units</element>
+            <position>38</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_freight_group</element>
+            <position>39</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>packaging_code</element>
+            <position>40</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>load_without_packaging_material_vso</element>
+            <position>41</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dangerous_goods_packaging_status</element>
+            <position>42</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3549</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>return_code</element>
+            <position>43</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>return_to_logistics_level</element>
+            <position>44</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_uom</element>
+            <position>45</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_category</element>
+            <position>46</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>data_division_marc</element>
+            <position>47</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>data_division_marc_division_1</element>
+            <position>48</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>purchasing_group</element>
+            <position>49</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_of_issue</element>
+            <position>50</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>plant_specific_material_status</element>
+            <position>51</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_mrp_profile</element>
+            <position>52</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mrp_type</element>
+            <position>53</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mrp_controller</element>
+            <position>54</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>procurement_type</element>
+            <position>55</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stock_in_transfer_plant_to_plant</element>
+            <position>56</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_quantity</element>
+            <position>57</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>profit_center</element>
+            <position>58</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stock_in_transit</element>
+            <position>59</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>production_unit</element>
+            <position>60</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>issue_storage_location</element>
+            <position>61</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>62</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mrp_group</element>
+            <position>63</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>serial_number_profile</element>
+            <position>64</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>default_storage_location_for_external_procurement</element>
+            <position>65</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_of_mearsure_group_oil_natural_gas</element>
+            <position>66</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>conversion_group_oil_natural_gas</element>
+            <position>67</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stock_transfer_sales_value_plant_to_plant_for_vo_material</element>
+            <position>68</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_from_which_the_plant_specific_material_status_is_valid</element>
+            <position>69</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>storage_location</element>
+            <position>70</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>data_division_mard</element>
+            <position>71</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>maintenance_status</element>
+            <position>72</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valuated_unrestricted_use_stock</element>
+            <position>73</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stock_in_quality_inspection</element>
+            <position>74</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_stock_of_all_restricted_batches</element>
+            <position>75</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>blocked_stock</element>
+            <position>76</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>physical_inventory_indicator_for_whse_stock_in_current_year</element>
+            <position>77</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>blocked_stock_returns</element>
+            <position>78</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phys_inventory_ind_f_stock_in_qual_insp_in_current_year</element>
+            <position>79</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>physical_inventory_indicator_for_restricted_use_stock</element>
+            <position>80</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>storage_location_mrp_indicator</element>
+            <position>81</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>storage_bin</element>
+            <position>82</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>special_procurement_type_at_storage_location_level</element>
+            <position>83</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valuation_area</element>
+            <position>84</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valuation_type</element>
+            <position>85</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_valuated_stock</element>
+            <position>86</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_of_total_valuated_stock</element>
+            <position>87</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price_control_indicator</element>
+            <position>88</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>standard_price</element>
+            <position>89</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price_unit</element>
+            <position>90</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_valuated_stock_in_previous_period</element>
+            <position>91</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_of_total_valuated_stock_in_previous_period</element>
+            <position>92</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>standard_price_in_the_previous_period</element>
+            <position>93</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price_unit_of_previous_period</element>
+            <position>94</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fiscal_year_of_current_period</element>
+            <position>95</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_period_posting_period</element>
+            <position>96</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valuation_category</element>
+            <position>97</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>previous_price</element>
+            <position>98</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3550</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_of_the_last_price_change</element>
+            <position>99</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_price</element>
+            <position>100</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_as_of_which_the_price_is_valid</element>
+            <position>101</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>utc_time_stamp_in_short_form_yyyymmddhhmmss</element>
+            <position>102</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_planned_price</element>
+            <position>103</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_planned_price_1</element>
+            <position>104</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_planned_price_2</element>
+            <position>105</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_planned_price_3</element>
+            <position>106</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3551</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_from_which_future_planned_price_1_is_valid</element>
+            <position>107</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_from_which_future_planned_price_2_is_valid</element>
+            <position>108</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_from_which_future_planned_price_3_is_valid</element>
+            <position>109</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_is_costed_with_quantity_structure</element>
+            <position>110</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_planned_price</element>
+            <position>111</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>physical_inventory_blocking_indicator</element>
+            <position>112</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>produced_in_house</element>
+            <position>113</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_description</element>
+            <position>114</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3552</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>storage_percentage</element>
+            <position>115</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>plant_field</element>
+            <position>116</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a0d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>erp_source</element>
+            <position>117</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>24d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>language</element>
+            <position>118</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a4d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_unit_of_measure_desc</element>
+            <position>119</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>28d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_category_desc</element>
+            <position>120</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>a8d44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_type_desc</element>
+            <position>121</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>2cd44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_group_desc</element>
+            <position>122</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>acd44aeb8745a1101325337e0ebb3553</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>123</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:13</sys_created_on>
+            <sys_id>20d44aeb8745a1101325337e0ebb3554</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_prodct_stg" sys_domain="global" view="Default view">58d406eb8745a1101325337e0ebb357b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:13</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sn_psm_sap_int_prodct_stg</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-22 11:47:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58d406eb8745a1101325337e0ebb357b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_psm_sap_int_prodct_stg</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+            <sys_update_name>sys_ui_section_58d406eb8745a1101325337e0ebb357b</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-22 11:47:12</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

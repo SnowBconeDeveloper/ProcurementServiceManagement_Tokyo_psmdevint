@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_psm_sap_int.PsmSapUtil_ClientCallable</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Use this for Client UI Actions</description>
+        <name>PsmSapUtil_ClientCallable</name>
+        <script><![CDATA[var PsmSapUtil_ClientCallable = Class.create();
+PsmSapUtil_ClientCallable.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    callSubflowPO: function() {
+        var updateCounter = 0,
+            createCounter = 0;
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString().split(",");
+        for (var i = 0; i < sysIdList.length; i++) {
+            var gr = new GlideRecord("sn_shop_purchase_order");
+            gr.get(sysIdList[i].toString());
+            var inputs = {};
+            inputs['current'] = gr;
+            inputs['table_name'] = 'sn_shop_purchase_order';
+            try {
+                if (gs.nil(gr.erp_number)) {
+                    createCounter++;
+                    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_purchase_order_in_erp').inBackground().withInputs(inputs).run();
+                } else {
+                    updateCounter++;
+                    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.update_purchase_order_in_erp').inBackground().withInputs(inputs).run();
+                }
+            } catch (ex) {
+                var message = ex.getMessage();
+                gs.error(message);
+            }
+        }
+        return "Records Insert: " + createCounter.toString() + "\nRecords Updated: " + updateCounter.toString();
+    },
+
+    callSubflowIR: function() {
+        var updateCounter = 0,
+            createCounter = 0;
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString().split(",");
+        for (var i = 0; i < sysIdList.length; i++) {
+            var gr = new GlideRecord("sn_shop_invoice");
+            gr.get(sysIdList[i].toString());
+            var inputs = {};
+            inputs['current'] = gr;
+            inputs['table_name'] = 'sn_shop_invoice';
+            try {
+                if (gs.nil(gr.erp_number)) {
+                    createCounter++;
+                    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_invoice_in_erp').inBackground().withInputs(inputs).run();
+                } else {
+                    updateCounter++;
+                    //                   sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.update_purchase_order_in_erp').inBackground().withInputs(inputs).run();
+                }
+            } catch (ex) {
+                var message = ex.getMessage();
+                gs.error(message);
+            }
+        }
+        return "Records Insert: " + createCounter.toString() + "\nRecords Updated: " + updateCounter.toString() + " No update record flow executed.";
+    },
+
+    callSubflowGR: function() {
+        var updateCounter = 0,
+            createCounter = 0;
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString().split(",");
+        for (var i = 0; i < sysIdList.length; i++) {
+            var gr = new GlideRecord("sn_shop_receipt");
+            gr.get(sysIdList[i].toString());
+            var inputs = {};
+            inputs['current'] = gr;
+            inputs['table_name'] = 'sn_shop_receipt';
+            try {
+                if (gs.nil(gr.erp_gr_number)) {
+                    createCounter++;
+                    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_goods_receipt_in_erp').inBackground().withInputs(inputs).run();
+                } else {
+                    updateCounter++;
+                    //                     sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.update_purchase_order_in_erp').inBackground().withInputs(inputs).run();
+                }
+            } catch (ex) {
+                var message = ex.getMessage();
+                gs.error(message);
+            }
+        }
+        return "Records Insert: " + createCounter.toString() + "\nRecords Updated: " + updateCounter.toString() + " No update record flow executed.";
+    },
+
+    executeCreatePOFlow: function() {
+        var sysId = this.getParameter('sysparm_sysid').toString();
+        var gr = new GlideRecord("sn_shop_purchase_order");
+        gr.get(sysId);
+        var inputs = {};
+        inputs['current'] = gr;
+        inputs['table_name'] = 'sn_shop_purchase_order';
+        try {
+            sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_purchase_order_in_erp').inBackground().withInputs(inputs).run();
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+        return true;
+    },
+    type: 'PsmSapUtil_ClientCallable'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>shreenag.araga</sys_created_by>
+        <sys_created_on>2023-01-30 11:20:48</sys_created_on>
+        <sys_id>96126344877c2510c04eb259dabb35a5</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>PsmSapUtil_ClientCallable</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_script_include_96126344877c2510c04eb259dabb35a5</sys_update_name>
+        <sys_updated_by>shreenag.araga</sys_updated_by>
+        <sys_updated_on>2023-02-20 03:21:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

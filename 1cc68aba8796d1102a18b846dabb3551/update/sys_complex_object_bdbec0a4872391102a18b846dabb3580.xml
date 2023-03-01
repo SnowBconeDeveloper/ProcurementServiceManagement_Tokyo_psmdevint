@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDf9bec0a4162391102b4d0764cd8f5980</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>1cc68aba8796d1102a18b846dabb3551</scope_name>
+        <serialized_content>{"FlowDesigner:FDf9bec0a4162391102b4d0764cd8f5980":{"$COCollectionField":[{"item":{"PO_ITEM":"String","PO_ITEM.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"PO Line Number\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"TAX_CODE":"String","TAX_CODE.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Tax Code\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"max_rows\":null,\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"ERP Line Data\",\"mandatory\":\"false\",\"child_name\":\"item\",\"uiUniqueId\":\"56fda51a-c279-4101-b6f3-c5aa387c818c\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDf9bec0a4162391102b4d0764cd8f5980\",\"child_label\":\"Item\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"4\",\"max_length\":\"0\",\"child_uiUniqueId\":\"bdd2bd74-7d9f-4c64-9e20-6487b4764617\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDf9bec0a4162391102b4d0764cd8f5980.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"max_rows\":null,\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"ERP Line Data\",\"mandatory\":\"false\",\"child_name\":\"item\",\"uiUniqueId\":\"56fda51a-c279-4101-b6f3-c5aa387c818c\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDf9bec0a4162391102b4d0764cd8f5980\",\"child_label\":\"Item\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"4\",\"max_length\":\"0\",\"child_uiUniqueId\":\"bdd2bd74-7d9f-4c64-9e20-6487b4764617\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2022-11-30 05:55:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bdbec0a4872391102a18b846dabb3580</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDf9bec0a4162391102b4d0764cd8f5980</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_complex_object_bdbec0a4872391102a18b846dabb3580</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2022-11-30 05:55:14</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

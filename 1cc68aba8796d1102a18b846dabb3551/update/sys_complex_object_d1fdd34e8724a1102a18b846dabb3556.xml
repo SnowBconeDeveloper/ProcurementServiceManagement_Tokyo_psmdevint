@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD11fdd34ec424a1100b9058e28846d356</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>1cc68aba8796d1102a18b846dabb3551</scope_name>
+        <serialized_content>{"FlowDesigner:FD11fdd34ec424a1100b9058e28846d356":{"LIMIT":"String","LIMIT.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Overall limit\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"d33ec3c0-4cf2-4c8f-aaf1-48a532bd8646\"}"},"EXP_VALUE":"String","EXP_VALUE.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Expected value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\",\"uiUniqueId\":\"f70d0cdc-e921-4efe-9499-4b66e960f78a\"}"}},"FlowDesigner:FD11fdd34ec424a1100b9058e28846d356.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"PO Limit\",\"mandatory\":\"false\",\"uiUniqueId\":\"cc437195-99ad-46aa-a16a-e9cad294a418\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD11fdd34ec424a1100b9058e28846d356\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-01-24 05:54:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d1fdd34e8724a1102a18b846dabb3556</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FD11fdd34ec424a1100b9058e28846d356</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_complex_object_d1fdd34e8724a1102a18b846dabb3556</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-02-02 07:21:57</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

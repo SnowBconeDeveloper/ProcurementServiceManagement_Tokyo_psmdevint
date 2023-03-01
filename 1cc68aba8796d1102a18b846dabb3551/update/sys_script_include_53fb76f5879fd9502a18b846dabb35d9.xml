@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_psm_sap_int.PsmSapUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PsmSapUtils</name>
+        <script><![CDATA[var PsmSapUtils = Class.create();
+PsmSapUtils.prototype = {
+    initialize: function() {},
+    getCurrencyFields: function(tablename, sysId) {
+        var rec = new GlideRecord(tablename);
+        rec.get(sysId);
+        var fields = rec.getElements();
+        var currencyFields = {};
+        fields.forEach(function(element) {
+            var type = element.getED().getInternalType();
+            if (type == "currency2") {
+                var sys_id = element.toString();
+                if (sys_id) {
+                    var obj = {};
+                    var grec = element.getRefRecord();
+                    obj['amount'] = grec.reference_amount.toString();
+                    obj['code'] = grec.reference_currency.toString();
+                    currencyFields[element.getName()] = obj;
+                }
+            }
+        });
+        return currencyFields;
+    },
+    checkMandatoryFields: function(mandatoryFieldsList) {
+        var emptyMandatoryFieldsList = [];
+        Object.keys(mandatoryFieldsList).forEach(function(key) {
+            if (gs.nil(mandatoryFieldsList[key])) {
+                emptyMandatoryFieldsList.push(key);
+            }
+        });
+        emptyMandatoryFieldsList = emptyMandatoryFieldsList.join(", ");
+        return emptyMandatoryFieldsList;
+    },
+    convertDateToSAPFormat: function(dte) {
+        dte = dte.split('-');
+        var sapDate = '';
+        for (k = 0; k < dte.length; k++) {
+            sapDate = sapDate + dte[k].toString();
+        }
+        return sapDate.toString();
+    },
+
+    callSubflowPO: function() {
+        gs.addInfoMessage("Test Value: ");
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString();
+        var tblName = this.getParameter('sysparm_table_name');
+
+        try {
+            gs.info("Test Value: " + sysIdList);
+            var inputs = {};
+            inputs['po_sysid'] = sysIdList; // String 
+            inputs['table_name'] = tblName; // String 
+            sn_fd.FlowAPI.getRunner().subflow('sn_psm_sap_int.submit_pos_test_test').inBackground().withInputs(inputs).run();
+            return "Ran Successfully";
+        } catch (ex) {
+            gs.info("Test Value: " + sysIdList);
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    },
+
+    dividePOLinesBasedOnCostCenter: function(polRec, polObj) {
+        var quantity = polObj.QUANTITY;
+        var polines = [];
+        var grec = new GlideRecord('sn_shop_cost_allocation');
+        grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
+        grec.query();
+        if (grec.hasNext()) {
+            while (grec.next()) {
+                var costCenter = grec.cost_center.code;
+                var allocPercentage = grec.allocation_percentage;
+                var tempPOL = polObj;
+                tempPOL['QUANTITY'] = (quantity * (allocPercentage / 100)).toFixed(3);
+                tempPOL['temp_costcenter'] = costCenter;
+                polines.push(tempPOL);
+            }
+        }else{
+			polines.push(polObj);
+		}
+        return polines;
+    },
+
+    type: 'PsmSapUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2022-11-22 05:29:59</sys_created_on>
+        <sys_id>53fb76f5879fd9502a18b846dabb35d9</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>PsmSapUtils</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_script_include_53fb76f5879fd9502a18b846dabb35d9</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-02-06 15:07:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

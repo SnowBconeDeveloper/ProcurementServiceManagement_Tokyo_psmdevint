@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Resubmit PO</name>
+        <specificity>20</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-02-06 14:00:31</sys_created_on>
+        <sys_id>21e9886e8774ad102a18b846dabb35b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resubmit PO</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_ux_form_action_21e9886e8774ad102a18b846dabb35b5</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-02-06 14:00:31</sys_updated_on>
+        <table>sn_shop_purchase_order</table>
+        <ui_action display_value="Resubmit PO">1aa7442e8774ad102a18b846dabb3529</ui_action>
+    </sys_ux_form_action>
+</record_update>
