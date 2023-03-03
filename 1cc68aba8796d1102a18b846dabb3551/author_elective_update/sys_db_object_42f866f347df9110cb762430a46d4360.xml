@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Materials</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>sn_psm_sap_int_product_stg</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">e2800bf247131110cb762430a46d43d9</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>Mayank</sys_created_by>
+        <sys_created_on>2022-10-21 05:10:32</sys_created_on>
+        <sys_id>42f866f347df9110cb762430a46d4360</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Materials</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_db_object_42f866f347df9110cb762430a46d4360</sys_update_name>
+        <sys_updated_by>mayank</sys_updated_by>
+        <sys_updated_on>2023-01-09 05:00:06</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="sn_psm_sap_int.product_stg" name="sn_psm_sap_int.product_stg">89e44a2747a29110a4be65a5d36d4380</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</application>
+        <file_path/>
+        <instance_id>38dcb1acdb11a11c91232f17d4961910</instance_id>
+        <instance_name>psmdevint</instance_name>
+        <name>sys_db_object_42f866f347df9110cb762430a46d4360</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Materials</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>sn_psm_sap_int_product_stg</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">e2800bf247131110cb762430a46d43d9</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>Mayank</sys_created_by>
+        <sys_created_on>2022-10-21 05:10:32</sys_created_on>
+        <sys_id>42f866f347df9110cb762430a46d4360</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Materials</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_db_object_42f866f347df9110cb762430a46d4360</sys_update_name>
+        <sys_updated_by>mayank</sys_updated_by>
+        <sys_updated_on>2023-01-09 05:00:06</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="sn_psm_sap_int.product_stg" name="sn_psm_sap_int.product_stg">89e44a2747a29110a4be65a5d36d4380</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>1359292681</payload_hash>
+        <record_name>Materials</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-01 12:36:20</sys_created_on>
+        <sys_id>5033d679c355e11068187addd40131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1869d2c6da90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-01 12:36:20</sys_updated_on>
+        <type>Table</type>
+        <update_guid>1033d6794355e11054f1b1a146bc58dc</update_guid>
+        <update_guid_history>1033d6794355e11054f1b1a146bc58dc:1359292681</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-03 14:23:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>418795a150f14d4c931dc58dfa191c10</sys_id>
+        <sys_metadata>42f866f347df9110cb762430a46d4360</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Materials</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_scope_delete display_value="">5bcab6522a284c56b32126c15d077101</sys_scope_delete>
+        <sys_update_name>sys_db_object_42f866f347df9110cb762430a46d4360</sys_update_name>
+        <sys_update_version display_value="sys_db_object_42f866f347df9110cb762430a46d4360">5033d679c355e11068187addd40131dc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-03 14:23:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
