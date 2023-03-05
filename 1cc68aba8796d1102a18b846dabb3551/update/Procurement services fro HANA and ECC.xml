@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2023-03-05 07:53:26">
+<sn_sap_data_int_integrations_service action="INSERT_OR_UPDATE">
+<active>true</active>
+<erp_source_configuration display_value="SAP HANA">a506b543c355e11031c77addd40131e3</erp_source_configuration>
+<flow display_value="Parallel Subflow Caller  for Materials">f9a4adfe8714ed50a3e3cbb4dabb35b2</flow>
+<import_set_tables>sn_psm_sap_int_prodct_stg</import_set_tables>
+<name>Material Master</name>
+<order>10</order>
+<properties>{"low":"","high":"","sign":"I","option":"EQ","full_pull":"True","row_count":"120"}</properties>
+<source display_value=""/>
+<sys_class_name>sn_sap_data_int_integrations_service</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-03-05 07:50:49</sys_created_on>
+<sys_id>0d38fdc3c355e11031c77addd40131d0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>Material Master</sys_name>
+<sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+<sys_policy/>
+<sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+<sys_update_name>sn_sap_data_int_integrations_service_0d38fdc3c355e11031c77addd40131d0</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-03-05 07:50:49</sys_updated_on>
+</sn_sap_data_int_integrations_service>
+<sn_sap_data_int_integrations_service action="INSERT_OR_UPDATE">
+<active>true</active>
+<erp_source_configuration display_value="SAP ECC">7bd6edcf871921508dd710683cbb3560</erp_source_configuration>
+<flow display_value="Parallel Subflow Caller  for Materials">f9a4adfe8714ed50a3e3cbb4dabb35b2</flow>
+<import_set_tables>sn_psm_sap_int_prodct_stg</import_set_tables>
+<name>Material Master</name>
+<order>10</order>
+<properties>{"low":"","high":"","sign":"I","option":"EQ","full_pull":"True","row_count":"120"}</properties>
+<source display_value=""/>
+<sys_class_name>sn_sap_data_int_integrations_service</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-03-05 07:17:40</sys_created_on>
+<sys_id>3440bd0f8351251067a211b6feaad339</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>Material Master</sys_name>
+<sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+<sys_policy/>
+<sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+<sys_update_name>sn_sap_data_int_integrations_service_3440bd0f8351251067a211b6feaad339</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-03-05 07:17:40</sys_updated_on>
+</sn_sap_data_int_integrations_service>
+<sn_sap_data_int_integrations_service action="INSERT_OR_UPDATE">
+<active>true</active>
+<erp_source_configuration display_value="SAP ECC">7bd6edcf871921508dd710683cbb3560</erp_source_configuration>
+<flow display_value="Fetch services from SAP ECC">a27a63bd47d3551096fcb777746d43d5</flow>
+<import_set_tables>sn_psm_sap_int_services_stg</import_set_tables>
+<name>Service Master</name>
+<order>70</order>
+<properties/>
+<source display_value=""/>
+<sys_class_name>sn_sap_data_int_integrations_service</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-03-05 07:31:41</sys_created_on>
+<sys_id>c883b58fc315e11031c77addd4013148</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>Service Master</sys_name>
+<sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+<sys_policy/>
+<sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+<sys_update_name>sn_sap_data_int_integrations_service_c883b58fc315e11031c77addd4013148</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-03-05 07:31:41</sys_updated_on>
+</sn_sap_data_int_integrations_service>
+<sn_sap_data_int_integrations_service action="INSERT_OR_UPDATE">
+<active>true</active>
+<erp_source_configuration display_value="SAP HANA">a506b543c355e11031c77addd40131e3</erp_source_configuration>
+<flow display_value="Fetch services from SAP ECC">a27a63bd47d3551096fcb777746d43d5</flow>
+<import_set_tables>sn_psm_sap_int_services_stg</import_set_tables>
+<name>Service Master</name>
+<order>70</order>
+<properties/>
+<source display_value=""/>
+<sys_class_name>sn_sap_data_int_integrations_service</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-03-05 07:51:03</sys_created_on>
+<sys_id>a848fdc3c355e11031c77addd40131bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>Service Master</sys_name>
+<sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+<sys_policy/>
+<sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+<sys_update_name>sn_sap_data_int_integrations_service_a848fdc3c355e11031c77addd40131bb</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-03-05 07:51:03</sys_updated_on>
+</sn_sap_data_int_integrations_service>
+</unload>
