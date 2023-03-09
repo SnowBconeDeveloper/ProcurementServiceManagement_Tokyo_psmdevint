@@ -5,7 +5,7 @@
         <coalesce_case_sensitive>false</coalesce_case_sensitive>
         <coalesce_empty_fields>false</coalesce_empty_fields>
         <date_format>yyyy-MM-dd HH:mm:ss</date_format>
-        <map display_value="Procurement Service Management Integration with SAP">373e7ff54757551096fcb777746d4302</map>
+        <map display_value="Transform Services">373e7ff54757551096fcb777746d4302</map>
         <reference_value_field/>
         <source_field>activity_number</source_field>
         <source_script><![CDATA[answer = (function transformEntry(source) {

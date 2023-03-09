@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="Materials" max_length="40" name="sn_psm_sap_int_prodct_stg" sizeclass="0" type="collection">
+    <element db_object_id="6f239679c355e11068187addd40131f2" extends="sys_import_set_row" label="Materials" max_length="40" name="sn_psm_sap_int_prodct_stg" type="collection">
         <element label="Assignment UoM" max_length="50" name="assignment_uom" type="string"/>
         <element label="Base quantity" max_length="50" name="base_quantity" type="string"/>
         <element label="Base Unit of Measure" max_length="50" name="base_unit_of_measure" type="string"/>
-        <element label="Base unit of measure desc" max_length="50" name="base_unit_of_measure_desc" type="string"/>
+        <element label="Base unit of measure description" max_length="50" name="base_unit_of_measure_desc" type="string"/>
         <element label="Basic Material" max_length="50" name="basic_material" type="string"/>
         <element label="Blocked Stock" max_length="50" name="blocked_stock" type="string"/>
         <element label="Blocked Stock Returns" max_length="50" name="blocked_stock_returns" type="string"/>

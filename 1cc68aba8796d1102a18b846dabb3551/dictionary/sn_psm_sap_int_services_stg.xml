@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="Services" max_length="40" name="sn_psm_sap_int_services_stg" sizeclass="1341" type="collection">
+    <element db_object_id="ba239679c355e11068187addd4013196" extends="sys_import_set_row" label="Services" max_length="40" name="sn_psm_sap_int_services_stg" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Activity Number" max_length="18" name="activity_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Authorization Group" max_length="4" name="authorization_group" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Base Unit of Measure" max_length="3" name="base_unit_of_measure" type="string"/>
@@ -8,7 +8,7 @@
         <element attributes="edge_encryption_enabled=true" label="Date of Last Change" max_length="8" name="date_of_last_change" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Date on Which Record Was Created" max_length="8" name="date_on_which_record_was_created" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Deletion Indicator" max_length="1" name="deletion_indicator" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Denominator for Conversion (MEINS &lt;-&gt; IWEIN)" max_length="5" name="denominator_for_conversion_meins_iwein" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Denominator for Conversion (MEINS and IWEIN)" max_length="5" name="denominator_for_conversion_meins_iwein" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Division" max_length="2" name="division" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Edition of Service Type" max_length="4" name="edition_of_service_type" type="string"/>
         <element label="ERP Source" max_length="32" name="erp_source" reference="sn_fin_erp_source" type="reference"/>

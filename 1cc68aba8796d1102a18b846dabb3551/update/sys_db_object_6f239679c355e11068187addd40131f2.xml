@@ -9,7 +9,6 @@
         <create_access>false</create_access>
         <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
-        <extension_model/>
         <is_extendable>false</is_extendable>
         <label>Materials</label>
         <live_feed_enabled>false</live_feed_enabled>
@@ -18,21 +17,19 @@
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Import Set Row" name="sys_import_set_row">5072d5e3870021108dd710683cbb35f5</super_class>
-        <sys_class_code/>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">98f186e0831121102aac11b6feaad373</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
-        <sys_class_path/>
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-01-13 08:41:00</sys_created_on>
-        <sys_id>a0a91b2e871cad50a3e3cbb4dabb356c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>6f239679c355e11068187addd40131f2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Materials</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_db_object_a0a91b2e871cad50a3e3cbb4dabb356c</sys_update_name>
+        <sys_update_name>sys_db_object_6f239679c355e11068187addd40131f2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:16:23</sys_updated_on>
+        <sys_updated_on>2023-03-09 13:08:19</sys_updated_on>
         <update_access>false</update_access>
         <user_role display_value="sn_psm_sap_int.materials_user" name="sn_psm_sap_int.materials_user">5ce9dbea871cad50a3e3cbb4dabb35bd</user_role>
         <ws_access>true</ws_access>
