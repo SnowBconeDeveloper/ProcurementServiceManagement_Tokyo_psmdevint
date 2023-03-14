@@ -5,7 +5,7 @@
         <coalesce_case_sensitive>false</coalesce_case_sensitive>
         <coalesce_empty_fields>false</coalesce_empty_fields>
         <date_format>yyyy-MM-dd HH:mm:ss</date_format>
-        <map display_value="Material Master Transform Map">f9e4f97e8754ed50a3e3cbb4dabb35e0</map>
+        <map display_value="Transform Materials">f9e4f97e8754ed50a3e3cbb4dabb35e0</map>
         <reference_value_field/>
         <source_field>material_number</source_field>
         <source_script><![CDATA[answer = (function transformEntry(source) {

@@ -9,32 +9,29 @@
         <create_access>false</create_access>
         <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
-        <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Services</label>
+        <label>Materials</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>sn_psm_sap_int_services_stg</name>
+        <name>sn_psm_sap_int_prodct_stg</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Import Set Row" name="sys_import_set_row">343e72d328201110a866e68fbebfdf59</super_class>
-        <sys_class_code/>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">98f186e0831121102aac11b6feaad373</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
-        <sys_class_path/>
-        <sys_created_by>krishna</sys_created_by>
-        <sys_created_on>2022-11-22 08:15:58</sys_created_on>
-        <sys_id>5fc16b3547d3551096fcb777746d436d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Services</sys_name>
+        <sys_created_by>Anusha</sys_created_by>
+        <sys_created_on>2023-01-13 08:41:00</sys_created_on>
+        <sys_id>6f239679c355e11068187addd40131f2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Materials</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_db_object_5fc16b3547d3551096fcb777746d436d</sys_update_name>
-        <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2022-11-22 08:15:58</sys_updated_on>
+        <sys_update_name>sys_db_object_6f239679c355e11068187addd40131f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-09 13:08:19</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="Procurement Service Management Integration with SAP" name="sn_psm_sap_int.services_user">9132237547d3551096fcb777746d4307</user_role>
+        <user_role display_value="sn_psm_sap_int.materials_user" name="sn_psm_sap_int.materials_user">5ce9dbea871cad50a3e3cbb4dabb35bd</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>
