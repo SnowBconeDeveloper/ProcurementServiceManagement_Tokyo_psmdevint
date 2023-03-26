@@ -144,9 +144,10 @@ PsmSapUtils.prototype = {
             throw new Error(er.getMessage());
         }
     },
-    dividePOLinesBasedOnCostCenter: function(polRec, polObj) {
+    dividePOLinesBasedOnCostCenter: function(polRec, polObj, packageNum) {
         var quantity = polRec.purchased_quantity;
         var polines = [];
+        packageNum--;
         var grec = new GlideRecord('sn_shop_cost_allocation');
         grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
         grec.query();
@@ -157,12 +158,19 @@ PsmSapUtils.prototype = {
                 var tempPOL = polObj;
                 tempPOL['QUANTITY'] = (Math.round((quantity * (allocPercentage / 100)) * 100) / 100).toFixed(3);
                 tempPOL['temp_costcenter'] = isNaN(costCenter.toString()) ? costCenter.toString() : this.checkPadding(costCenter.toString(), 10);
+                if (packageNum) {
+                    tempPOL['PCKG_NO'] = this.checkPadding(packageNum, 10);
+                    packageNum++;
+                }
                 polines.push(JSON.parse(JSON.stringify(tempPOL)));
             }
         } else {
             polines.push(polObj);
         }
-        return polines;
+        return {
+            polines: polines,
+            packageNumber: packageNum
+        };
     },
 
     divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
@@ -260,17 +268,13 @@ PsmSapUtils.prototype = {
         serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
         serviceAccessObj['PCKG_NO'] = POServiceObj['PCKG_NO'];
         serviceAccessObj['LINE_NO'] = POServiceObj['LINE_NO'];
-		
-		packageNum++;
-		lineNumber++;
-		serialNumber++;
 
         return {
             POservicesObjs: POServices,
             serviceAccessObj: serviceAccessObj,
             packageNumber: packageNum,
             serialNumber: serialNumber,
-            ServiceLineNum: lineNumber
+            ServiceLineNumber: lineNumber
         };
     },
     generateStandardPOPaylaod: function(psm_po_sysId, itemInterval) {
@@ -302,22 +306,14 @@ PsmSapUtils.prototype = {
                     po_items: grec
                 }).purchase_order_item;
                 var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
-                costCenter_POlines.forEach(function(po_item) {
+                costCenter_POlines['polines'].forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
                     var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
                         po_accounts: grec,
                         po_item_number: po_item['PO_ITEM'],
-                        //serial_number: new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10)
+                        serial_number: new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10)
                     }).po_accounts;
-					
-					if(grec.acc_assgn_category == 'A'){
-						var assetRec = new sn_psm_sap_int.PsmSapUtils().getGlideRecords('sn_fin_fixed_asset',{order_line :grec.sys_id });
-						assetRec.next();
-						poAccountObj['ASSET_NO'] = assetRec.erp_asset_number.toString();
-					}
-					
-                    poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
-					poAccountObj['QUANTITY'] = po_item['QUANTITY'];
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
@@ -338,30 +334,30 @@ PsmSapUtils.prototype = {
                 var servicePOLObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
                     po_items: grec
                 }).purchase_order_item;
-                var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj);
-                costCenter_service_POlines.forEach(function(po_item) {
+                var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj, packageNumber);
+                packageNumber = costCenter_service_POlines['packageNumber']++;
+                costCenter_service_POlines['polines'].forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
-                    po_item['PCKG_NO'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(packageNumber, 10);
-                    ERPLineNumber += po_item['PO_ITEM'] + ',';
+                    ERPLineNumber += po_item['PO_ITEM'];
                     var AccountInputs = {};
                     AccountInputs['po_accounts'] = grec;
                     AccountInputs['po_item_number'] = po_item['PO_ITEM'];
                     AccountInputs['serial_number'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10);
                     var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', AccountInputs).po_accounts;
-                    poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
 
                     poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
                         po_schedule: grec,
-                        po_item_number: po_item['PO_ITEM']
+                        po_item_number: poItemNumber
                     }).po_schedule);
 
                     if (!(grec.request_line.location.office))
                         poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
                             po_address: grec,
-                            po_item_number: po_item['PO_ITEM']
+                            po_item_number: poItemNumber
                         }).po_address);
 
                     var serviceEntries = new sn_psm_sap_int.PsmSapUtils().generatePOServiceEntries(grec, po_item['PO_ITEM'], packageNumber, serialNumber, ServiceLineNum);
@@ -369,13 +365,16 @@ PsmSapUtils.prototype = {
                     poServiceAccessValues.push(serviceEntries['serviceAccessObj']);
 
                     packageNumber = serviceEntries['packageNumber'];
+                    packageNumber++
                     serialNumber = serviceEntries['serialNumber'];
+                    serialNumber++
                     ServiceLineNum = serviceEntries['ServiceLineNum'];
+                    ServiceLineNum++
 
-                    poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
+                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
                 });
             }
-            grec.erp_line_number = ERPLineNumber.slice(0, -1);
+            grec.erp_line_number = ERPLineNumber;
             grec.update();
         }
         return {
@@ -549,13 +548,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-03-24 11:47:25</sys_updated_on>
+        <sys_updated_on>2023-03-22 09:47:00</sys_updated_on>
     </sys_script_include>
 </record_update>

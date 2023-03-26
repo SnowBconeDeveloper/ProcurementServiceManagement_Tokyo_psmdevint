@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.erp_gr_number == '' &amp;&amp; current. status == 'pending_submission'</condition>
+        <condition>current.erp_gr_number == '' &amp;&amp; current. status == 'pending_submission' &amp;&amp;  new sn_psm_sap_int.PsmSapUtils().checkIfIntegrationErrorExistsForGR(current.purchase_order_line.purchase_order.sys_id)</condition>
         <form_action>false</form_action>
         <form_button>false</form_button>
         <form_button_v2>true</form_button_v2>
@@ -50,7 +50,7 @@ try {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7a1613e887c565102a18b846dabb3561</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Resubmit GR</sys_name>
         <sys_overrides/>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
@@ -58,7 +58,7 @@ try {
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_ui_action_7a1613e887c565102a18b846dabb3561</sys_update_name>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-02-13 10:10:25</sys_updated_on>
+        <sys_updated_on>2023-03-22 09:50:42</sys_updated_on>
         <table>sn_shop_receipt</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_psm_sap_int.PsmSapUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PsmSapUtils</name>
+        <script><![CDATA[var PsmSapUtils = Class.create();
+PsmSapUtils.prototype = {
+    initialize: function() {},
+    getCurrencyFields: function(tablename, sysId) {
+        var rec = new GlideRecord(tablename);
+        rec.get(sysId);
+        var fields = rec.getElements();
+        var currencyFields = {};
+        fields.forEach(function(element) {
+            var type = element.getED().getInternalType();
+            if (type == "currency2") {
+                var sys_id = element.toString();
+                if (sys_id) {
+                    var obj = {};
+                    var grec = element.getRefRecord();
+                    obj['amount'] = grec.reference_amount.toString();
+                    obj['code'] = grec.reference_currency.toString();
+                    currencyFields[element.getName()] = obj;
+                }
+            }
+        });
+        return currencyFields;
+    },
+    checkMandatoryFields: function(mandatoryFieldsList) {
+        var emptyMandatoryFieldsList = [];
+        Object.keys(mandatoryFieldsList).forEach(function(key) {
+            if (gs.nil(mandatoryFieldsList[key])) {
+                emptyMandatoryFieldsList.push(key);
+            }
+        });
+        emptyMandatoryFieldsList = emptyMandatoryFieldsList.join(", ");
+        return emptyMandatoryFieldsList;
+    },
+    convertDateToSAPFormat: function(dte) {
+        dte = dte.split('-');
+        var sapDate = '';
+        for (k = 0; k < dte.length; k++) {
+            sapDate = sapDate + dte[k].toString();
+        }
+        return sapDate.toString();
+    },
+
+    callSubflowPO: function() {
+        gs.addInfoMessage("Test Value: ");
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString();
+        var tblName = this.getParameter('sysparm_table_name');
+
+        try {
+            gs.info("Test Value: " + sysIdList);
+            var inputs = {};
+            inputs['po_sysid'] = sysIdList; // String 
+            inputs['table_name'] = tblName; // String 
+            sn_fd.FlowAPI.getRunner().subflow('sn_psm_sap_int.submit_pos_test_test').inBackground().withInputs(inputs).run();
+            return "Ran Successfully";
+        } catch (ex) {
+            gs.info("Test Value: " + sysIdList);
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    },
+    checkPadding: function(stringInteger, stringlength, addAsSuffix) {
+        var fieldValue = stringInteger.toString();
+        if (addAsSuffix) {
+            while (fieldValue.length < stringlength)
+                fieldValue = fieldValue + "0";
+            return fieldValue;
+        } else {
+            while (fieldValue.length < stringlength)
+                fieldValue = "0" + fieldValue;
+            return fieldValue;
+        }
+    },
+    getGlideRecords: function(tableName, queryParams, groupByParams) {
+        var glideRec = new GlideRecord(tableName);
+        if (!(gs.nil(queryParams))) {
+            Object.keys(queryParams).forEach(function(key) {
+                glideRec.addQuery(key.toString(), queryParams[key].toString());
+            });
+        }
+        if (!(gs.nil(groupByParams))) {
+            groupByParams.forEach(function(param) {
+                glideRec.groupBy(param.toString());
+            });
+        }
+        glideRec.query();
+        return glideRec;
+    },
+    executeAction: function(actionName, actionInputs) {
+        try {
+            var result = sn_fd.FlowAPI.getRunner().action(actionName).inForeground().withInputs(actionInputs).run();
+            var outputs = result.getOutputs();
+            if (!outputs['__action_status__']['code']) {
+                return outputs;
+            } else {
+                var contextID = result.getContextId();
+                throw new Error(outputs['__action_status__']['message']);
+            }
+        } catch (er) {
+            throw new Error(er.getMessage());
+        }
+    },
+    dividePOLinesBasedOnCostCenter: function(polRec, polObj, packageNum) {
+        var quantity = polRec.purchased_quantity;
+        var polines = [];
+        packageNum--;
+        var grec = new GlideRecord('sn_shop_cost_allocation');
+        grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
+        grec.query();
+        if (grec.hasNext()) {
+            while (grec.next()) {
+                var costCenter = grec.cost_center.code;
+                var allocPercentage = grec.allocation_percentage;
+                var tempPOL = polObj;
+                tempPOL['QUANTITY'] = (Math.round((quantity * (allocPercentage / 100)) * 100) / 100).toFixed(3);
+                tempPOL['temp_costcenter'] = isNaN(costCenter.toString()) ? costCenter.toString() : this.checkPadding(costCenter.toString(), 10);
+                if (packageNum) {
+                    tempPOL['PCKG_NO'] = this.checkPadding(packageNum, 10);
+                    packageNum++;
+                }
+                polines.push(JSON.parse(JSON.stringify(tempPOL)));
+            }
+        } else {
+            polines.push(polObj);
+        }
+        return {
+            polines: polines,
+            packageNumber: packageNum
+        };
+    },
+
+    divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
+        var GrLines = [];
+        var PolSysid = GrRec.purchase_order_line;
+        var dividedQuantities = this.calculateQuantityBasedOnCostCenters(PolSysid, GrObj['ENTRY_QNT']);
+        var PoItemNums = GrObj['PO_ITEM'].split(',');
+        if (PoItemNums.length == dividedQuantities.length) {
+            for (var i = 0; i < dividedQuantities.length; i++) {
+                var tempGRLine = JSON.parse(JSON.stringify(GrObj));
+                tempGRLine['PO_ITEM'] = PoItemNums[i];
+                tempGRLine['ENTRY_QNT'] = dividedQuantities[i].QUANTITY;
+                GrLines.push(tempGRLine);
+            }
+            return GrLines;
+        }
+    },
+    calculateQuantityBasedOnCostCenters: function(orderLine_sysid, totalQuantity) {
+        var returnArray = [];
+        var grec = new GlideRecord('sn_shop_cost_allocation');
+        grec.addQuery('order_line.sys_id', orderLine_sysid.toString());
+        grec.orderBy('sys_created_on');
+        grec.query();
+        while (grec.next()) {
+            var tempObj = {};
+            tempObj['costCenter'] = grec.cost_center.code;
+            var allocPercentage = grec.allocation_percentage;
+            tempObj['QUANTITY'] = (totalQuantity * (allocPercentage / 100)).toFixed(3);
+            returnArray.push(tempObj);
+        }
+        return returnArray;
+    },
+    getPlantID: function(grec) {
+        var plantId;
+        var DeliveryLoc = grec.request_line.location;
+        if (DeliveryLoc.office) {
+            var ERPmapRec = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+            ERPmapRec.addQuery('location.sys_id', DeliveryLoc.office.sys_id.toString());
+            ERPmapRec.query();
+            if (ERPmapRec.hasNext()) {
+                ERPmapRec.next();
+                plantId = ERPmapRec.erp_location_id;
+            } else {
+                throw new Error("No ERP Plant Address Mapping record found for office location");
+            }
+        } else {
+            var ricipientLE = grec.purchase_order.legal_entity;
+            if (ricipientLE) {
+                var ERPmapRec = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+                ERPmapRec.addQuery('legal_entity.sys_id', ricipientLE.sys_id.toString());
+                ERPmapRec.addQuery('default_address', 'true');
+                ERPmapRec.query();
+                if (ERPmapRec.hasNext()) {
+                    ERPmapRec.next();
+                    plantId = ERPmapRec.erp_location_id;
+                } else {
+                    var ERPmapRecord = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+                    ERPmapRecord.addQuery('legal_entity.sys_id', ricipientLE.sys_id.toString());
+                    ERPmapRecord.query();
+                    if (ERPmapRecord.hasNext()) {
+                        ERPmapRecord.next();
+                        plantId = ERPmapRecord.erp_location_id;
+                    } else {
+                        throw new Error("No ERP Plant Address Mapping record found for selected legal entity");
+                    }
+                }
+            } else {
+                throw new Error("No Legal Entity is Selected in Purchase Order");
+            }
+        }
+        return plantId.toString();
+    },
+    createPOAccountsBasedOnAssets: function(PolRec, PoAccountObj) {
+        var POAccounts = [];
+        var assetRecord = new GlideRecord('alm_asset');
+        assetRecord.addQuery('purchase_order_line', PolRec.sys_id);
+        assetRecord.query();
+        while (assetRecord.next()) {
+            var temp = PoAccountObj;
+            temp['ASSET_NO'] = assetRecord.asset_tag;
+            POAccounts.push(temp);
+        }
+        return POAccounts;
+    },
+    generatePOServiceEntries: function(polRec, POItemNum, packageNum, serialNumber, lineNumber) {
+        var POServiceObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
+            po_services: polRec
+        }).po_services;
+
+        var POServices = [];
+        var serviceAccessObj = {};
+        var line1 = {};
+        line1['PCKG_NO'] = this.checkPadding(packageNum, 10);
+        packageNum++;
+        line1['LINE_NO'] = this.checkPadding(lineNumber, 10);
+        lineNumber++;
+        line1['OUTL_IND'] = 'X';
+        line1['SUBPCKG_NO'] = this.checkPadding(packageNum, 10);
+        POServices.push(line1);
+
+        POServiceObj['PCKG_NO'] = line1['SUBPCKG_NO'];
+        POServiceObj['LINE_NO'] = this.checkPadding(lineNumber, 10);
+        POServiceObj['EXT_LINE'] = POItemNum;
+        POServices.push(POServiceObj);
+
+        serviceAccessObj['PO_ITEM'] = POItemNum;
+        serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
+        serviceAccessObj['PCKG_NO'] = POServiceObj['PCKG_NO'];
+        serviceAccessObj['LINE_NO'] = POServiceObj['LINE_NO'];
+
+        return {
+            POservicesObjs: POServices,
+            POServiceAccess: serviceAccessObj,
+            packageNumber: packageNum,
+            serialNumber: serialNumber,
+            ServiceLineNumber: lineNumber
+        };
+    },
+    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval) {
+        if (gs.nil(itemInterval))
+            throw new Error('Function Parameter : ItemInterval cannot be blank');
+
+        if (gs.nil(psm_po_sysId))
+            throw new Error('Function Parameter : PO sysId cannot be blank');
+
+        var poLines = [];
+        var poAccounts = [];
+        var poSchedules = [];
+        var poAddresses = [];
+        var poServices = [];
+        var poServiceAccessValues = [];
+        var poItemNumber = itemInterval;
+        var ERPLineNumber = '';
+        var packageNumber = 2;
+        var serialNumber = 1;
+        var ServiceLineNum = 1;
+
+        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+            purchase_order: psm_po_sysId
+        });
+        while (grec.next()) {
+            if (grec.product_type == 'good') {
+
+                var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                    po_items: grec
+                }).purchase_order_item;
+                var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
+                costCenter_POlines.forEach(function(po_item) {
+                    po_item['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+                    var poAccountObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+                        po_accounts: grec,
+                        po_item_number: po_item['PO_ITEM'],
+                        serial_number: this.checkPadding(serialNumber, 10)
+                    }).po_accounts;
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+                    delete po_item['temp_costcenter'];
+                    poLines.push(po_item);
+                    poAccounts.push(poAccountObj);
+                    poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                        po_schedule: grec,
+                        po_item_number: poItemNumber
+                    }).po_schedule);
+                    if (!(grec.request_line.location.office))
+                        poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                            po_address: grec,
+                            po_item_number: poItemNumber
+                        }).po_address);
+                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+
+                });
+            } else if (grec.product_type == 'service' || grec.product_type == 'handling_fee') {
+
+                var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                    po_items: grec
+                }).purchase_order_item;
+                var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj, packageNumber);
+                packageNumber = costCenter_POlines['packageNumber']++;
+                costCenter_POlines['polines'].forEach(function(po_item) {
+                    po_item['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+                    ERPLineNumber += po_item['PO_ITEM'];
+					var AccountInputs = {};
+                       AccountInputs['po_accounts']= grec;
+                        AccountInputs['po_item_number']= po_item['PO_ITEM'];
+                        AccountInputs['serial_number']= this.checkPadding(serialNumber, 10);
+                    var poAccountObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', AccountInputs).po_accounts;
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+                    delete po_item['temp_costcenter'];
+                    poLines.push(po_item);
+                    poAccounts.push(poAccountObj);
+
+                    poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                        po_schedule: grec,
+                        po_item_number: poItemNumber
+                    }).po_schedule);
+
+                    if (!(grec.request_line.location.office))
+                        poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                            po_address: grec,
+                            po_item_number: poItemNumber
+                        }).po_address);
+
+                    var serviceEntries = this.generatePOServiceEntries(grec, po_item['PO_ITEM'], packageNumber, serialNumber, ServiceAccessLineNum);
+                    Array.prototype.push.apply(poServices, serviceEntries['POservicesObjs']);
+                    poServiceAccessValues.push(serviceEntries['serviceAccessObj']);
+
+                    packageNumber = serviceEntries['packageNumber'];
+                    serialNumber = serviceEntries['serialNumber'];
+                    ServiceLineNum = serviceEntries['ServiceLineNum'];
+
+                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+                });
+            }
+            grec.erp_line_number = ERPLineNumber;
+            grec.update();
+        }
+        return {
+            polines: poLines,
+            poaccounts: poAccounts,
+            poschedules: poSchedules,
+            poaddress: poAddresses,
+            poservices: poServices,
+            poserviceaccess: poServiceAccessValues
+        };
+    },
+    generateBlanketPOPayload: function(psm_po_sysId, itemInterval) {
+        if (gs.nil(itemInterval))
+            throw new Error('Function Parameter : ItemInterval cannot be blank');
+
+        if (gs.nil(psm_po_sysId))
+            throw new Error('Function Parameter : PO sysId cannot be blank');
+
+        var poLines = [];
+        var poAccounts = [];
+        var poSchedules = [];
+        var poAddresses = [];
+        var poLimits = [];
+        var poServiceAccessValues = [];
+        var poItemNumber = itemInterval;
+        var packageNumber = 2;
+        var serialNumber = 1;
+
+        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+            purchase_order: psm_po_sysId
+        }, 'number');
+        while (grec.next) {
+            var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                po_items: grec
+            });
+
+            polObj['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+            poLines.push(polObj);
+            poAccounts.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                po_address: grec,
+                po_item_number: poItemNumber,
+                serial_number: serialNumber
+            }).po_accounts);
+            poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                po_schedule: grec,
+                po_item_number: poItemNumber
+            }).po_schedule);
+
+            if (!(grec.request_line.location.office))
+                poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                    po_address: grec,
+                    po_item_number: poItemNumber
+                }).po_address);
+
+            poLimits.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_limits_object', {
+                po_limits: polRec,
+                package_number: packageNumber
+            }).po_limits);
+
+            var serviceAccessObj = {};
+            serviceAccessObj['SERIAL_NO'] = serialNumber;
+            serviceAccessObj['PCKG_NO'] = packageNumber;
+            poServiceAccessValues.push(serviceAccessObj);
+
+            poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+        }
+        return {
+            polines: poLines,
+            poaccounts: poAccounts,
+            poschedules: poSchedules,
+            poaddress: poAddresses,
+            polimits: poLimits,
+            poserviceaccess: poServiceAccessValues
+        };
+
+    },
+    generateECCPOEntities: function(polRec, POlineNum, packageNum) {
+        var returnObj = {};
+        //Creating PO Accounts object
+        var accountResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+            po_accounts: polRec
+        });
+        if (!accountResult['__action_status__']['code']) {
+            accountResult['po_accounts']['PO_ITEM'] = POlineNum;
+            if (polRec.acc_assgn_category == 'A') {
+                returnObj['accountObj'] = this.createPOAccountsBasedOnAssets(packageNum, accountResult['po_accounts']);
+            } else {
+                returnObj['accountObj'] = accountResult['po_accounts'];
+            }
+        } else {
+            gs.error("Generate ECC PO accounts object- " + accountResult['__action_status__']['message']);
+            throw new Error(accountResult['__action_status__']['message']);
+        }
+        //Creating PO DeliveryAddress object based on delivery location (plant address logic)
+        if (!(polRec.request_line.location.office)) {
+            var addressResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                po_address: polRec
+            });
+            if (!addressResult['__action_status__']['code']) {
+                addressResult['po_address']['PO_ITEM'] = POlineNum;
+                returnObj['addressObj'] = addressResult['po_address'];
+            } else {
+                gs.error("Generate ECC PO address object- " + addressResult['__action_status__']['message']);
+                throw new Error(addressResult['__action_status__']['message']);
+            }
+        }
+        //Creating PO schedule   
+        var scheduleResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+            po_schedule: polRec
+        });
+        if (!scheduleResult['__action_status__']['code']) {
+            scheduleResult['po_schedule']['PO_ITEM'] = POlineNum;
+            returnObj['scheduleObj'] = scheduleResult['po_schedule'];
+        } else {
+            gs.error("Generate ECC PO schedule object- " + scheduleResult['__action_status__']['message']);
+            throw new Error(scheduleResult['__action_status__']['message']);
+        }
+        //Creating PO Limits
+        if (polRec.purchase_order.purchase_order_type == 'blanket') {
+            var blankePOPaylaod = this.generateBlanketPOPaylaod(packageNum, returnObj['accountObj']);
+            returnObj['accessServicesObj'] = blankePOPaylaod['POServiceAccess'];
+            returnObj['accountObj'] = blankePOPaylaod['POAccounts'];
+            var limitResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_limits_object', {
+                po_limits: polRec
+            });
+            if (!limitResult['__action_status__']['code']) {
+                limitResult['po_limits']['PCKG_NO'] = packageNum;
+                returnObj['limitsObj'] = limitResult['po_limits'];
+            } else {
+                gs.error("Generate ECC PO limits object- " + limitResult['__action_status__']['message']);
+                throw new Error(limitResult['__action_status__']['message']);
+            }
+        }
+        //Creating PO Services
+        if ((polRec.purchase_order.purchase_order_type != 'blanket') && polRec.product_type == 'service' || polRec.product_type == 'handling_fee') {
+            var serviceResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
+                po_services: polRec
+            });
+            if (!serviceResult['__action_status__']['code']) {
+                var serviceEntries = this.generatePOServiceEntries(POlineNum, packageNum, serviceResult['po_services'], returnObj['accountObj']);
+                returnObj['servicesObj'] = serviceEntries['POservicesObjs'];
+                returnObj['accessServicesObj'] = serviceEntries['POServiceAccess'];
+                returnObj['accountObj'] = serviceEntries['POAccounts'];
+            } else {
+                gs.error("Generate ECC PO services object- Error : " + serviceResult['__action_status__']['message']);
+                throw new Error(serviceResult['__action_status__']['message']);
+            }
+        }
+        return returnObj;
+    },
+
+    quantityRatio: function(purhcaseLine, purchasedReceived, percentage) {
+        var quantityReceived = ((purchasedReceived * percentage) / 100).toFixed(3);
+        var quantity = [];
+        var costAllocationGR = new GlideRecord('sn_shop_cost_allocation');
+        costAllocationGR.addQuery('request_line.sys_id', purhcaseLine);
+        costAllocationGR.orderBy('sys_created_on');
+        costAllocationGR.query();
+        while (costAllocationGR.next()) {
+            var costAllocation = parseInt(costAllocationGR.allocation_percentage);
+            var leftQuantity = ((costAllocation * quantityReceived) / 100).toString();
+            quantity.push(leftQuantity);
+        }
+        return quantity;
+    },
+
+    getServiceGRHeaderECC: function(gr_record) {
+        if (gs.nil(gr_record)) {
+            throw new Error("Null Parameter passed.");
+        } else {
+            var headerResult = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_header_object', {
+                gr_header: gr_record
+            });
+        }
+        return headerResult['service_goods_receipt_header'];
+    },
+
+    getServiceGRServicesECC: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
+        quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
+        var service_gr_services = [];
+
+        var lineResult1 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
+            gr_service: gr_record
+        });
+        var lineResult2 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
+            gr_service: gr_record
+        });
+
+        lineResult2['service_goods_receipt']['PCKG_NO'] = "0000000003";
+        lineResult2['service_goods_receipt']['LINE_NO'] = "0000000002";
+        lineResult2['service_goods_receipt']['EXT_LINE'] = "0000000010";
+        lineResult2['service_goods_receipt']['OUTL_IND'] = '';
+        lineResult2['service_goods_receipt']['SUBPCKG_NO'] = '';
+        lineResult2['service_goods_receipt']['SERVICE'] = service;
+        lineResult2['service_goods_receipt']['QUANTITY'] = quantity[interationCount];
+        lineResult2['service_goods_receipt']['SHORT_TEXT'] = short_text;
+
+        service_gr_services.push(lineResult1['service_goods_receipt'], lineResult2['service_goods_receipt']);
+        return service_gr_services;
+
+    },
+
+    getServiceGRHeaderHANA: function(gr_record) {
+        if (gs.nil(gr_record)) {
+            throw new Error("Null Parameter passed.");
+        } else {
+            var headerResult = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_header_object', {
+                service_gr_header: gr_record
+            });
+        }
+        return headerResult['service_goods_receipt_header'];
+    },
+
+    getServiceGRServicesHANA: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
+        quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
+        var service_gr_services = [];
+
+        var lineResult1 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
+            service_gr_service: gr_record
+        });
+        var lineResult2 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
+            service_gr_service: gr_record
+        });
+
+        lineResult2['service_gr_service']['PCKG_NO'] = "0000000003";
+        lineResult2['service_gr_service']['LINE_NO'] = "0000000002";
+        lineResult2['service_gr_service']['EXT_LINE'] = "0000000010";
+        lineResult2['service_gr_service']['OUTL_IND'] = '';
+        lineResult2['service_gr_service']['SUBPCKG_NO'] = '';
+        lineResult2['service_gr_service']['SERVICE'] = service;
+        lineResult2['service_gr_service']['QUANTITY'] = quantity[interationCount];
+        lineResult2['service_gr_service']['SHORT_TEXT'] = short_text;
+
+        service_gr_services.push(lineResult1['service_gr_service'], lineResult2['service_gr_service']);
+        return service_gr_services;
+
+    },
+    type: 'PsmSapUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2022-11-22 05:29:59</sys_created_on>
+        <sys_id>53fb76f5879fd9502a18b846dabb35d9</sys_id>
+        <sys_mod_count>135</sys_mod_count>
+        <sys_name>PsmSapUtils</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_script_include_53fb76f5879fd9502a18b846dabb35d9</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-03-21 13:30:41</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</application>
+        <file_path/>
+        <instance_id>f35e75f9db5611100288c597059619dd</instance_id>
+        <instance_name>psmdev03</instance_name>
+        <name>sys_script_include_53fb76f5879fd9502a18b846dabb35d9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;sn_psm_sap_int.PsmSapUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;PsmSapUtils&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var PsmSapUtils = Class.create();
+PsmSapUtils.prototype = {
+    initialize: function() {},
+    getCurrencyFields: function(tablename, sysId) {
+        var rec = new GlideRecord(tablename);
+        rec.get(sysId);
+        var fields = rec.getElements();
+        var currencyFields = {};
+        fields.forEach(function(element) {
+            var type = element.getED().getInternalType();
+            if (type == "currency2") {
+                var sys_id = element.toString();
+                if (sys_id) {
+                    var obj = {};
+                    var grec = element.getRefRecord();
+                    obj['amount'] = grec.reference_amount.toString();
+                    obj['code'] = grec.reference_currency.toString();
+                    currencyFields[element.getName()] = obj;
+                }
+            }
+        });
+        return currencyFields;
+    },
+    checkMandatoryFields: function(mandatoryFieldsList) {
+        var emptyMandatoryFieldsList = [];
+        Object.keys(mandatoryFieldsList).forEach(function(key) {
+            if (gs.nil(mandatoryFieldsList[key])) {
+                emptyMandatoryFieldsList.push(key);
+            }
+        });
+        emptyMandatoryFieldsList = emptyMandatoryFieldsList.join(", ");
+        return emptyMandatoryFieldsList;
+    },
+    convertDateToSAPFormat: function(dte) {
+        dte = dte.split('-');
+        var sapDate = '';
+        for (k = 0; k &lt; dte.length; k++) {
+            sapDate = sapDate + dte[k].toString();
+        }
+        return sapDate.toString();
+    },
+
+    callSubflowPO: function() {
+        gs.addInfoMessage("Test Value: ");
+        var sysIdList = this.getParameter('sysparm_sysid_list').toString();
+        var tblName = this.getParameter('sysparm_table_name');
+
+        try {
+            gs.info("Test Value: " + sysIdList);
+            var inputs = {};
+            inputs['po_sysid'] = sysIdList; // String 
+            inputs['table_name'] = tblName; // String 
+            sn_fd.FlowAPI.getRunner().subflow('sn_psm_sap_int.submit_pos_test_test').inBackground().withInputs(inputs).run();
+            return "Ran Successfully";
+        } catch (ex) {
+            gs.info("Test Value: " + sysIdList);
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    },
+    checkPadding: function(stringInteger, stringlength, addAsSuffix) {
+        var fieldValue = stringInteger.toString();
+        if (addAsSuffix) {
+            while (fieldValue.length &lt; stringlength)
+                fieldValue = fieldValue + "0";
+            return fieldValue;
+        } else {
+            while (fieldValue.length &lt; stringlength)
+                fieldValue = "0" + fieldValue;
+            return fieldValue;
+        }
+    },
+    getGlideRecords: function(tableName, queryParams, groupByParams) {
+        var glideRec = new GlideRecord(tableName);
+        if (!(gs.nil(queryParams))) {
+            Object.keys(queryParams).forEach(function(key) {
+                glideRec.addQuery(key.toString(), queryParams[key].toString());
+            });
+        }
+        if (!(gs.nil(groupByParams))) {
+            groupByParams.forEach(function(param) {
+                glideRec.groupBy(param.toString());
+            });
+        }
+        glideRec.query();
+        return glideRec;
+    },
+    executeAction: function(actionName, actionInputs) {
+        try {
+            var result = sn_fd.FlowAPI.getRunner().action(actionName).inForeground().withInputs(actionInputs).run();
+            var outputs = result.getOutputs();
+            if (!outputs['__action_status__']['code']) {
+                return outputs;
+            } else {
+                var contextID = result.getContextId();
+                throw new Error(outputs['__action_status__']['message']);
+            }
+        } catch (er) {
+            throw new Error(er.getMessage());
+        }
+    },
+    dividePOLinesBasedOnCostCenter: function(polRec, polObj, packageNum) {
+        var quantity = polRec.purchased_quantity;
+        var polines = [];
+        packageNum--;
+        var grec = new GlideRecord('sn_shop_cost_allocation');
+        grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
+        grec.query();
+        if (grec.hasNext()) {
+            while (grec.next()) {
+                var costCenter = grec.cost_center.code;
+                var allocPercentage = grec.allocation_percentage;
+                var tempPOL = polObj;
+                tempPOL['QUANTITY'] = (Math.round((quantity * (allocPercentage / 100)) * 100) / 100).toFixed(3);
+                tempPOL['temp_costcenter'] = isNaN(costCenter.toString()) ? costCenter.toString() : this.checkPadding(costCenter.toString(), 10);
+                if (packageNum) {
+                    tempPOL['PCKG_NO'] = this.checkPadding(packageNum, 10);
+                    packageNum++;
+                }
+                polines.push(JSON.parse(JSON.stringify(tempPOL)));
+            }
+        } else {
+            polines.push(polObj);
+        }
+        return {
+            polines: polines,
+            packageNumber: packageNum
+        };
+    },
+
+    divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
+        var GrLines = [];
+        var PolSysid = GrRec.purchase_order_line;
+        var dividedQuantities = this.calculateQuantityBasedOnCostCenters(PolSysid, GrObj['ENTRY_QNT']);
+        var PoItemNums = GrObj['PO_ITEM'].split(',');
+        if (PoItemNums.length == dividedQuantities.length) {
+            for (var i = 0; i &lt; dividedQuantities.length; i++) {
+                var tempGRLine = JSON.parse(JSON.stringify(GrObj));
+                tempGRLine['PO_ITEM'] = PoItemNums[i];
+                tempGRLine['ENTRY_QNT'] = dividedQuantities[i].QUANTITY;
+                GrLines.push(tempGRLine);
+            }
+            return GrLines;
+        }
+    },
+    calculateQuantityBasedOnCostCenters: function(orderLine_sysid, totalQuantity) {
+        var returnArray = [];
+        var grec = new GlideRecord('sn_shop_cost_allocation');
+        grec.addQuery('order_line.sys_id', orderLine_sysid.toString());
+        grec.orderBy('sys_created_on');
+        grec.query();
+        while (grec.next()) {
+            var tempObj = {};
+            tempObj['costCenter'] = grec.cost_center.code;
+            var allocPercentage = grec.allocation_percentage;
+            tempObj['QUANTITY'] = (totalQuantity * (allocPercentage / 100)).toFixed(3);
+            returnArray.push(tempObj);
+        }
+        return returnArray;
+    },
+    getPlantID: function(grec) {
+        var plantId;
+        var DeliveryLoc = grec.request_line.location;
+        if (DeliveryLoc.office) {
+            var ERPmapRec = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+            ERPmapRec.addQuery('location.sys_id', DeliveryLoc.office.sys_id.toString());
+            ERPmapRec.query();
+            if (ERPmapRec.hasNext()) {
+                ERPmapRec.next();
+                plantId = ERPmapRec.erp_location_id;
+            } else {
+                throw new Error("No ERP Plant Address Mapping record found for office location");
+            }
+        } else {
+            var ricipientLE = grec.purchase_order.legal_entity;
+            if (ricipientLE) {
+                var ERPmapRec = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+                ERPmapRec.addQuery('legal_entity.sys_id', ricipientLE.sys_id.toString());
+                ERPmapRec.addQuery('default_address', 'true');
+                ERPmapRec.query();
+                if (ERPmapRec.hasNext()) {
+                    ERPmapRec.next();
+                    plantId = ERPmapRec.erp_location_id;
+                } else {
+                    var ERPmapRecord = new GlideRecord('sn_sap_data_int_erp_plant_address_mapping');
+                    ERPmapRecord.addQuery('legal_entity.sys_id', ricipientLE.sys_id.toString());
+                    ERPmapRecord.query();
+                    if (ERPmapRecord.hasNext()) {
+                        ERPmapRecord.next();
+                        plantId = ERPmapRecord.erp_location_id;
+                    } else {
+                        throw new Error("No ERP Plant Address Mapping record found for selected legal entity");
+                    }
+                }
+            } else {
+                throw new Error("No Legal Entity is Selected in Purchase Order");
+            }
+        }
+        return plantId.toString();
+    },
+    createPOAccountsBasedOnAssets: function(PolRec, PoAccountObj) {
+        var POAccounts = [];
+        var assetRecord = new GlideRecord('alm_asset');
+        assetRecord.addQuery('purchase_order_line', PolRec.sys_id);
+        assetRecord.query();
+        while (assetRecord.next()) {
+            var temp = PoAccountObj;
+            temp['ASSET_NO'] = assetRecord.asset_tag;
+            POAccounts.push(temp);
+        }
+        return POAccounts;
+    },
+    generatePOServiceEntries: function(polRec, POItemNum, packageNum, serialNumber, lineNumber) {
+        var POServiceObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
+            po_services: polRec
+        }).po_services;
+
+        var POServices = [];
+        var serviceAccessObj = {};
+        var line1 = {};
+        line1['PCKG_NO'] = this.checkPadding(packageNum, 10);
+        packageNum++;
+        line1['LINE_NO'] = this.checkPadding(lineNumber, 10);
+        lineNumber++;
+        line1['OUTL_IND'] = 'X';
+        line1['SUBPCKG_NO'] = this.checkPadding(packageNum, 10);
+        POServices.push(line1);
+
+        POServiceObj['PCKG_NO'] = line1['SUBPCKG_NO'];
+        POServiceObj['LINE_NO'] = this.checkPadding(lineNumber, 10);
+        POServiceObj['EXT_LINE'] = POItemNum;
+        POServices.push(POServiceObj);
+
+        serviceAccessObj['PO_ITEM'] = POItemNum;
+        serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
+        serviceAccessObj['PCKG_NO'] = POServiceObj['PCKG_NO'];
+        serviceAccessObj['LINE_NO'] = POServiceObj['LINE_NO'];
+
+        return {
+            POservicesObjs: POServices,
+            POServiceAccess: serviceAccessObj,
+            packageNumber: packageNum,
+            serialNumber: serialNumber,
+            ServiceLineNumber: lineNumber
+        };
+    },
+    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval) {
+        if (gs.nil(itemInterval))
+            throw new Error('Function Parameter : ItemInterval cannot be blank');
+
+        if (gs.nil(psm_po_sysId))
+            throw new Error('Function Parameter : PO sysId cannot be blank');
+
+        var poLines = [];
+        var poAccounts = [];
+        var poSchedules = [];
+        var poAddresses = [];
+        var poServices = [];
+        var poServiceAccessValues = [];
+        var poItemNumber = itemInterval;
+        var ERPLineNumber = '';
+        var packageNumber = 2;
+        var serialNumber = 1;
+        var ServiceLineNum = 1;
+
+        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+            purchase_order: psm_po_sysId
+        });
+        while (grec.next()) {
+            if (grec.product_type == 'good') {
+
+                var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                    po_items: grec
+                }).purchase_order_item;
+                var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
+                costCenter_POlines.forEach(function(po_item) {
+                    po_item['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+                    var poAccountObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+                        po_accounts: grec,
+                        po_item_number: po_item['PO_ITEM'],
+                        serial_number: this.checkPadding(serialNumber, 10)
+                    }).po_accounts;
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+                    delete po_item['temp_costcenter'];
+                    poLines.push(po_item);
+                    poAccounts.push(poAccountObj);
+                    poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                        po_schedule: grec,
+                        po_item_number: poItemNumber
+                    }).po_schedule);
+                    if (!(grec.request_line.location.office))
+                        poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                            po_address: grec,
+                            po_item_number: poItemNumber
+                        }).po_address);
+                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+
+                });
+            } else if (grec.product_type == 'service' || grec.product_type == 'handling_fee') {
+
+                var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                    po_items: grec
+                }).purchase_order_item;
+                var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj, packageNumber);
+                packageNumber = costCenter_POlines['packageNumber']++;
+                costCenter_POlines['polines'].forEach(function(po_item) {
+                    po_item['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+                    ERPLineNumber += po_item['PO_ITEM'];
+					var AccountInputs = {};
+                       AccountInputs['po_accounts']= grec;
+                        AccountInputs['po_item_number']= po_item['PO_ITEM'];
+                        AccountInputs['serial_number']= this.checkPadding(serialNumber, 10);
+                    var poAccountObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', AccountInputs).po_accounts;
+                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+                    delete po_item['temp_costcenter'];
+                    poLines.push(po_item);
+                    poAccounts.push(poAccountObj);
+
+                    poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                        po_schedule: grec,
+                        po_item_number: poItemNumber
+                    }).po_schedule);
+
+                    if (!(grec.request_line.location.office))
+                        poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                            po_address: grec,
+                            po_item_number: poItemNumber
+                        }).po_address);
+
+                    var serviceEntries = this.generatePOServiceEntries(grec, po_item['PO_ITEM'], packageNumber, serialNumber, ServiceAccessLineNum);
+                    Array.prototype.push.apply(poServices, serviceEntries['POservicesObjs']);
+                    poServiceAccessValues.push(serviceEntries['serviceAccessObj']);
+
+                    packageNumber = serviceEntries['packageNumber'];
+                    serialNumber = serviceEntries['serialNumber'];
+                    ServiceLineNum = serviceEntries['ServiceLineNum'];
+
+                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+                });
+            }
+            grec.erp_line_number = ERPLineNumber;
+            grec.update();
+        }
+        return {
+            polines: poLines,
+            poaccounts: poAccounts,
+            poschedules: poSchedules,
+            poaddress: poAddresses,
+            poservices: poServices,
+            poserviceaccess: poServiceAccessValues
+        };
+    },
+    generateBlanketPOPayload: function(psm_po_sysId, itemInterval) {
+        if (gs.nil(itemInterval))
+            throw new Error('Function Parameter : ItemInterval cannot be blank');
+
+        if (gs.nil(psm_po_sysId))
+            throw new Error('Function Parameter : PO sysId cannot be blank');
+
+        var poLines = [];
+        var poAccounts = [];
+        var poSchedules = [];
+        var poAddresses = [];
+        var poLimits = [];
+        var poServiceAccessValues = [];
+        var poItemNumber = itemInterval;
+        var packageNumber = 2;
+        var serialNumber = 1;
+
+        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+            purchase_order: psm_po_sysId
+        }, 'number');
+        while (grec.next) {
+            var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                po_items: grec
+            });
+
+            polObj['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
+            poLines.push(polObj);
+            poAccounts.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                po_address: grec,
+                po_item_number: poItemNumber,
+                serial_number: serialNumber
+            }).po_accounts);
+            poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                po_schedule: grec,
+                po_item_number: poItemNumber
+            }).po_schedule);
+
+            if (!(grec.request_line.location.office))
+                poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                    po_address: grec,
+                    po_item_number: poItemNumber
+                }).po_address);
+
+            poLimits.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_limits_object', {
+                po_limits: polRec,
+                package_number: packageNumber
+            }).po_limits);
+
+            var serviceAccessObj = {};
+            serviceAccessObj['SERIAL_NO'] = serialNumber;
+            serviceAccessObj['PCKG_NO'] = packageNumber;
+            poServiceAccessValues.push(serviceAccessObj);
+
+            poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+        }
+        return {
+            polines: poLines,
+            poaccounts: poAccounts,
+            poschedules: poSchedules,
+            poaddress: poAddresses,
+            polimits: poLimits,
+            poserviceaccess: poServiceAccessValues
+        };
+
+    },
+    generateECCPOEntities: function(polRec, POlineNum, packageNum) {
+        var returnObj = {};
+        //Creating PO Accounts object
+        var accountResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+            po_accounts: polRec
+        });
+        if (!accountResult['__action_status__']['code']) {
+            accountResult['po_accounts']['PO_ITEM'] = POlineNum;
+            if (polRec.acc_assgn_category == 'A') {
+                returnObj['accountObj'] = this.createPOAccountsBasedOnAssets(packageNum, accountResult['po_accounts']);
+            } else {
+                returnObj['accountObj'] = accountResult['po_accounts'];
+            }
+        } else {
+            gs.error("Generate ECC PO accounts object- " + accountResult['__action_status__']['message']);
+            throw new Error(accountResult['__action_status__']['message']);
+        }
+        //Creating PO DeliveryAddress object based on delivery location (plant address logic)
+        if (!(polRec.request_line.location.office)) {
+            var addressResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                po_address: polRec
+            });
+            if (!addressResult['__action_status__']['code']) {
+                addressResult['po_address']['PO_ITEM'] = POlineNum;
+                returnObj['addressObj'] = addressResult['po_address'];
+            } else {
+                gs.error("Generate ECC PO address object- " + addressResult['__action_status__']['message']);
+                throw new Error(addressResult['__action_status__']['message']);
+            }
+        }
+        //Creating PO schedule   
+        var scheduleResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+            po_schedule: polRec
+        });
+        if (!scheduleResult['__action_status__']['code']) {
+            scheduleResult['po_schedule']['PO_ITEM'] = POlineNum;
+            returnObj['scheduleObj'] = scheduleResult['po_schedule'];
+        } else {
+            gs.error("Generate ECC PO schedule object- " + scheduleResult['__action_status__']['message']);
+            throw new Error(scheduleResult['__action_status__']['message']);
+        }
+        //Creating PO Limits
+        if (polRec.purchase_order.purchase_order_type == 'blanket') {
+            var blankePOPaylaod = this.generateBlanketPOPaylaod(packageNum, returnObj['accountObj']);
+            returnObj['accessServicesObj'] = blankePOPaylaod['POServiceAccess'];
+            returnObj['accountObj'] = blankePOPaylaod['POAccounts'];
+            var limitResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_limits_object', {
+                po_limits: polRec
+            });
+            if (!limitResult['__action_status__']['code']) {
+                limitResult['po_limits']['PCKG_NO'] = packageNum;
+                returnObj['limitsObj'] = limitResult['po_limits'];
+            } else {
+                gs.error("Generate ECC PO limits object- " + limitResult['__action_status__']['message']);
+                throw new Error(limitResult['__action_status__']['message']);
+            }
+        }
+        //Creating PO Services
+        if ((polRec.purchase_order.purchase_order_type != 'blanket') &amp;&amp; polRec.product_type == 'service' || polRec.product_type == 'handling_fee') {
+            var serviceResult = sn_fd.FlowAPI.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
+                po_services: polRec
+            });
+            if (!serviceResult['__action_status__']['code']) {
+                var serviceEntries = this.generatePOServiceEntries(POlineNum, packageNum, serviceResult['po_services'], returnObj['accountObj']);
+                returnObj['servicesObj'] = serviceEntries['POservicesObjs'];
+                returnObj['accessServicesObj'] = serviceEntries['POServiceAccess'];
+                returnObj['accountObj'] = serviceEntries['POAccounts'];
+            } else {
+                gs.error("Generate ECC PO services object- Error : " + serviceResult['__action_status__']['message']);
+                throw new Error(serviceResult['__action_status__']['message']);
+            }
+        }
+        return returnObj;
+    },
+
+    quantityRatio: function(purhcaseLine, purchasedReceived, percentage) {
+        var quantityReceived = ((purchasedReceived * percentage) / 100).toFixed(3);
+        var quantity = [];
+        var costAllocationGR = new GlideRecord('sn_shop_cost_allocation');
+        costAllocationGR.addQuery('request_line.sys_id', purhcaseLine);
+        costAllocationGR.orderBy('sys_created_on');
+        costAllocationGR.query();
+        while (costAllocationGR.next()) {
+            var costAllocation = parseInt(costAllocationGR.allocation_percentage);
+            var leftQuantity = ((costAllocation * quantityReceived) / 100).toString();
+            quantity.push(leftQuantity);
+        }
+        return quantity;
+    },
+
+    getServiceGRHeaderECC: function(gr_record) {
+        if (gs.nil(gr_record)) {
+            throw new Error("Null Parameter passed.");
+        } else {
+            var headerResult = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_header_object', {
+                gr_header: gr_record
+            });
+        }
+        return headerResult['service_goods_receipt_header'];
+    },
+
+    getServiceGRServicesECC: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
+        quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
+        var service_gr_services = [];
+
+        var lineResult1 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
+            gr_service: gr_record
+        });
+        var lineResult2 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
+            gr_service: gr_record
+        });
+
+        lineResult2['service_goods_receipt']['PCKG_NO'] = "0000000003";
+        lineResult2['service_goods_receipt']['LINE_NO'] = "0000000002";
+        lineResult2['service_goods_receipt']['EXT_LINE'] = "0000000010";
+        lineResult2['service_goods_receipt']['OUTL_IND'] = '';
+        lineResult2['service_goods_receipt']['SUBPCKG_NO'] = '';
+        lineResult2['service_goods_receipt']['SERVICE'] = service;
+        lineResult2['service_goods_receipt']['QUANTITY'] = quantity[interationCount];
+        lineResult2['service_goods_receipt']['SHORT_TEXT'] = short_text;
+
+        service_gr_services.push(lineResult1['service_goods_receipt'], lineResult2['service_goods_receipt']);
+        return service_gr_services;
+
+    },
+
+    getServiceGRHeaderHANA: function(gr_record) {
+        if (gs.nil(gr_record)) {
+            throw new Error("Null Parameter passed.");
+        } else {
+            var headerResult = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_header_object', {
+                service_gr_header: gr_record
+            });
+        }
+        return headerResult['service_goods_receipt_header'];
+    },
+
+    getServiceGRServicesHANA: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
+        quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
+        var service_gr_services = [];
+
+        var lineResult1 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
+            service_gr_service: gr_record
+        });
+        var lineResult2 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
+            service_gr_service: gr_record
+        });
+
+        lineResult2['service_gr_service']['PCKG_NO'] = "0000000003";
+        lineResult2['service_gr_service']['LINE_NO'] = "0000000002";
+        lineResult2['service_gr_service']['EXT_LINE'] = "0000000010";
+        lineResult2['service_gr_service']['OUTL_IND'] = '';
+        lineResult2['service_gr_service']['SUBPCKG_NO'] = '';
+        lineResult2['service_gr_service']['SERVICE'] = service;
+        lineResult2['service_gr_service']['QUANTITY'] = quantity[interationCount];
+        lineResult2['service_gr_service']['SHORT_TEXT'] = short_text;
+
+        service_gr_services.push(lineResult1['service_gr_service'], lineResult2['service_gr_service']);
+        return service_gr_services;
+
+    },
+    type: 'PsmSapUtils'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;satya&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 05:29:59&lt;/sys_created_on&gt;&lt;sys_id&gt;53fb76f5879fd9502a18b846dabb35d9&lt;/sys_id&gt;&lt;sys_mod_count&gt;135&lt;/sys_mod_count&gt;&lt;sys_name&gt;PsmSapUtils&lt;/sys_name&gt;&lt;sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int"&gt;1cc68aba8796d1102a18b846dabb3551&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Procurement Service Management Integration with SAP"&gt;1cc68aba8796d1102a18b846dabb3551&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_53fb76f5879fd9502a18b846dabb35d9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;satya&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-03-21 13:30:41&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2014422325</payload_hash>
+        <record_name>PsmSapUtils</record_name>
+        <reverted_from/>
+        <source>b19ed7d587ada510c04eb259dabb3507</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-03-21 13:30:41</sys_created_on>
+        <sys_id>e36fd91487fd2d102a18b846dabb35b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187045d626b0000001</sys_recorded_at>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-03-21 13:30:41</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>eb6fd91427fd2d109db5f46ab59992b4</update_guid>
+        <update_guid_history>eb6fd91427fd2d109db5f46ab59992b4:2014422325,989e1dd043fd2d100201bdd4cdefe65e:2104348782,5d91d194cebd2d10f6e90309728df6d9:-1143833467,a9f095540fbd2d10b620ec77a6150406:2104348782,32809d14cabd2d10e6997fb9391c33ad:966129951,55ff8514e0bd2d103fc71b6b5730082a:-1007117774,ef9f01145ebd2d1062c1c97d10500992:-1301320853,6b1f8d90d5bd2d10df57c756c1253aaf:180470448,4e6e89902ebd2d1011e4f1886f528020:2104348782,ff3e819087bd2d108434064891489ae1:1473436195,72ad4d10f1bd2d10b3f755689abc9d65:1557909906,eb9ac19cca7d2d108f77b2976a094448:-1679992531,151a419c637d2d108e30fcd292565fdc:1396868161,5f598d1c737d2d101c8ee74a2dbd2c7e:-1348101098,322805d8847d2d10bb46a6e303814a15:2104348782,933e3c50577d2d10130a9375bcd8fecd:2014422325,7bdb30dcee3d2d10edb87493eb305de2:-941012781,5faab09c3d3d2d10e43f241af6ad7c01:-599114239,2e497cd8fc3d2d104df4a3b97256836b:-1846854439,e2887cd8d23d2d10e3374255360af315:2096181690,14183c98ad3d2d10409767c6fc5dd21e:-1060580975,31da2884a93de91006a2d99e6a53b1b1:914124685,3f0a6c00623de9101e3b33f00d4d20cf:54359851,bded9848f3f9e9108a5687338965725d:-770123357,b32c14c4daf9e9109df3ae1ee0fdead9:-1042854740,1dab2e3be425e910715926ab0a4c4c09:-468788109,1b7e5afbb5e1e910487fa8bd869bbc9f:1860022831,2ddc1e7b1be1e910e8563a0861051be2:500579021,964934c7cc6de510f4b9334d057fcf9d:-1924140919,115774471b6de5100e153a6cc5f55108:964877992,1d473447666de5106d9750af70b4b392:-1647477490,eca4984f20a9e510befa1e72fb9ad2e7:-1387497800,1713980f63a9e5106024759f3874e391:766954931,d541d08bcca9e51075f5aa910deee64a:-426452932,63c0d00be1a9e51001e38448f282b67c:468439740,cb3f88c7aba9e510e168a0457f40c5a0:1372628906,0c3e488710a9e510ea0c1e5ada5bd118:2056910840,ab8d4087cba9e5109ef4cfb36067fb7d:2035216974,c7bc4047c7a9e510b41b1c9628e462b2:1681639556,461880032ea9e51000c9be41791be68e:737769499,08db33f20e69e510d1c03eb5cf4c37cf:-304469667,d85bf7b20169e5101253def4c0cbe9e1:1096039827,162abfbec329e510567e07dd13f1314b:1053195142,8366737e2329e5103163addd8fece0e5:-1435573222,7556737e9f29e5107e957f604248ba5b:1416975998,82f5b73e1d29e510c0a90f0e1cdf9aac:-1487196978,c3296b3eb7e5e51067c6638eba843c45:1562068108,3f37e3ba99e5e51025457694fef4433b:1643771137,d3152ff6f3e5e51004db0e92ba7864e9:245657151,2ea3673a43e5e51090b8b8893418a41e:-42679562,a233e7f6e2e5e510ff82491a219876b1:-1169979900,28a2e7f6e4e5e51028393f29e9e10a10:239376717,f77e1bb27ee5e5107c4eddb2f4f96c21:2116929620,abfd5b323ce5e5102e93359b8f18e709:805649300,0b9d5f32e2e5e5108f4aa9fbd901486e:-1783712658,6d57177aaaa5e510f951dd82e6f6ead1:-913526098,78d6d77abba5e51006b9abb340c109f3:-2086914820,e2359b3a90a5e5105a14c0201edf9376:-913526098,8015973a04a5e51035246d1e64070532:1514041314,7474d7f60ba5e510ef99c914ddb1af1e:247393814,96f29b7644a5e5107eaa5fdd8b5e2d8d:1802148931,de431fae4365a51021078d53234fda00:-657713934,1aff32e9b6a9e510c27481badb3830e9:-492494408,0bb4aba08c6525104022d581654e4997:-678557163,52cd932c9a252510efcf0fcb0b6544b6:-243612954,18d95ac403696150e00a7e770c6ff71c:-1395124377,e9795684cf69615075b83518deae054b:340318513,d0599684bd6961506a219f865c039ce7:-1317484699,9a855a80546961501c65276dc6fa6b81:504774495,2bf6fbc701552150c132196c3affe99b:-1633336186,d6663747ad5521506d40117afe422dd9:621523513,afd3c5e613d5e910d1b13a8c532b0956:2070547019,38928d268bd5e9107d318a5d753c26a2:1230641789,47514d2621d5e91040ada4c081be5257:-325182485,f731c926e7d5e910945391b39bbe23f9:2060350176,a9cd306247d5e9107ca12be590b32cc1:-767964667,aca5f82a4995e910a3d8792aab71b0de:-1886526302,d8b76ce2c855e91097d1b891dd7be5a2:-1144481520,32306ce21155e9100584f49d81b0089c:-107983285,439edc624d55e91051e60f650b9ce260:1866119734,ec48182a0315e910eca7feaacec137f1:-392448081,b5d02d611f99e510722a5663d24ac171:937208853,1740ad21e999e5104272c660742e67a8:-770482466,a6ed5dadbb59e510a07c703a53e83915:1414875404,44541525c359e510fd452604fe22008c:-1143690777,e1b009a19719e510fe8ee9d45636b209:1582997575,ad90cd616619e51021ca204648db2de4:616902863,8adf3ced05d5e510aff8ae777b36c324:417717216,35e058a12a55e51084034f1798691d4b:782826966,9d69cfd92f11e510cb2ed1b520fba497:-1734070553,1647cbd9ce11e510504ef41d7ea6163b:148901319,04964f99fc11e51095b1c53f7d82917b:-273144809,28e40359a611e510d81adb92d375e7b0:-813725401,67c381d9d119a510026adb0961a560e6:138525444,592fb0192919a51096b2c47681525003:-1986254345,ee0f70197019a5103ad2c6b89cff239b:-515026787,81ee38959719a5107f4ca93340a79ee7:-1145577635,f7865e018b9d651041b34c3c21371cef:1929836465,f292d6c9df5d65108c19ed38246c2311:258230838,e15def73a8456110a304802aa7e2622e:650201332,914c23738a456110adb5bd6bbe83b9f9:1866657901,102d8e2f1885e1102328251eeb594dea:2112225833,4644db3c8fc5a5101763f7a6d40a0a61:-1622502994,1024db3c11c5a510219f5f6658547836:-661919604,83cc168fe670615088678c34b56c4955:766326555,917cde4ff67061500ab4278f818ac900:1119381755,7fcb5a0f58706150af95e0e956e83a91:-1768854137,c1fb420f33306150b6635980d9c69269:1228277427,fd4886c7d83061505374c64b159c07e3:-1174701549,c377c2c7f1306150c8966efe7a8fa955:1228277427,876782c70e3061500319878b68b73da0:2018113534,e4858ec3523061501370a5d0ced7c847:-546031752,9a040a832930615087b9d474d387af6f:-1083481220,f4b386834f306150a1eed62ec79d8bf1:-576564245,7ad282437930615093c53494aaa7c1d0:-718662839,b262ce0372306150e34c779fa5249d49:2018572799,bee1cecf30fc2150d13495494ff0db44:-1449450977,3f4102cfe5fc215084f115053641d4e2:751889008,a2b615438a7c2150ad0ed40d673b2fc3:1240269388,93399462eff4ad10d58fc0e9158b0718:1733088023,909714ae1bb4ad10b0951e235203f957:-1630334151,b4026344737c251001668525baa24277:1013762458,cfc1e3040e7c2510997c80b3c66fc3d8:990946892,e1318d12df2ca1106ee67cdd630bcda4:-1337146014,c85968d2c2a8a11091a16dc2de0f7127:535561227,14c3a41e8b68a110f9d91aa724de04e0:-1230497177,9862ac9a2c68a1109ae0a9d7358bbad3:-1482773976,a4ba1c529568a11061aec050c07e69cb:-1755136322,388c330273e4a110ac136db8f50f31dd:1439611735,6d88f7ca41a4a110770c71c7aae1f475:1975673794,a81873ca23a4a1108763add5284da3d4:-1514371115,c7c3f786dfa4a1109b9b21cc318fa675:-1096115692,68ce8d99d38061506c8a2ea21385b7a3:1903633955,322ad0fa9f679110a6ce86b8b02c7426:-17017886,41baa26ee25f9d505282c72c189e0e6f:1259686179,504a6a2edd5f9d50b5a5e3a25be781ee:-2122534949,781aaa2eac5f9d50584cf0e23df5ceb9:1326202824,0819eea6325f9d50f7a294a912c9462c:-873683238,e9236a66885f9d50aa1fdf93c07aec4b:370627369,f242aae2ef5f9d5040908ce173450a45:-1105080323,be2a922e8f1f9d50da342df4a94b613e:-56921616,3e58d626f61f9d504b447c911c35142e:-108982146,a9789a5a3e1f5d504799a06ff502e93b:1030980416,fda75296141f5d5018a3985d519ee051:461468986,c6f45e56051f5d5054055bbdd76e31f5:567426817,8fc607313cdfd9504d845f9e8eabb226:-2136528240,93dcbaf5a09fd950138ede6aa83cf763:401942767,695cbaf5b49fd950ae0f6a90ce00314a:-1354133692,393c7af5e99fd950060aa2d51d35d4f8:1151499674</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-03-21 15:59:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>17c71fe7fe164746b839b7c149d98fa4</sys_id>
+        <sys_metadata>53fb76f5879fd9502a18b846dabb35d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PsmSapUtils</sys_name>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_scope_delete display_value="">5bcab6522a284c56b32126c15d077101</sys_scope_delete>
+        <sys_update_name>sys_script_include_53fb76f5879fd9502a18b846dabb35d9</sys_update_name>
+        <sys_update_version display_value="sys_script_include_53fb76f5879fd9502a18b846dabb35d9">e36fd91487fd2d102a18b846dabb35b5</sys_update_version>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-03-21 15:59:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
