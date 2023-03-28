@@ -144,10 +144,9 @@ PsmSapUtils.prototype = {
             throw new Error(er.getMessage());
         }
     },
-    dividePOLinesBasedOnCostCenter: function(polRec, polObj, packageNum) {
+    dividePOLinesBasedOnCostCenter: function(polRec, polObj) {
         var quantity = polRec.purchased_quantity;
         var polines = [];
-        packageNum--;
         var grec = new GlideRecord('sn_shop_cost_allocation');
         grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
         grec.query();
@@ -158,19 +157,12 @@ PsmSapUtils.prototype = {
                 var tempPOL = polObj;
                 tempPOL['QUANTITY'] = (Math.round((quantity * (allocPercentage / 100)) * 100) / 100).toFixed(3);
                 tempPOL['temp_costcenter'] = isNaN(costCenter.toString()) ? costCenter.toString() : this.checkPadding(costCenter.toString(), 10);
-                if (packageNum) {
-                    tempPOL['PCKG_NO'] = this.checkPadding(packageNum, 10);
-                    packageNum++;
-                }
                 polines.push(JSON.parse(JSON.stringify(tempPOL)));
             }
         } else {
             polines.push(polObj);
         }
-        return {
-            polines: polines,
-            packageNumber: packageNum
-        };
+        return polines;
     },
 
     divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
@@ -243,7 +235,7 @@ PsmSapUtils.prototype = {
         }
         return plantId.toString();
     },
-    generatePOServiceEntries: function(polRec, POItemNum, packageNum, serialNumber, lineNumber) {
+    generatePOServiceEntries: function(polRec, POItem, packageNum, serialNumber, lineNumber) {
         var POServiceObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
             po_services: polRec
         }).po_services;
@@ -261,20 +253,25 @@ PsmSapUtils.prototype = {
 
         POServiceObj['PCKG_NO'] = line1['SUBPCKG_NO'];
         POServiceObj['LINE_NO'] = this.checkPadding(lineNumber, 10);
-        POServiceObj['EXT_LINE'] = POItemNum;
+        POServiceObj['EXT_LINE'] = POItem['PO_ITEM'];
+		POServiceObj['QUANTITY'] = POItem['QUANTITY'];
         POServices.push(POServiceObj);
 
-        serviceAccessObj['PO_ITEM'] = POItemNum;
+        //serviceAccessObj['PO_ITEM'] = POItem['PO_ITEM'];
         serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
         serviceAccessObj['PCKG_NO'] = POServiceObj['PCKG_NO'];
         serviceAccessObj['LINE_NO'] = POServiceObj['LINE_NO'];
+
+        packageNum++;
+        lineNumber++;
+        serialNumber++;
 
         return {
             POservicesObjs: POServices,
             serviceAccessObj: serviceAccessObj,
             packageNumber: packageNum,
             serialNumber: serialNumber,
-            ServiceLineNumber: lineNumber
+            ServiceLineNum: lineNumber
         };
     },
     generateStandardPOPaylaod: function(psm_po_sysId, itemInterval) {
@@ -291,7 +288,7 @@ PsmSapUtils.prototype = {
         var poServices = [];
         var poServiceAccessValues = [];
         var poItemNumber = itemInterval;
-        var ERPLineNumber = '';
+        //var ERPLineNumber = '';
         var packageNumber = 2;
         var serialNumber = 1;
         var ServiceLineNum = 1;
@@ -300,33 +297,44 @@ PsmSapUtils.prototype = {
             purchase_order: psm_po_sysId
         });
         while (grec.next()) {
+			var ERPLineNumber = '';
             if (grec.product_type == 'good') {
 
                 var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
                     po_items: grec
                 }).purchase_order_item;
                 var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
-                costCenter_POlines['polines'].forEach(function(po_item) {
+                costCenter_POlines.forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
+					ERPLineNumber += po_item['PO_ITEM'] + ',';
                     var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
                         po_accounts: grec,
                         po_item_number: po_item['PO_ITEM'],
-                        serial_number: new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10)
                     }).po_accounts;
-                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+
+                    if (grec.acc_assgn_category == 'A') {
+                        var assetRec = new sn_psm_sap_int.PsmSapUtils().getGlideRecords('sn_fin_fixed_asset', {
+                            order_line: grec.sys_id
+                        });
+                        assetRec.next();
+                        poAccountObj['ASSET_NO'] = assetRec.erp_asset_number.toString();
+                    }
+
+                    poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
+                    poAccountObj['QUANTITY'] = po_item['QUANTITY'];
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
                     poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
                         po_schedule: grec,
-                        po_item_number: poItemNumber
+                        po_item_number: po_item['PO_ITEM']
                     }).po_schedule);
                     if (!(grec.request_line.location.office))
                         poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
                             po_address: grec,
-                            po_item_number: poItemNumber
+                            po_item_number: po_item['PO_ITEM']
                         }).po_address);
-                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+                    poItemNumber = parseInt(poItemNumber,10) + parseInt(itemInterval,10);
 
                 });
             } else if (grec.product_type == 'service' || grec.product_type == 'handling_fee') {
@@ -334,47 +342,44 @@ PsmSapUtils.prototype = {
                 var servicePOLObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
                     po_items: grec
                 }).purchase_order_item;
-                var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj, packageNumber);
-                packageNumber = costCenter_service_POlines['packageNumber']++;
-                costCenter_service_POlines['polines'].forEach(function(po_item) {
+                var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj);
+                costCenter_service_POlines.forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
-                    ERPLineNumber += po_item['PO_ITEM'];
+                    po_item['PCKG_NO'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(packageNumber, 10);
+                    ERPLineNumber += po_item['PO_ITEM'] + ',';
                     var AccountInputs = {};
                     AccountInputs['po_accounts'] = grec;
                     AccountInputs['po_item_number'] = po_item['PO_ITEM'];
                     AccountInputs['serial_number'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10);
                     var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', AccountInputs).po_accounts;
-                    poAccountObj['COSTCNTER'] = po_item['temp_costcenter'];
+                    poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
 
                     poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
                         po_schedule: grec,
-                        po_item_number: poItemNumber
+                        po_item_number: po_item['PO_ITEM']
                     }).po_schedule);
 
                     if (!(grec.request_line.location.office))
                         poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
                             po_address: grec,
-                            po_item_number: poItemNumber
+                            po_item_number: po_item['PO_ITEM']
                         }).po_address);
 
-                    var serviceEntries = new sn_psm_sap_int.PsmSapUtils().generatePOServiceEntries(grec, po_item['PO_ITEM'], packageNumber, serialNumber, ServiceLineNum);
+                    var serviceEntries = new sn_psm_sap_int.PsmSapUtils().generatePOServiceEntries(grec, po_item, packageNumber, serialNumber, ServiceLineNum);
                     Array.prototype.push.apply(poServices, serviceEntries['POservicesObjs']);
                     poServiceAccessValues.push(serviceEntries['serviceAccessObj']);
 
                     packageNumber = serviceEntries['packageNumber'];
-                    packageNumber++
                     serialNumber = serviceEntries['serialNumber'];
-                    serialNumber++
                     ServiceLineNum = serviceEntries['ServiceLineNum'];
-                    ServiceLineNum++
 
-                    poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+                    poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
                 });
             }
-            grec.erp_line_number = ERPLineNumber;
+            grec.erp_line_number = ERPLineNumber.slice(0, -1);
             grec.update();
         }
         return {
@@ -471,13 +476,14 @@ PsmSapUtils.prototype = {
         return quantity;
     },
 
-    getServiceGRHeaderECC: function(gr_record) {
+    getServiceGRHeaderECC: function(gr_record, erpNumber) {
         if (gs.nil(gr_record)) {
             throw new Error("Null Parameter passed.");
         } else {
             var headerResult = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_header_object', {
                 gr_header: gr_record
             });
+            headerResult['service_goods_receipt_header']['PO_ITEM'] = erpNumber;
         }
         return headerResult['service_goods_receipt_header'];
     },
@@ -485,14 +491,12 @@ PsmSapUtils.prototype = {
     getServiceGRServicesECC: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
         quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
         var service_gr_services = [];
-
         var lineResult1 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
             gr_service: gr_record
         });
         var lineResult2 = this.executeAction('sn_psm_sap_int.generate_ecc_service_goods_receipt_service_object', {
             gr_service: gr_record
         });
-
         lineResult2['service_goods_receipt']['PCKG_NO'] = "0000000003";
         lineResult2['service_goods_receipt']['LINE_NO'] = "0000000002";
         lineResult2['service_goods_receipt']['EXT_LINE'] = "0000000010";
@@ -507,13 +511,14 @@ PsmSapUtils.prototype = {
 
     },
 
-    getServiceGRHeaderHANA: function(gr_record) {
+    getServiceGRHeaderHANA: function(gr_record,erpNumber) {
         if (gs.nil(gr_record)) {
             throw new Error("Null Parameter passed.");
         } else {
             var headerResult = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_header_object', {
                 service_gr_header: gr_record
             });
+            headerResult['service_goods_receipt_header']['PO_ITEM'] = erpNumber;
         }
         return headerResult['service_goods_receipt_header'];
     },
@@ -521,14 +526,12 @@ PsmSapUtils.prototype = {
     getServiceGRServicesHANA: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
         quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
         var service_gr_services = [];
-
         var lineResult1 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
             service_gr_service: gr_record
         });
         var lineResult2 = this.executeAction('sn_psm_sap_int.generate_hana_service_goods_receipt_service_object', {
             service_gr_service: gr_record
         });
-
         lineResult2['service_gr_service']['PCKG_NO'] = "0000000003";
         lineResult2['service_gr_service']['LINE_NO'] = "0000000002";
         lineResult2['service_gr_service']['EXT_LINE'] = "0000000010";
@@ -548,13 +551,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-03-22 09:47:00</sys_updated_on>
+        <sys_updated_on>2023-03-27 10:59:44</sys_updated_on>
     </sys_script_include>
 </record_update>
