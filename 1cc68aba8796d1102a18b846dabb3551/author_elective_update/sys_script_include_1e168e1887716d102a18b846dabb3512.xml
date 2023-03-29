@@ -848,7 +848,7 @@ PsmSapUtils.prototype = {
         <reverted_from/>
         <source>b19ed7d587ada510c04eb259dabb3507</source>
         <source_table>sys_update_set</source_table>
-        <state>previous</state>
+        <state>current</state>
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:21:34</sys_created_on>
         <sys_id>32864e9887716d102a18b846dabb350b</sys_id>
