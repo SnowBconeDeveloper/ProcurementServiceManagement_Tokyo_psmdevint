@@ -103,6 +103,29 @@ PsmSapUtils.prototype = {
             return false;
         }
     },
+    getUtilityActionNames: function(erp) {
+        switch (erp) {
+            case 'ecc':
+                return {
+                    GenLinesActionName: 'sn_psm_sap_int.generate_ecc_po_line_object',
+                        GenAccountActionName: 'sn_psm_sap_int.generate_ecc_po_accounts_object',
+                        GenScheduleActionName: 'sn_psm_sap_int.generate_ecc_po_schedule_object',
+                        GenAddressActionName: 'sn_psm_sap_int.generate_ecc_po_address_object',
+                        GenLimitsActionName: 'sn_psm_sap_int.generate_ecc_po_limits_object',
+                        GenServicesAcrionName: 'sn_psm_sap_int.generate_ecc_po_services_object'
+                };
+
+            case 'hana':
+                return {
+                    GenLinesActionName: 'sn_psm_sap_int.generate_hana_po_line_object',
+                        GenAccountActionName: 'sn_psm_sap_int.generate_hana_po_accounts_object',
+                        GenScheduleActionName: 'sn_psm_sap_int.generate_hana_po_schedule_object',
+                        GenAddressActionName: 'sn_psm_sap_int.generate_hana_po_address_object',
+                        GenLimitsActionName: 'sn_psm_sap_int.generate_hana_po_limits_object',
+                        GenServicesAcrionName: 'sn_psm_sap_int.generate_hana_po_services_object'
+                };
+        }
+    },
     checkPadding: function(stringInteger, stringlength, addAsSuffix) {
         var fieldValue = stringInteger.toString();
         if (addAsSuffix) {
@@ -141,7 +164,7 @@ PsmSapUtils.prototype = {
                 throw new Error(outputs['__action_status__']['message']);
             }
         } catch (er) {
-            throw new Error(er.getMessage());
+            throw new Error(er.getMessage()+'in Action :'+actionName);
         }
     },
     dividePOLinesBasedOnCostCenter: function(polRec, polObj) {
@@ -235,8 +258,8 @@ PsmSapUtils.prototype = {
         }
         return plantId.toString();
     },
-    generatePOServiceEntries: function(polRec, POItem, packageNum, serialNumber, lineNumber) {
-        var POServiceObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_services_object', {
+    generatePOServiceEntries: function(actionName, polRec, POItem, packageNum, serialNumber, lineNumber) {
+        var POServiceObj = this.executeAction(actionName, {
             po_services: polRec
         }).po_services;
 
@@ -254,7 +277,7 @@ PsmSapUtils.prototype = {
         POServiceObj['PCKG_NO'] = line1['SUBPCKG_NO'];
         POServiceObj['LINE_NO'] = this.checkPadding(lineNumber, 10);
         POServiceObj['EXT_LINE'] = POItem['PO_ITEM'];
-		POServiceObj['QUANTITY'] = POItem['QUANTITY'];
+        POServiceObj['QUANTITY'] = POItem['QUANTITY'];
         POServices.push(POServiceObj);
 
         //serviceAccessObj['PO_ITEM'] = POItem['PO_ITEM'];
@@ -274,12 +297,17 @@ PsmSapUtils.prototype = {
             ServiceLineNum: lineNumber
         };
     },
-    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval) {
+    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
 
         if (gs.nil(psm_po_sysId))
             throw new Error('Function Parameter : PO sysId cannot be blank');
+		
+		if (gs.nil(erp))
+            throw new Error('Function Parameter : ERP cannot be blank');
+
+        var UtilityActionNames = this.getUtilityActionNames(erp);
 
         var poLines = [];
         var poAccounts = [];
@@ -297,17 +325,17 @@ PsmSapUtils.prototype = {
             purchase_order: psm_po_sysId
         });
         while (grec.next()) {
-			var ERPLineNumber = '';
+            var ERPLineNumber = '';
             if (grec.product_type == 'good') {
 
-                var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                     po_items: grec
                 }).purchase_order_item;
                 var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
                 costCenter_POlines.forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
-					ERPLineNumber += po_item['PO_ITEM'] + ',';
-                    var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+                    ERPLineNumber += po_item['PO_ITEM'] + ',';
+                    var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAccountActionName'], {
                         po_accounts: grec,
                         po_item_number: po_item['PO_ITEM'],
                     }).po_accounts;
@@ -325,21 +353,21 @@ PsmSapUtils.prototype = {
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
-                    poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                    poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenScheduleActionName'], {
                         po_schedule: grec,
                         po_item_number: po_item['PO_ITEM']
                     }).po_schedule);
                     if (!(grec.request_line.location.office))
-                        poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                        poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAddressActionName'], {
                             po_address: grec,
                             po_item_number: po_item['PO_ITEM']
                         }).po_address);
-                    poItemNumber = parseInt(poItemNumber,10) + parseInt(itemInterval,10);
+                    poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
 
                 });
             } else if (grec.product_type == 'service' || grec.product_type == 'handling_fee') {
 
-                var servicePOLObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+                var servicePOLObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                     po_items: grec
                 }).purchase_order_item;
                 var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj);
@@ -347,28 +375,30 @@ PsmSapUtils.prototype = {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
                     po_item['PCKG_NO'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(packageNumber, 10);
                     ERPLineNumber += po_item['PO_ITEM'] + ',';
+
                     var AccountInputs = {};
                     AccountInputs['po_accounts'] = grec;
                     AccountInputs['po_item_number'] = po_item['PO_ITEM'];
                     AccountInputs['serial_number'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(serialNumber, 10);
-                    var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', AccountInputs).po_accounts;
+
+                    var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAccountActionName'], AccountInputs).po_accounts;
                     poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
                     delete po_item['temp_costcenter'];
                     poLines.push(po_item);
                     poAccounts.push(poAccountObj);
 
-                    poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+                    poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenScheduleActionName'], {
                         po_schedule: grec,
                         po_item_number: po_item['PO_ITEM']
                     }).po_schedule);
 
                     if (!(grec.request_line.location.office))
-                        poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                        poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAddressActionName'], {
                             po_address: grec,
                             po_item_number: po_item['PO_ITEM']
                         }).po_address);
 
-                    var serviceEntries = new sn_psm_sap_int.PsmSapUtils().generatePOServiceEntries(grec, po_item, packageNumber, serialNumber, ServiceLineNum);
+                    var serviceEntries = new sn_psm_sap_int.PsmSapUtils().generatePOServiceEntries(UtilityActionNames['GenServicesAcrionName'], grec, po_item, packageNumber, serialNumber, ServiceLineNum);
                     Array.prototype.push.apply(poServices, serviceEntries['POservicesObjs']);
                     poServiceAccessValues.push(serviceEntries['serviceAccessObj']);
 
@@ -379,8 +409,10 @@ PsmSapUtils.prototype = {
                     poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
                 });
             }
-            grec.erp_line_number = ERPLineNumber.slice(0, -1);
-            grec.update();
+            if (gs.nil(isUpdatePO)) {
+                grec.erp_line_number = ERPLineNumber.slice(0, -1);
+                grec.update();
+            }
         }
         return {
             polines: poLines,
@@ -391,12 +423,17 @@ PsmSapUtils.prototype = {
             poserviceaccess: poServiceAccessValues
         };
     },
-    generateBlanketPOPayload: function(psm_po_sysId, itemInterval) {
+    generateBlanketPOPayload: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
 
         if (gs.nil(psm_po_sysId))
             throw new Error('Function Parameter : PO sysId cannot be blank');
+		
+		if (gs.nil(erp))
+            throw new Error('Function Parameter : ERP cannot be blank');
+		
+		var UtilityActionNames = this.getUtilityActionNames(erp);
 
         var poLines = [];
         var poAccounts = [];
@@ -412,32 +449,32 @@ PsmSapUtils.prototype = {
             purchase_order: psm_po_sysId
         });
         while (grec.next()) {
-            var polObj = this.executeAction('sn_psm_sap_int.generate_ecc_po_line_object', {
+            var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                 po_items: grec
             }).purchase_order_item;
 
             polObj['PO_ITEM'] = this.checkPadding(poItemNumber, 5);
-            grec.erp_line_number = polObj['PO_ITEM'];
-            grec.update();
             polObj['PCKG_NO'] = this.checkPadding(packageNumber, 10);
             poLines.push(polObj);
-            poAccounts.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_accounts_object', {
+
+            poAccounts.push(this.executeAction(UtilityActionNames['GenAccountActionName'], {
                 po_accounts: grec,
                 po_item_number: polObj['PO_ITEM'],
                 serial_number: this.checkPadding(serialNumber, 10)
             }).po_accounts);
-            poSchedules.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_schedule_object', {
+
+            poSchedules.push(this.executeAction(UtilityActionNames['GenScheduleActionName'], {
                 po_schedule: grec,
                 po_item_number: polObj['PO_ITEM']
             }).po_schedule);
 
             if (!(grec.request_line.location.office))
-                poAddresses.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_address_object', {
+                poAddresses.push(this.executeAction(UtilityActionNames['GenAddressActionName'], {
                     po_address: grec,
                     po_item_number: polObj['PO_ITEM']
                 }).po_address);
 
-            poLimits.push(this.executeAction('sn_psm_sap_int.generate_ecc_po_limits_object', {
+            poLimits.push(this.executeAction(UtilityActionNames['GenLimitsActionName'], {
                 po_limits: grec,
                 package_number: this.checkPadding(packageNumber, 10)
             }).po_limits);
@@ -449,7 +486,11 @@ PsmSapUtils.prototype = {
 
             serialNumber++;
             packageNumber++;
-            poItemNumber = parseInt(poItemNumber) + parseInt(itemInterval);
+            if (gs.nil(isUpdatePO)) {
+                grec.erp_line_number = polObj['PO_ITEM'];
+                grec.update();
+            }
+            poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
         }
         return {
             polines: poLines,
@@ -511,7 +552,7 @@ PsmSapUtils.prototype = {
 
     },
 
-    getServiceGRHeaderHANA: function(gr_record,erpNumber) {
+    getServiceGRHeaderHANA: function(gr_record, erpNumber) {
         if (gs.nil(gr_record)) {
             throw new Error("Null Parameter passed.");
         } else {
@@ -551,13 +592,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-03-27 10:59:44</sys_updated_on>
+        <sys_updated_on>2023-03-30 17:19:44</sys_updated_on>
     </sys_script_include>
 </record_update>
