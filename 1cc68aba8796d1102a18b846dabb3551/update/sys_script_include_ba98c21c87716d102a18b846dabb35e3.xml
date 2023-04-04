@@ -327,7 +327,6 @@ PsmSapUtils.prototype = {
         while (grec.next()) {
             var ERPLineNumber = '';
             if (grec.product_type == 'good') {
-
                 var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                     po_items: grec
                 }).purchase_order_item;
@@ -592,13 +591,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
-        <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-03-30 17:19:44</sys_updated_on>
+        <sys_updated_by>shreenag.araga</sys_updated_by>
+        <sys_updated_on>2023-04-04 03:20:58</sys_updated_on>
     </sys_script_include>
 </record_update>
