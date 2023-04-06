@@ -48,7 +48,6 @@ PsmSapUtils.prototype = {
         }
         return sapDate.toString();
     },
-
     callSubflowPO: function() {
         gs.addInfoMessage("Test Value: ");
         var sysIdList = this.getParameter('sysparm_sysid_list').toString();
@@ -187,7 +186,6 @@ PsmSapUtils.prototype = {
         }
         return polines;
     },
-
     divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
         var GrLines = [];
         var PolSysid = GrRec.purchase_order_line;
@@ -515,7 +513,6 @@ PsmSapUtils.prototype = {
         }
         return quantity;
     },
-
     getServiceGRHeaderECC: function(gr_record, erpNumber) {
         if (gs.nil(gr_record)) {
             throw new Error("Null Parameter passed.");
@@ -527,7 +524,6 @@ PsmSapUtils.prototype = {
         }
         return headerResult['service_goods_receipt_header'];
     },
-
     getServiceGRServicesECC: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
         quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
         var service_gr_services = [];
@@ -550,7 +546,6 @@ PsmSapUtils.prototype = {
         return service_gr_services;
 
     },
-
     getServiceGRHeaderHANA: function(gr_record, erpNumber) {
         if (gs.nil(gr_record)) {
             throw new Error("Null Parameter passed.");
@@ -562,7 +557,6 @@ PsmSapUtils.prototype = {
         }
         return headerResult['service_goods_receipt_header'];
     },
-
     getServiceGRServicesHANA: function(gr_record, service, interationCount, short_text, purhcaseLine, purchasedReceived, percentage) {
         quantity = this.quantityRatio(purhcaseLine, purchasedReceived, percentage);
         var service_gr_services = [];
@@ -591,13 +585,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
-        <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-05 11:43:36</sys_updated_on>
+        <sys_updated_by>shreenag.araga</sys_updated_by>
+        <sys_updated_on>2023-04-06 05:47:29</sys_updated_on>
     </sys_script_include>
 </record_update>
