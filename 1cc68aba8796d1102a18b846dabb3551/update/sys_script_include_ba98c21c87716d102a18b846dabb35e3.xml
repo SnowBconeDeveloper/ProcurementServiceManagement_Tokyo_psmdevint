@@ -171,6 +171,7 @@ PsmSapUtils.prototype = {
         var polines = [];
         var grec = new GlideRecord('sn_shop_cost_allocation');
         grec.addQuery('order_line.sys_id', polRec.sys_id.toString());
+        grec.orderBy('cost_center');
         grec.query();
         if (grec.hasNext()) {
             while (grec.next()) {
@@ -280,6 +281,7 @@ PsmSapUtils.prototype = {
 
         //serviceAccessObj['PO_ITEM'] = POItem['PO_ITEM'];
         serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
+        serviceAccessObj['SERNO_LINE'] = this.checkPadding(serialNumber, 2);
         serviceAccessObj['PCKG_NO'] = POServiceObj['PCKG_NO'];
         serviceAccessObj['LINE_NO'] = POServiceObj['LINE_NO'];
 
@@ -295,7 +297,10 @@ PsmSapUtils.prototype = {
             ServiceLineNum: lineNumber
         };
     },
-    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
+    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO, isCancelLine) {
+        var updateLine = gs.nil(isUpdatePO) ? false : true;
+        var cancelLine = gs.nil(isCancelLine) ? false : true;
+
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
 
@@ -318,10 +323,22 @@ PsmSapUtils.prototype = {
         var packageNumber = 2;
         var serialNumber = 1;
         var ServiceLineNum = 1;
-
-        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
-            purchase_order: psm_po_sysId
-        }, ['number']);
+        var grec;
+        if (cancelLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "closed_canceled"
+            }, ['number']);
+        } else if (updateLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "pending_submission"
+            }, ['number']);
+        } else {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId
+            }, ['number']);
+        }
         while (grec.next()) {
             var ERPLineNumber = '';
             if (grec.product_type == 'good') {
@@ -406,7 +423,7 @@ PsmSapUtils.prototype = {
                     poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
                 });
             }
-            if (gs.nil(isUpdatePO)) {
+            if (!updateLine) {
                 grec.erp_line_number = ERPLineNumber.slice(0, -1);
                 grec.update();
             }
@@ -420,7 +437,10 @@ PsmSapUtils.prototype = {
             poserviceaccess: poServiceAccessValues
         };
     },
-    generateBlanketPOPayload: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
+    generateBlanketPOPayload: function(psm_po_sysId, itemInterval, erp, isUpdatePO, isCancelLine) {
+        var updateLine = gs.nil(isUpdatePO) ? false : true;
+        var cancelLine = gs.nil(isCancelLine) ? false : true;
+
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
 
@@ -441,10 +461,23 @@ PsmSapUtils.prototype = {
         var poItemNumber = itemInterval;
         var packageNumber = 2;
         var serialNumber = 1;
+        var grec;
+        if (cancelLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "closed_canceled"
+            }, ['number']);
+        } else if (updateLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "pending_submission"
+            }, ['number']);
+        } else {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId
+            }, ['number']);
+        }
 
-        var grec = this.getGlideRecords('sn_shop_purchase_order_line', {
-            purchase_order: psm_po_sysId
-        });
         while (grec.next()) {
             var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                 po_items: grec
@@ -478,6 +511,7 @@ PsmSapUtils.prototype = {
 
             var serviceAccessObj = {};
             serviceAccessObj['SERIAL_NO'] = this.checkPadding(serialNumber, 10);
+            serviceAccessObj['SERNO_LINE'] = this.checkPadding(serialNumber, 2);
             serviceAccessObj['PCKG_NO'] = this.checkPadding(packageNumber, 10);
             poServiceAccessValues.push(serviceAccessObj);
 
@@ -504,7 +538,7 @@ PsmSapUtils.prototype = {
         var quantity = [];
         var costAllocationGR = new GlideRecord('sn_shop_cost_allocation');
         costAllocationGR.addQuery('request_line.sys_id', purhcaseLine);
-        costAllocationGR.orderBy('sys_created_on');
+        costAllocationGR.orderBy('cost_center');
         costAllocationGR.query();
         while (costAllocationGR.next()) {
             var costAllocation = parseInt(costAllocationGR.allocation_percentage);
@@ -585,13 +619,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
         <sys_updated_by>shreenag.araga</sys_updated_by>
-        <sys_updated_on>2023-04-06 05:47:29</sys_updated_on>
+        <sys_updated_on>2023-04-17 10:05:24</sys_updated_on>
     </sys_script_include>
 </record_update>
