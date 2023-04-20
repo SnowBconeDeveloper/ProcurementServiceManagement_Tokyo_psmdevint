@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.erp_gr_number == '' &amp;&amp; current. status == 'pending_submission' &amp;&amp;  new sn_psm_sap_int.PsmSapUtils().checkIfIntegrationErrorExistsForGR(current.purchase_order_line.purchase_order.sys_id)</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Resubmit GR</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var inputs = {};
+inputs['current'] = current;
+inputs['table_name'] = 'sn_shop_receipt';
+gs.addInfoMessage('Initiated Goods Receipt creation in ERP');
+try {
+    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_goods_receipt_in_erp').inBackground().withInputs(inputs).run();
+} catch (ex) {
+    var message = ex.getMessage();
+    gs.error(message);
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-02-13 10:02:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7a1613e887c565102a18b846dabb3561</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Resubmit GR</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_ui_action_7a1613e887c565102a18b846dabb3561</sys_update_name>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-03-22 09:50:42</sys_updated_on>
+        <table>sn_shop_receipt</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</application>
+        <file_path/>
+        <instance_id>f35e75f9db5611100288c597059619dd</instance_id>
+        <instance_name>psmdev03</instance_name>
+        <name>sys_ui_action_7a1613e887c565102a18b846dabb3561</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;current.erp_gr_number == '' &amp;amp;&amp;amp; current. status == 'pending_submission' &amp;amp;&amp;amp;  new sn_psm_sap_int.PsmSapUtils().checkIfIntegrationErrorExistsForGR(current.purchase_order_line.purchase_order.sys_id)&lt;/condition&gt;&lt;form_action&gt;false&lt;/form_action&gt;&lt;form_button&gt;false&lt;/form_button&gt;&lt;form_button_v2&gt;true&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;true&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Resubmit GR&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var inputs = {};
+inputs['current'] = current;
+inputs['table_name'] = 'sn_shop_receipt';
+gs.addInfoMessage('Initiated Goods Receipt creation in ERP');
+try {
+    sn_fd.FlowAPI.getRunner().flow('sn_fcms_intg.create_goods_receipt_in_erp').inBackground().withInputs(inputs).run();
+} catch (ex) {
+    var message = ex.getMessage();
+    gs.error(message);
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;satya&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-13 10:02:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7a1613e887c565102a18b846dabb3561&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Resubmit GR&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int"&gt;1cc68aba8796d1102a18b846dabb3551&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Procurement Service Management Integration with SAP"&gt;1cc68aba8796d1102a18b846dabb3551&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_7a1613e887c565102a18b846dabb3561&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;satya&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-03-22 09:50:42&lt;/sys_updated_on&gt;&lt;table&gt;sn_shop_receipt&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>600818120</payload_hash>
+        <record_name>Resubmit GR</record_name>
+        <reverted_from/>
+        <source>7fdeef16877965502a18b846dabb354d</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-03-22 09:50:42</sys_created_on>
+        <sys_id>baa6b9a88731ad102a18b846dabb351f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_recorded_at>18708ba57160000001</sys_recorded_at>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-03-28 05:05:15</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>f2a6b9a8f031ad10ff025d7235bf3b1f</update_guid>
+        <update_guid_history>f2a6b9a8f031ad10ff025d7235bf3b1f:600818120,03581f6cb7c5651034bdbfaa30334d0c:1483476544,5ca65fe8c4c565103b32519d65540c82:-1220182526</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-04-20 11:37:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>4464bfc5418a41f8ae1b0c6b081512a9</sys_id>
+        <sys_metadata>7a1613e887c565102a18b846dabb3561</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resubmit GR</sys_name>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_parent display_value="">8f42b27e875ad1102a18b846dabb35bd</sys_parent>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_scope_delete display_value="">5bcab6522a284c56b32126c15d077101</sys_scope_delete>
+        <sys_update_name>sys_ui_action_7a1613e887c565102a18b846dabb3561</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_7a1613e887c565102a18b846dabb3561">baa6b9a88731ad102a18b846dabb351f</sys_update_version>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-04-20 11:37:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
