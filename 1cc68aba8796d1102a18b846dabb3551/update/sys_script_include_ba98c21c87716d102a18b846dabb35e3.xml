@@ -66,42 +66,6 @@ PsmSapUtils.prototype = {
             gs.error(message);
         }
     },
-    checkIfIntegrationErrorExistsForPO: function(po_sys_id) {
-        var integrationErrorRecs = this.getGlideRecords('sn_shop_erp_error_task', {
-            purchase_order: po_sys_id.toString(),
-            subtype: 'purchase_order',
-            state: 1
-        });
-        if (integrationErrorRecs.hasNext()) {
-            return true;
-        } else {
-            return false;
-        }
-    },
-    checkIfIntegrationErrorExistsForGR: function(gr_sys_id) {
-        var integrationErrorRecs = this.getGlideRecords('sn_shop_erp_error_task', {
-            purchase_order: gr_sys_id.toString(),
-            subtype: 'receipt',
-            state: 1
-        });
-        if (integrationErrorRecs.hasNext()) {
-            return true;
-        } else {
-            return false;
-        }
-    },
-    checkIfIntegrationErrorExistsForIR: function(ir_sys_id) {
-        var integrationErrorRecs = this.getGlideRecords('sn_shop_erp_error_task', {
-            purchase_order: gr_sys_id.toString(),
-            subtype: 'invoice',
-            state: 1
-        });
-        if (integrationErrorRecs.hasNext()) {
-            return true;
-        } else {
-            return false;
-        }
-    },
     getUtilityActionNames: function(erp) {
         switch (erp) {
             case 'ecc':
@@ -190,7 +154,7 @@ PsmSapUtils.prototype = {
     divideGRLinesBasedOnCostCenter: function(GrRec, GrObj) {
         var GrLines = [];
         var PolSysid = GrRec.purchase_order_line;
-        var dividedQuantities = this.calculateQuantityBasedOnCostCenters(PolSysid, GrObj['ENTRY_QNT']);
+        var dividedQuantities = this.calculateQuantityBasedOnCostCenters(PolSysid, GrObj['ENTRY_QNT'].toString().str.replace(/\D/g,''));
         var PoItemNums = GrObj['PO_ITEM'].split(',');
         if (PoItemNums.length == dividedQuantities.length) {
             for (var i = 0; i < dividedQuantities.length; i++) {
@@ -265,12 +229,12 @@ PsmSapUtils.prototype = {
         var POServices = [];
         var serviceAccessObj = {};
         var line1 = {};
-        line1['PCKG_NO'] = this.checkPadding(packageNum, 10);
+        line1['PCKG_NO'] = this.checkPadding(packageNum, 2);
         packageNum++;
         line1['LINE_NO'] = this.checkPadding(lineNumber, 10);
         lineNumber++;
         line1['OUTL_IND'] = 'X';
-        line1['SUBPCKG_NO'] = this.checkPadding(packageNum, 10);
+        line1['SUBPCKG_NO'] = this.checkPadding(packageNum, 2);
         POServices.push(line1);
 
         POServiceObj['PCKG_NO'] = line1['SUBPCKG_NO'];
@@ -298,8 +262,8 @@ PsmSapUtils.prototype = {
         };
     },
     generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO, isCancelLine) {
-        var updateLine = gs.nil(isUpdatePO) ? false : true;
-        var cancelLine = gs.nil(isCancelLine) ? false : true;
+        var updateLine = (gs.nil(isUpdatePO) || isUpdatePO == false) ? false : true;
+        var cancelLine = (gs.nil(isCancelLine) || isCancelLine == false) ? false : true;
 
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
@@ -387,7 +351,7 @@ PsmSapUtils.prototype = {
                 var costCenter_service_POlines = this.dividePOLinesBasedOnCostCenter(grec, servicePOLObj);
                 costCenter_service_POlines.forEach(function(po_item) {
                     po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
-                    po_item['PCKG_NO'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(packageNumber, 10);
+                    po_item['PCKG_NO'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(packageNumber, 2);
                     ERPLineNumber += po_item['PO_ITEM'] + ',';
 
                     var AccountInputs = {};
@@ -619,13 +583,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>56</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
-        <sys_updated_by>shreenag.araga</sys_updated_by>
-        <sys_updated_on>2023-04-17 10:05:24</sys_updated_on>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-04-22 06:28:12</sys_updated_on>
     </sys_script_include>
 </record_update>

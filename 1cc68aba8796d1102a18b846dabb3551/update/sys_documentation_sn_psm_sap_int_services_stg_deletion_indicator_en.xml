@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="deletion_indicator" label="Deletion Indicator" language="en" table="sn_psm_sap_int_services_stg">
+    <sys_documentation element="deletion_indicator" label="Deletion indicator" language="en" table="sn_psm_sap_int_services_stg">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>deletion_indicator</element>
             <help/>
             <hint/>
-            <label>Deletion Indicator</label>
+            <label>Deletion indicator</label>
             <language>en</language>
             <name>sn_psm_sap_int_services_stg</name>
-            <plural>Deletion Indicators</plural>
+            <plural>Deletion indicators</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2023-03-01 12:36:14</sys_created_on>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>Deletion Indicator</sys_name>
-            <sys_package display_value="Procurement Service Management Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Deletion indicator</sys_name>
+            <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
             <sys_policy/>
-            <sys_scope display_value="Procurement Service Management Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+            <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
             <sys_update_name>sys_documentation_sn_psm_sap_int_services_stg_deletion_indicator_en</sys_update_name>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-03-01 12:36:14</sys_updated_on>
+            <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+            <sys_updated_on>2023-04-22 08:22:04</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

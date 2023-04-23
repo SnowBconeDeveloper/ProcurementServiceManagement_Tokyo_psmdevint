@@ -10,7 +10,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>create_service_goods_receipt_in_sap_s4hana</internal_name>
-        <label_cache>[{"name":"subflow.connection_alias","label":"Input➛Connection Alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"557ef8bc-b1a9-449e-aa6e-08f2707efa9b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.scheduled_end_date_time","label":"17 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.total_duration","label":"17 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.message","label":"3➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.entry_sheet","label":"Flow Variables➛Entry Sheet","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b7c5aa0-08e0-40bc-a257-658d428311de"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__dont_treat_as_error__","label":"14 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__action_status__","label":"14 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.table_name","label":"14 - Update Record➛Receipt Table","reference":"sn_shop_receipt","reference_display":"Receipt","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.record","label":"14 - Update Record➛Receipt Record","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.psm_goods_receipt.erp_gr_number","label":"Input➛PSM Goods Receipt➛ERP number","reference":"","reference_display":"ERP number","type":"string","base_type":"string","parent_table_name":"sn_shop_receipt","column_name":"erp_gr_number"},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.error_message","label":"6 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.status","label":"6 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":0.0},{"label":"Error","value":"Error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__dont_treat_as_error__","label":"6 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt","label":"6 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__action_status__","label":"6 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d8327dac-f21b-4d0d-8865-3555c39ce5fb"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_services","label":"7 - Generate HANA service goods receipt payload➛Service GR Services","reference_display":"Service GR Services","type":"array.object","base_type":"array.object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","child_name":"Item","uiUniqueId":"d5a0509c-ff43-4c6d-a18e-b3dc95c877f5","uiTypeLabel":"Array.Object","co_type_name":"FDd47a59ed274169102a5e28930a72bb18","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"53ebb141-7f05-4af2-9e3f-a23a93088bee","uiType":"array.object","child_type":"object","child_uiUniqueId":"94b97e35-a3d8-418a-89c5-2d43e5662945"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_record","label":"7 - Generate HANA service goods receipt payload➛Service GR Record","reference_display":"Service GR Record","type":"object","base_type":"object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","uiTypeLabel":"Object","co_type_name":"FDd47a59edd84169106a5e06bcc6bd5716","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"492c319e-0255-4016-a893-f5b09836cb97","uiType":"object","uiUniqueId":"a2f38114-5a21-4e6d-8ff7-03088cfc011b"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__dont_treat_as_error__","label":"7 - Generate HANA service goods receipt payload➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"629dfa6b-f744-4c95-9511-e4a45e286e86"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__action_status__","label":"7 - Generate HANA service goods receipt payload➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6776762a-b639-45fe-8ce9-01fd2e54faf1"}},{"name":"eaee31b8-065b-4d26-8d08-d6a6fcea2b1d.item","label":"6 - For Each➛ERP Line Number_child0","reference_display":"ERP Line Number_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.code","label":"3➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"subflow.psm_goods_receipt.purchase_order_line.erp_line_number","label":"Input➛PSM Goods Receipt➛Purchase order line➛ERP line number","reference":"","reference_display":"ERP line number","type":"string","base_type":"string","parent_table_name":"sn_shop_purchase_order_line","column_name":"erp_line_number"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__dont_treat_as_error__","label":"3 - Convert String to Array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"654de9cd-38d4-4acc-b219-b7d189e2367a"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__","label":"3 - Convert String to Array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3bf620e3-a622-4b55-9db3-18d9d86e2125"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.erp_line_number","label":"3 - Convert String to Array➛ERP Line Number","reference_display":"ERP Line Number","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD5eebf96a882025106c99b56cfb183d05","child_label":"ERP Line Number_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"erp_line_number_child0","child_uiUniqueId":"0252e8f3-7a7b-40c7-b990-ea801fe3beff","uiUniqueId":"f8ad5e8a-4995-4e65-9a91-de096982ff5d"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt.EV_ENTRYSHEET","label":"6 - Create Service Goods Receipt➛Goods Receipt➛Entry Sheet","type":"string","base_type":"string"},{"name":"subflow.psm_goods_receipt","label":"Input➛PSM Goods Receipt","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0e2e53f7-8313-41f1-8e71-5cfdc98a5889"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.json_response","label":"6 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.json_response","label":"8 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.context","label":"1 - Check Pre - Requisites➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.status","label":"1 - Check Pre - Requisites➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.output","label":"1 - Check Pre - Requisites➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}},{"name":"subflow.psm_goods_receipt.erp_source","label":"Input➛PSM Goods Receipt➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_shop_receipt","column_name":"erp_source"},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}}]</label_cache>
+        <label_cache>[{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"subflow.psm_goods_receipt.erp_source","label":"Input➛PSM Goods Receipt➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_shop_receipt","column_name":"erp_source"},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.output","label":"1 - Check Pre - Requisites➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.status","label":"1 - Check Pre - Requisites➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.context","label":"1 - Check Pre - Requisites➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.json_response","label":"8 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.json_response","label":"6 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"subflow.psm_goods_receipt","label":"Input➛PSM Goods Receipt","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0e2e53f7-8313-41f1-8e71-5cfdc98a5889"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt.EV_ENTRYSHEET","label":"6 - Create Service Goods Receipt➛Goods Receipt➛Entry Sheet","type":"string","base_type":"string"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.erp_line_number","label":"3 - Convert String to Array➛ERP Line Number","reference_display":"ERP Line Number","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD5eebf96a882025106c99b56cfb183d05","child_label":"ERP Line Number_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"erp_line_number_child0","child_uiUniqueId":"0252e8f3-7a7b-40c7-b990-ea801fe3beff","uiUniqueId":"f8ad5e8a-4995-4e65-9a91-de096982ff5d"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__","label":"3 - Convert String to Array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3bf620e3-a622-4b55-9db3-18d9d86e2125"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__dont_treat_as_error__","label":"3 - Convert String to Array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"654de9cd-38d4-4acc-b219-b7d189e2367a"}},{"name":"subflow.psm_goods_receipt.purchase_order_line.erp_line_number","label":"Input➛PSM Goods Receipt➛Purchase order line➛ERP line number","reference":"","reference_display":"ERP line number","type":"string","base_type":"string","parent_table_name":"sn_shop_purchase_order_line","column_name":"erp_line_number"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.code","label":"3➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"eaee31b8-065b-4d26-8d08-d6a6fcea2b1d.item","label":"6 - For Each➛ERP Line Number_child0","reference_display":"ERP Line Number_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__action_status__","label":"7 - Generate HANA service goods receipt payload➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6776762a-b639-45fe-8ce9-01fd2e54faf1"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__dont_treat_as_error__","label":"7 - Generate HANA service goods receipt payload➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"629dfa6b-f744-4c95-9511-e4a45e286e86"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_record","label":"7 - Generate HANA service goods receipt payload➛Service GR Record","reference_display":"Service GR Record","type":"object","base_type":"object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","uiTypeLabel":"Object","co_type_name":"FDd47a59edd84169106a5e06bcc6bd5716","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"492c319e-0255-4016-a893-f5b09836cb97","uiType":"object","uiUniqueId":"a2f38114-5a21-4e6d-8ff7-03088cfc011b"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_services","label":"7 - Generate HANA service goods receipt payload➛Service GR Services","reference_display":"Service GR Services","type":"array.object","base_type":"array.object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","child_name":"Item","uiUniqueId":"d5a0509c-ff43-4c6d-a18e-b3dc95c877f5","uiTypeLabel":"Array.Object","co_type_name":"FDd47a59ed274169102a5e28930a72bb18","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"53ebb141-7f05-4af2-9e3f-a23a93088bee","uiType":"array.object","child_type":"object","child_uiUniqueId":"94b97e35-a3d8-418a-89c5-2d43e5662945"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d8327dac-f21b-4d0d-8865-3555c39ce5fb"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__action_status__","label":"6 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt","label":"6 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__dont_treat_as_error__","label":"6 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.status","label":"6 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":0.0},{"label":"Error","value":"Error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.error_message","label":"6 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"subflow.psm_goods_receipt.erp_gr_number","label":"Input➛PSM Goods Receipt➛ERP number","reference":"","reference_display":"ERP number","type":"string","base_type":"string","parent_table_name":"sn_shop_receipt","column_name":"erp_gr_number"},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.record","label":"14 - Update Record➛Receipt Record","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.table_name","label":"14 - Update Record➛Receipt Table","reference":"sn_shop_receipt","reference_display":"Receipt","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__action_status__","label":"14 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__dont_treat_as_error__","label":"14 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.entry_sheet","label":"Flow Variables➛Entry Sheet","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b7c5aa0-08e0-40bc-a257-658d428311de"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.message","label":"3➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.total_duration","label":"17 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.scheduled_end_date_time","label":"17 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"subflow.connection_alias","label":"Input➛Connection Alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"557ef8bc-b1a9-449e-aa6e-08f2707efa9b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.context","label":"1 - Check Pre - Requisites for SAP➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.status","label":"1 - Check Pre - Requisites for SAP➛Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.output","label":"1 - Check Pre - Requisites for SAP➛Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}}]</label_cache>
         <master_snapshot>9f56ef5a87352950c04eb259dabb3531</master_snapshot>
         <name>Create service goods receipt in SAP S4HANA</name>
         <natlang/>
@@ -37,7 +37,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_flow_9d6f0c9a87f925502a18b846dabb3534</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-20 08:13:58</sys_updated_on>
+        <sys_updated_on>2023-04-22 11:47:24</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=9d6f0c9a87f925502a18b846dabb3534"/>
@@ -408,10 +408,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>2f949452873d25502a18b846dabb3510</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>d5a30276-3452-4437-8877-cc17d9fa1c95</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2f949452873d25502a18b846dabb3510"/>
@@ -481,10 +481,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-20 07:42:19</sys_created_on>
         <sys_id>cd6f66f187166150c04eb259dabb35e2</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>7def3836-864b-4fc0-a5b8-d2decf34ef2d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cd6f66f187166150c04eb259dabb35e2"/>
@@ -532,10 +532,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:34</sys_created_on>
         <sys_id>ce945452873d25502a18b846dabb35e1</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>63b242b1-5225-4f1f-84cf-f93417a32742</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ce945452873d25502a18b846dabb35e1"/>
@@ -606,10 +606,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>f9945452873d25502a18b846dabb35c9</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
         <ui_id>eb2dabdc-ffbc-4a16-9535-018228bdab6c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f9945452873d25502a18b846dabb35c9"/>
@@ -628,43 +628,69 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=f9945452873d25502a18b846dabb35c9"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=f9945452873d25502a18b846dabb35c9"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT IN40e7d8fe8706a5102a18b846dabb35af"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT IN66974f8a879e21102a18b846dabb35c5"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
         <flow display_value="Create service goods receipt in SAP S4HANA">9d6f0c9a87f925502a18b846dabb3534</flow>
         <inputs/>
+        <inputs/>
         <order>1</order>
         <parent_ui_id/>
-        <subflow display_value="">f01bef65870e6110c04eb259dabb350d</subflow>
+        <subflow display_value="Check Pre - Requisites for SAP">8d2426c44754a51029806813846d43f3</subflow>
         <subflow_instance_inputs/>
         <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:34</sys_created_on>
-        <sys_id>40e7d8fe8706a5102a18b846dabb35af</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_created_on>2023-04-21 04:06:34</sys_created_on>
+        <sys_id>66974f8a879e21102a18b846dabb35c5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
-        <ui_id>a16eaf02-0e5d-4274-8f9b-e290b43d298f</ui_id>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
+        <ui_id>ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2</ui_id>
     </sys_hub_sub_flow_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=40e7d8fe8706a5102a18b846dabb35af"/>
+    <sys_variable_value action="delete_multiple" query="document_key=66974f8a879e21102a18b846dabb35c5"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
-        <document_key>40e7d8fe8706a5102a18b846dabb35af</document_key>
+        <document_key>66974f8a879e21102a18b846dabb35c5</document_key>
         <order>0</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:35</sys_created_on>
-        <sys_id>18e71cfe8706a5102a18b846dabb3506</sys_id>
+        <sys_created_on>2023-04-21 04:06:35</sys_created_on>
+        <sys_id>32974f8a879e21102a18b846dabb35f8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:35</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:35</sys_updated_on>
         <value>1</value>
-        <variable display_value="Wait For Completion">c4e7d8fe8706a5102a18b846dabb35b0</variable>
+        <variable display_value="Wait For Completion">26974f8a879e21102a18b846dabb35c6</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_40e7d8fe8706a5102a18b846dabb35af^id=40e7d8fe8706a5102a18b846dabb35af"/>
-    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=40e7d8fe8706a5102a18b846dabb35af^sys_idNOT INc4e7d8fe8706a5102a18b846dabb35b0"/>
+    <sys_element_mapping action="delete_multiple" query="id=66974f8a879e21102a18b846dabb35c5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>66974f8a879e21102a18b846dabb35c5</id>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-04-21 04:06:35</sys_created_on>
+        <sys_id>f2974f8a879e21102a18b846dabb35f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-04-21 04:06:35</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8d2426c44754a51029806813846d43f3</table>
+        <value>{{subflow.connection_alias}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>erp_source</field>
+        <id>66974f8a879e21102a18b846dabb35c5</id>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-04-21 04:06:35</sys_created_on>
+        <sys_id>3e974f8a879e21102a18b846dabb35f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-04-21 04:06:35</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8d2426c44754a51029806813846d43f3</table>
+        <value>{{subflow.psm_goods_receipt.erp_source}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_66974f8a879e21102a18b846dabb35c5^id=66974f8a879e21102a18b846dabb35c5"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=66974f8a879e21102a18b846dabb35c5^sys_idNOT IN26974f8a879e21102a18b846dabb35c6"/>
     <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -705,10 +731,10 @@
         <label>Wait For Completion</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="">40e7d8fe8706a5102a18b846dabb35af</model>
-        <model_id>40e7d8fe8706a5102a18b846dabb35af</model_id>
+        <model display_value="">66974f8a879e21102a18b846dabb35c5</model>
+        <model_id>66974f8a879e21102a18b846dabb35c5</model_id>
         <model_table>sys_hub_flow_logic_ext_input</model_table>
-        <name>var__m_sys_hub_sub_flow_instance_inputs_40e7d8fe8706a5102a18b846dabb35af</name>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_66974f8a879e21102a18b846dabb35c5</name>
         <next_element/>
         <order>0</order>
         <primary>false</primary>
@@ -726,8 +752,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:34</sys_created_on>
-        <sys_id>c4e7d8fe8706a5102a18b846dabb35b0</sys_id>
+        <sys_created_on>2023-04-21 04:06:34</sys_created_on>
+        <sys_id>26974f8a879e21102a18b846dabb35c6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -735,7 +761,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:34</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -748,7 +774,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_sub_flow_instance_inputs>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=40e7d8fe8706a5102a18b846dabb35af"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=66974f8a879e21102a18b846dabb35c5"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT IN02945452873d25502a18b846dabb35fd,0a945452873d25502a18b846dabb35d5,16949452873d25502a18b846dabb3504,37949452873d25502a18b846dabb3517,3b949452873d25502a18b846dabb3513,3b949452873d25502a18b846dabb3581,3d945452873d25502a18b846dabb35cc,4e949452873d25502a18b846dabb3500,56949452873d25502a18b846dabb350a,5ce71cfe8706a5102a18b846dabb3507,73949452873d25502a18b846dabb3575,77949452873d25502a18b846dabb357b,8ba827aa8742a5102a18b846dabb358b,96468c0487d2e9102a18b846dabb35a1,96949452873d25502a18b846dabb3507,b7949452873d25502a18b846dabb3578,b9945452873d25502a18b846dabb35d1,d2468c0487d2e9102a18b846dabb35a4,de468c0487d2e9102a18b846dabb35a7,f3949452873d25502a18b846dabb3572,f3949452873d25502a18b846dabb357e"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">4a945452873d25502a18b846dabb35fc</block>
@@ -772,10 +798,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:34</sys_created_on>
         <sys_id>02945452873d25502a18b846dabb35fd</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>4997813d-efc3-4322-be76-38d26a67206d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -846,10 +872,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:34</sys_created_on>
         <sys_id>0a945452873d25502a18b846dabb35d5</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>eaee31b8-065b-4d26-8d08-d6a6fcea2b1d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -893,10 +919,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>16949452873d25502a18b846dabb3504</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>a7710646-e848-49f1-a9dd-253adc6b8320</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -940,10 +966,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>37949452873d25502a18b846dabb3517</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>d56e4bf0-2402-4d65-96d1-470c958db872</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -988,10 +1014,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>3b949452873d25502a18b846dabb3513</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>5e79dd12-1678-418a-887c-0026be8a9d32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1049,10 +1075,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>3b949452873d25502a18b846dabb3581</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>a9886d32-ea6d-4f7b-9849-96d3a415727b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1083,10 +1109,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>3d945452873d25502a18b846dabb35cc</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
         <ui_id>c46e2177-7f6f-4dc1-9784-ed7a426e3a4a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1132,10 +1158,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>4e949452873d25502a18b846dabb3500</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>089ac20f-81ae-4737-932f-40891102c143</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1179,10 +1205,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>56949452873d25502a18b846dabb350a</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>f591a416-91e4-4965-bd4a-a77c390a1b13</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1227,10 +1253,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:35</sys_created_on>
         <sys_id>5ce71cfe8706a5102a18b846dabb3507</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
         <ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1244,11 +1270,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:35</sys_created_on>
         <sys_id>d4e71cfe8706a5102a18b846dabb350c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:35</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:35</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{a16eaf02-0e5d-4274-8f9b-e290b43d298f.status}}=Success</value>
+        <value>{{ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.status}}=Success</value>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_9d6f0c9a87f925502a18b846dabb3534^id=5ce71cfe8706a5102a18b846dabb3507"/>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5ce71cfe8706a5102a18b846dabb3507"/>
@@ -1275,10 +1301,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>73949452873d25502a18b846dabb3575</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>960ac4c4-53f8-4309-97f3-0bc0fe99ce83</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1321,10 +1347,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>77949452873d25502a18b846dabb357b</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>f913693f-135b-426f-a80c-277188a95ba9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1355,10 +1381,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 09:32:20</sys_created_on>
         <sys_id>8ba827aa8742a5102a18b846dabb358b</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>a16fb80e-236f-4afb-b0cd-0b91712595c9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1418,10 +1444,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>96468c0487d2e9102a18b846dabb35a1</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1452,10 +1478,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>96949452873d25502a18b846dabb3507</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>56fd5097-643d-4d83-b6a6-af7f88306f16</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1486,10 +1512,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>b7949452873d25502a18b846dabb3578</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>26bb188a-a364-4b28-83b5-c854aea24398</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1521,10 +1547,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>b9945452873d25502a18b846dabb35d1</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
         <ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1569,10 +1595,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>d2468c0487d2e9102a18b846dabb35a4</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>2d79fe47-41b8-4607-b1d9-941808caa7c6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1586,11 +1612,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>16468c0487d2e9102a18b846dabb35a7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-14 08:54:07</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:37</sys_updated_on>
         <table>var__m_sys_hub_flow_output_9d6f0c9a87f925502a18b846dabb3534</table>
-        <value>{{a16eaf02-0e5d-4274-8f9b-e290b43d298f.output}}</value>
+        <value>{{ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.output}}</value>
     </sys_element_mapping>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d2468c0487d2e9102a18b846dabb35a4"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d2468c0487d2e9102a18b846dabb35a4"/>
@@ -1615,10 +1641,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>de468c0487d2e9102a18b846dabb35a7</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:26</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>6d1b4640-245c-49df-aafa-d76224da32bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1649,10 +1675,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>f3949452873d25502a18b846dabb3572</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:03</sys_updated_on>
         <ui_id>56892a7f-8bb7-4c02-8fee-3c9d2e769978</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1684,10 +1710,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>f3949452873d25502a18b846dabb357e</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:04</sys_updated_on>
         <ui_id>11fca524-4d7c-4325-a0bb-da2d615d0c2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2018,7 +2044,7 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9d6f0c9a87f925502a18b846dabb3534"/>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT INa666639a87352950c04eb259dabb3563"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@1985eea</plan>
+        <plan>com.snc.process_flow.engine.ProcessPlan@7e7ab0</plan>
         <plan_id display_value="Create service goods receipt in SAP S4HANA">9d6f0c9a87f925502a18b846dabb3534</plan_id>
         <snapshot>9f56ef5a87352950c04eb259dabb3531</snapshot>
         <sys_created_by>varun</sys_created_by>
@@ -2026,11 +2052,11 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a666639a87352950c04eb259dabb3563</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:24</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:07:02</sys_updated_on>
     </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2043,7 +2069,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>create_service_goods_receipt_in_sap_s4hana</internal_name>
-        <label_cache>[{"name":"subflow.connection_alias","label":"Input➛Connection Alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"557ef8bc-b1a9-449e-aa6e-08f2707efa9b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.scheduled_end_date_time","label":"17 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.total_duration","label":"17 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.message","label":"3➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.entry_sheet","label":"Flow Variables➛Entry Sheet","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b7c5aa0-08e0-40bc-a257-658d428311de"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__dont_treat_as_error__","label":"14 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__action_status__","label":"14 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.table_name","label":"14 - Update Record➛Receipt Table","reference":"sn_shop_receipt","reference_display":"Receipt","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.record","label":"14 - Update Record➛Receipt Record","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.psm_goods_receipt.erp_gr_number","label":"Input➛PSM Goods Receipt➛ERP number","reference":"","reference_display":"ERP number","type":"string","base_type":"string","parent_table_name":"sn_shop_receipt","column_name":"erp_gr_number"},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.error_message","label":"6 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.status","label":"6 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":0.0},{"label":"Error","value":"Error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__dont_treat_as_error__","label":"6 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt","label":"6 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__action_status__","label":"6 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d8327dac-f21b-4d0d-8865-3555c39ce5fb"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_services","label":"7 - Generate HANA service goods receipt payload➛Service GR Services","reference_display":"Service GR Services","type":"array.object","base_type":"array.object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","child_name":"Item","uiUniqueId":"d5a0509c-ff43-4c6d-a18e-b3dc95c877f5","uiTypeLabel":"Array.Object","co_type_name":"FDd47a59ed274169102a5e28930a72bb18","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"53ebb141-7f05-4af2-9e3f-a23a93088bee","uiType":"array.object","child_type":"object","child_uiUniqueId":"94b97e35-a3d8-418a-89c5-2d43e5662945"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_record","label":"7 - Generate HANA service goods receipt payload➛Service GR Record","reference_display":"Service GR Record","type":"object","base_type":"object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","uiTypeLabel":"Object","co_type_name":"FDd47a59edd84169106a5e06bcc6bd5716","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"492c319e-0255-4016-a893-f5b09836cb97","uiType":"object","uiUniqueId":"a2f38114-5a21-4e6d-8ff7-03088cfc011b"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__dont_treat_as_error__","label":"7 - Generate HANA service goods receipt payload➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"629dfa6b-f744-4c95-9511-e4a45e286e86"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__action_status__","label":"7 - Generate HANA service goods receipt payload➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6776762a-b639-45fe-8ce9-01fd2e54faf1"}},{"name":"eaee31b8-065b-4d26-8d08-d6a6fcea2b1d.item","label":"6 - For Each➛ERP Line Number_child0","reference_display":"ERP Line Number_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.code","label":"3➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"subflow.psm_goods_receipt.purchase_order_line.erp_line_number","label":"Input➛PSM Goods Receipt➛Purchase order line➛ERP line number","reference":"","reference_display":"ERP line number","type":"string","base_type":"string","parent_table_name":"sn_shop_purchase_order_line","column_name":"erp_line_number"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__dont_treat_as_error__","label":"3 - Convert String to Array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"654de9cd-38d4-4acc-b219-b7d189e2367a"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__","label":"3 - Convert String to Array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3bf620e3-a622-4b55-9db3-18d9d86e2125"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.erp_line_number","label":"3 - Convert String to Array➛ERP Line Number","reference_display":"ERP Line Number","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD5eebf96a882025106c99b56cfb183d05","child_label":"ERP Line Number_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"erp_line_number_child0","child_uiUniqueId":"0252e8f3-7a7b-40c7-b990-ea801fe3beff","uiUniqueId":"f8ad5e8a-4995-4e65-9a91-de096982ff5d"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt.EV_ENTRYSHEET","label":"6 - Create Service Goods Receipt➛Goods Receipt➛Entry Sheet","type":"string","base_type":"string"},{"name":"subflow.psm_goods_receipt","label":"Input➛PSM Goods Receipt","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0e2e53f7-8313-41f1-8e71-5cfdc98a5889"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.json_response","label":"6 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.json_response","label":"8 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.context","label":"1 - Check Pre - Requisites➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.status","label":"1 - Check Pre - Requisites➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.output","label":"1 - Check Pre - Requisites➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}},{"name":"subflow.psm_goods_receipt.erp_source","label":"Input➛PSM Goods Receipt➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_shop_receipt","column_name":"erp_source"},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}}]</label_cache>
+        <label_cache>[{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"7def3836-864b-4fc0-a5b8-d2decf34ef2d.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"subflow.psm_goods_receipt.erp_source","label":"Input➛PSM Goods Receipt➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_shop_receipt","column_name":"erp_source"},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.output","label":"1 - Check Pre - Requisites➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.status","label":"1 - Check Pre - Requisites➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"a16eaf02-0e5d-4274-8f9b-e290b43d298f.context","label":"1 - Check Pre - Requisites➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.json_response","label":"8 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.json_response","label":"6 - Create Service Goods Receipt➛JSON Response","reference_display":"JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"06c6995f-47ae-43ef-877b-41e1819d05fb"}},{"name":"subflow.psm_goods_receipt","label":"Input➛PSM Goods Receipt","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0e2e53f7-8313-41f1-8e71-5cfdc98a5889"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt.EV_ENTRYSHEET","label":"6 - Create Service Goods Receipt➛Goods Receipt➛Entry Sheet","type":"string","base_type":"string"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.erp_line_number","label":"3 - Convert String to Array➛ERP Line Number","reference_display":"ERP Line Number","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD5eebf96a882025106c99b56cfb183d05","child_label":"ERP Line Number_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"erp_line_number_child0","child_uiUniqueId":"0252e8f3-7a7b-40c7-b990-ea801fe3beff","uiUniqueId":"f8ad5e8a-4995-4e65-9a91-de096982ff5d"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__","label":"3 - Convert String to Array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3bf620e3-a622-4b55-9db3-18d9d86e2125"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__dont_treat_as_error__","label":"3 - Convert String to Array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"654de9cd-38d4-4acc-b219-b7d189e2367a"}},{"name":"subflow.psm_goods_receipt.purchase_order_line.erp_line_number","label":"Input➛PSM Goods Receipt➛Purchase order line➛ERP line number","reference":"","reference_display":"ERP line number","type":"string","base_type":"string","parent_table_name":"sn_shop_purchase_order_line","column_name":"erp_line_number"},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.code","label":"3➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"eaee31b8-065b-4d26-8d08-d6a6fcea2b1d.item","label":"6 - For Each➛ERP Line Number_child0","reference_display":"ERP Line Number_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__action_status__","label":"7 - Generate HANA service goods receipt payload➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6776762a-b639-45fe-8ce9-01fd2e54faf1"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.__dont_treat_as_error__","label":"7 - Generate HANA service goods receipt payload➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"629dfa6b-f744-4c95-9511-e4a45e286e86"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_record","label":"7 - Generate HANA service goods receipt payload➛Service GR Record","reference_display":"Service GR Record","type":"object","base_type":"object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","uiTypeLabel":"Object","co_type_name":"FDd47a59edd84169106a5e06bcc6bd5716","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"492c319e-0255-4016-a893-f5b09836cb97","uiType":"object","uiUniqueId":"a2f38114-5a21-4e6d-8ff7-03088cfc011b"}},{"name":"63b242b1-5225-4f1f-84cf-f93417a32742.service_gr_services","label":"7 - Generate HANA service goods receipt payload➛Service GR Services","reference_display":"Service GR Services","type":"array.object","base_type":"array.object","attributes":{"sourceId":"86fb02d0-ed42-40d7-9be1-3abbdc1588a9","child_name":"Item","uiUniqueId":"d5a0509c-ff43-4c6d-a18e-b3dc95c877f5","uiTypeLabel":"Array.Object","co_type_name":"FDd47a59ed274169102a5e28930a72bb18","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"53ebb141-7f05-4af2-9e3f-a23a93088bee","uiType":"array.object","child_type":"object","child_uiUniqueId":"94b97e35-a3d8-418a-89c5-2d43e5662945"}},{"name":"flow_variable.count","label":"Flow Variables➛count","reference":"","reference_display":"","type":"integer","base_type":"integer","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d8327dac-f21b-4d0d-8865-3555c39ce5fb"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__action_status__","label":"6 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.goods_receipt","label":"6 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.__dont_treat_as_error__","label":"6 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.status","label":"6 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":0.0},{"label":"Error","value":"Error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4fe94ab8-580e-4f27-8388-db252f740d0a.error_message","label":"6 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"subflow.psm_goods_receipt.erp_gr_number","label":"Input➛PSM Goods Receipt➛ERP number","reference":"","reference_display":"ERP number","type":"string","base_type":"string","parent_table_name":"sn_shop_receipt","column_name":"erp_gr_number"},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.record","label":"14 - Update Record➛Receipt Record","reference":"sn_shop_receipt","reference_display":"Receipt","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.table_name","label":"14 - Update Record➛Receipt Table","reference":"sn_shop_receipt","reference_display":"Receipt","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__action_status__","label":"14 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5a30276-3452-4437-8877-cc17d9fa1c95.__dont_treat_as_error__","label":"14 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.entry_sheet","label":"Flow Variables➛Entry Sheet","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b7c5aa0-08e0-40bc-a257-658d428311de"}},{"name":"eb2dabdc-ffbc-4a16-9535-018228bdab6c.__action_status__.message","label":"3➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.total_duration","label":"17 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a16fb80e-236f-4afb-b0cd-0b91712595c9.scheduled_end_date_time","label":"17 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"37a5a983-7298-4900-b316-088bbbb3f786.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__action_status__","label":"8 - Create Service Goods Receipt➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"94c7b2dd-2a1f-4642-b4c9-752f7108ca7f"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt","label":"8 - Create Service Goods Receipt➛Goods Receipt","reference_display":"Goods Receipt","type":"dynamic_object","base_type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.__dont_treat_as_error__","label":"8 - Create Service Goods Receipt➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"41e48217-a8fd-47db-befd-67b8e6724235"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.goods_receipt_json_response","label":"8 - Create Service Goods Receipt➛Goods Receipt JSON Response","reference_display":"Goods Receipt JSON Response","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d350685f-4a59-4988-9a77-433937f46674"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.status","label":"8 - Create Service Goods Receipt➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7352d773-8816-4d3c-8cfc-265f68b9d618"}},{"name":"4c0a898d-30b4-49a3-9e3a-3aa9812bfb35.error_message","label":"8 - Create Service Goods Receipt➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"07ed72f2-ed2b-4593-a731-4520687f1196"}},{"name":"subflow.connection_alias","label":"Input➛Connection Alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"557ef8bc-b1a9-449e-aa6e-08f2707efa9b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.context","label":"1 - Check Pre - Requisites for SAP➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.status","label":"1 - Check Pre - Requisites for SAP➛Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f8f31b15-3400-43c5-9885-223d5e07b592"}},{"name":"ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.output","label":"1 - Check Pre - Requisites for SAP➛Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"696adac1-394f-4334-86b1-cd545d685918"}}]</label_cache>
         <master>true</master>
         <name>Create service goods receipt in SAP S4HANA</name>
         <natlang/>
@@ -2060,7 +2086,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9f56ef5a87352950c04eb259dabb3531</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2068,7 +2094,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:20</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:57</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=9f56ef5a87352950c04eb259dabb3531"/>
@@ -2439,10 +2465,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:07</sys_created_on>
         <sys_id>1066239a87352950c04eb259dabb350f</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>63b242b1-5225-4f1f-84cf-f93417a32742</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1066239a87352950c04eb259dabb350f"/>
@@ -2513,10 +2539,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:13</sys_created_on>
         <sys_id>2166239a87352950c04eb259dabb3597</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>d5a30276-3452-4437-8877-cc17d9fa1c95</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2166239a87352950c04eb259dabb3597"/>
@@ -2586,10 +2612,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-20 07:42:37</sys_created_on>
         <sys_id>2d7f6af187166150c04eb259dabb3549</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>7def3836-864b-4fc0-a5b8-d2decf34ef2d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2d7f6af187166150c04eb259dabb3549"/>
@@ -2637,10 +2663,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:07</sys_created_on>
         <sys_id>4066239a87352950c04eb259dabb3502</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>eb2dabdc-ffbc-4a16-9535-018228bdab6c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4066239a87352950c04eb259dabb3502"/>
@@ -2659,43 +2685,69 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=4066239a87352950c04eb259dabb3502"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=4066239a87352950c04eb259dabb3502"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT INa8f7dcfe8706a5102a18b846dabb359e"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT IN27a783ca879e21102a18b846dabb358c"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
         <flow display_value="Create service goods receipt in SAP S4HANA">9f56ef5a87352950c04eb259dabb3531</flow>
         <inputs/>
+        <inputs/>
         <order>1</order>
         <parent_ui_id/>
-        <subflow display_value="">f01bef65870e6110c04eb259dabb350d</subflow>
+        <subflow display_value="Check Pre - Requisites for SAP">8d2426c44754a51029806813846d43f3</subflow>
         <subflow_instance_inputs/>
         <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:52</sys_created_on>
-        <sys_id>a8f7dcfe8706a5102a18b846dabb359e</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_created_on>2023-04-21 04:06:54</sys_created_on>
+        <sys_id>27a783ca879e21102a18b846dabb358c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
-        <ui_id>a16eaf02-0e5d-4274-8f9b-e290b43d298f</ui_id>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
+        <ui_id>ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2</ui_id>
     </sys_hub_sub_flow_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=a8f7dcfe8706a5102a18b846dabb359e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=27a783ca879e21102a18b846dabb358c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
-        <document_key>a8f7dcfe8706a5102a18b846dabb359e</document_key>
+        <document_key>27a783ca879e21102a18b846dabb358c</document_key>
         <order>0</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:53</sys_created_on>
-        <sys_id>b0f7dcfe8706a5102a18b846dabb35b4</sys_id>
+        <sys_created_on>2023-04-21 04:06:54</sys_created_on>
+        <sys_id>27a783ca879e21102a18b846dabb359f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:53</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:54</sys_updated_on>
         <value>1</value>
-        <variable display_value="Wait For Completion">64f7dcfe8706a5102a18b846dabb359f</variable>
+        <variable display_value="Wait For Completion">efa783ca879e21102a18b846dabb358c</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_a8f7dcfe8706a5102a18b846dabb359e^id=a8f7dcfe8706a5102a18b846dabb359e"/>
-    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=a8f7dcfe8706a5102a18b846dabb359e^sys_idNOT IN64f7dcfe8706a5102a18b846dabb359f"/>
+    <sys_element_mapping action="delete_multiple" query="id=27a783ca879e21102a18b846dabb358c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>27a783ca879e21102a18b846dabb358c</id>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-04-21 04:06:54</sys_created_on>
+        <sys_id>6ba783ca879e21102a18b846dabb359e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-04-21 04:06:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8d2426c44754a51029806813846d43f3</table>
+        <value>{{subflow.connection_alias}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>erp_source</field>
+        <id>27a783ca879e21102a18b846dabb358c</id>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-04-21 04:06:54</sys_created_on>
+        <sys_id>a7a783ca879e21102a18b846dabb359e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-04-21 04:06:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8d2426c44754a51029806813846d43f3</table>
+        <value>{{subflow.psm_goods_receipt.erp_source}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_27a783ca879e21102a18b846dabb358c^id=27a783ca879e21102a18b846dabb358c"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=27a783ca879e21102a18b846dabb358c^sys_idNOT INefa783ca879e21102a18b846dabb358c"/>
     <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2736,10 +2788,10 @@
         <label>Wait For Completion</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="">a8f7dcfe8706a5102a18b846dabb359e</model>
-        <model_id>a8f7dcfe8706a5102a18b846dabb359e</model_id>
+        <model display_value="">27a783ca879e21102a18b846dabb358c</model>
+        <model_id>27a783ca879e21102a18b846dabb358c</model_id>
         <model_table>sys_hub_flow_logic_ext_input</model_table>
-        <name>var__m_sys_hub_sub_flow_instance_inputs_a8f7dcfe8706a5102a18b846dabb359e</name>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_27a783ca879e21102a18b846dabb358c</name>
         <next_element/>
         <order>0</order>
         <primary>false</primary>
@@ -2757,8 +2809,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
         <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-10 12:58:52</sys_created_on>
-        <sys_id>64f7dcfe8706a5102a18b846dabb359f</sys_id>
+        <sys_created_on>2023-04-21 04:06:54</sys_created_on>
+        <sys_id>efa783ca879e21102a18b846dabb358c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -2766,7 +2818,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:52</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2779,7 +2831,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_sub_flow_instance_inputs>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=a8f7dcfe8706a5102a18b846dabb359e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=27a783ca879e21102a18b846dabb358c"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT IN3356ef5a87352950c04eb259dabb35db,3356ef5a87352950c04eb259dabb35ee,3e56804487d2e9102a18b846dabb3548,62b8e7aa8742a5102a18b846dabb359c,7756ef5a87352950c04eb259dabb35b8,7b56ef5a87352950c04eb259dabb35f3,7f56ef5a87352950c04eb259dabb35b0,7f56ef5a87352950c04eb259dabb35e0,94f7dcfe8706a5102a18b846dabb3519,b656804487d2e9102a18b846dabb354c,b756ef5a87352950c04eb259dabb35e4,bf56ef5a87352950c04eb259dabb35dd,bf56ef5a87352950c04eb259dabb35ea,bf56ef5a87352950c04eb259dabb35f0,c866ef5a87352950c04eb259dabb35f6,f256804487d2e9102a18b846dabb352d,f356ef5a87352950c04eb259dabb35bf,f356ef5a87352950c04eb259dabb35e8,f756ef5a87352950c04eb259dabb35ac,fb56ef5a87352950c04eb259dabb35b4,ff56ef5a87352950c04eb259dabb35bb"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">de949452873d25502a18b846dabb3506</block>
@@ -2802,10 +2854,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>3356ef5a87352950c04eb259dabb35db</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>56fd5097-643d-4d83-b6a6-af7f88306f16</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2836,10 +2888,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>3356ef5a87352950c04eb259dabb35ee</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>26bb188a-a364-4b28-83b5-c854aea24398</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2871,10 +2923,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>3e56804487d2e9102a18b846dabb3548</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:20</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:57</sys_updated_on>
         <ui_id>2d79fe47-41b8-4607-b1d9-941808caa7c6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2888,11 +2940,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>7e56804487d2e9102a18b846dabb354b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-14 08:54:25</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:54</sys_updated_on>
         <table>var__m_sys_hub_flow_output_9f56ef5a87352950c04eb259dabb3531</table>
-        <value>{{a16eaf02-0e5d-4274-8f9b-e290b43d298f.output}}</value>
+        <value>{{ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.output}}</value>
     </sys_element_mapping>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3e56804487d2e9102a18b846dabb3548"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=3e56804487d2e9102a18b846dabb3548"/>
@@ -2917,10 +2969,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 09:32:34</sys_created_on>
         <sys_id>62b8e7aa8742a5102a18b846dabb359c</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>a16fb80e-236f-4afb-b0cd-0b91712595c9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2981,10 +3033,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7756ef5a87352950c04eb259dabb35b8</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>4997813d-efc3-4322-be76-38d26a67206d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3055,10 +3107,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7b56ef5a87352950c04eb259dabb35f3</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>11fca524-4d7c-4325-a0bb-da2d615d0c2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3102,10 +3154,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:05</sys_created_on>
         <sys_id>7f56ef5a87352950c04eb259dabb35b0</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3149,10 +3201,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7f56ef5a87352950c04eb259dabb35e0</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>5e79dd12-1678-418a-887c-0026be8a9d32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3211,10 +3263,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:51</sys_created_on>
         <sys_id>94f7dcfe8706a5102a18b846dabb3519</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3228,11 +3280,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:51</sys_created_on>
         <sys_id>d8f7dcfe8706a5102a18b846dabb351c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-10 12:58:51</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:52</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{a16eaf02-0e5d-4274-8f9b-e290b43d298f.status}}=Success</value>
+        <value>{{ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2.status}}=Success</value>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_9f56ef5a87352950c04eb259dabb3531^id=94f7dcfe8706a5102a18b846dabb3519"/>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=94f7dcfe8706a5102a18b846dabb3519"/>
@@ -3258,10 +3310,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>b656804487d2e9102a18b846dabb354c</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:20</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:57</sys_updated_on>
         <ui_id>6d1b4640-245c-49df-aafa-d76224da32bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3292,10 +3344,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>b756ef5a87352950c04eb259dabb35e4</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>d56e4bf0-2402-4d65-96d1-470c958db872</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3340,10 +3392,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35dd</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>f591a416-91e4-4965-bd4a-a77c390a1b13</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3388,10 +3440,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35ea</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>960ac4c4-53f8-4309-97f3-0bc0fe99ce83</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3434,10 +3486,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35f0</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>f913693f-135b-426f-a80c-277188a95ba9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3468,10 +3520,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>c866ef5a87352950c04eb259dabb35f6</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:20</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>a9886d32-ea6d-4f7b-9849-96d3a415727b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3502,10 +3554,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>f256804487d2e9102a18b846dabb352d</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:20</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3536,10 +3588,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>f356ef5a87352950c04eb259dabb35bf</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>a7710646-e848-49f1-a9dd-253adc6b8320</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3583,10 +3635,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>f356ef5a87352950c04eb259dabb35e8</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:56</sys_updated_on>
         <ui_id>56892a7f-8bb7-4c02-8fee-3c9d2e769978</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3617,10 +3669,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:05</sys_created_on>
         <sys_id>f756ef5a87352950c04eb259dabb35ac</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>c46e2177-7f6f-4dc1-9784-ed7a426e3a4a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3666,10 +3718,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>fb56ef5a87352950c04eb259dabb35b4</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:18</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>eaee31b8-065b-4d26-8d08-d6a6fcea2b1d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3714,10 +3766,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>ff56ef5a87352950c04eb259dabb35bb</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-20 07:58:19</sys_updated_on>
+        <sys_updated_on>2023-04-21 04:06:55</sys_updated_on>
         <ui_id>089ac20f-81ae-4737-932f-40891102c143</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
