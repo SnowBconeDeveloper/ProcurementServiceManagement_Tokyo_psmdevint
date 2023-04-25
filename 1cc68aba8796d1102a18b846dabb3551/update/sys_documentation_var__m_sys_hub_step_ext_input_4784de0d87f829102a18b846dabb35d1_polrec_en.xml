@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="polRec" label="polRec" language="en" table="var__m_sys_hub_step_ext_input_4784de0d87f829102a18b846dabb35d1">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>polRec</element>
+            <help/>
+            <hint/>
+            <label>polRec</label>
+            <language>en</language>
+            <name>var__m_sys_hub_step_ext_input_4784de0d87f829102a18b846dabb35d1</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>satya</sys_created_by>
+            <sys_created_on>2023-04-24 11:02:59</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>polRec</sys_name>
+            <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_input_4784de0d87f829102a18b846dabb35d1_polRec_en</sys_update_name>
+            <sys_updated_by>satya</sys_updated_by>
+            <sys_updated_on>2023-04-24 11:02:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
