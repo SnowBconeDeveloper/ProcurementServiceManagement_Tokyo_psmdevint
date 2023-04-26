@@ -18,12 +18,12 @@
         <element label="Data division marc" max_length="50" name="data_division_marc" type="string"/>
         <element label="Data division marc division 1" max_length="50" name="data_division_marc_division_1" type="string"/>
         <element label="Data division mard" max_length="50" name="data_division_mard" type="string"/>
-        <element label="Date as of which the price is valid" max_length="50" name="date_as_of_which_the_price_is_valid" type="glide_date_time"/>
-        <element label="Date from which future planned price 1 is valid" max_length="50" name="date_from_which_future_planned_price_1_is_valid" type="glide_date_time"/>
-        <element label="Date from which future planned price 2 is valid" max_length="50" name="date_from_which_future_planned_price_2_is_valid" type="glide_date_time"/>
-        <element label="Date from which future planned price 3 is valid" max_length="50" name="date_from_which_future_planned_price_3_is_valid" type="glide_date_time"/>
+        <element label="Date as of which the price is valid" max_length="50" name="date_as_of_which_the_price_is_valid" type="string"/>
+        <element label="Date from which future planned price 1 is valid" max_length="50" name="date_from_which_future_planned_price_1_is_valid" type="string"/>
+        <element label="Date from which future planned price 2 is valid" max_length="50" name="date_from_which_future_planned_price_2_is_valid" type="string"/>
+        <element label="Date from which future planned price 3 is valid" max_length="50" name="date_from_which_future_planned_price_3_is_valid" type="string"/>
         <element label="Date from which the plant specific material status is valid" max_length="50" name="date_from_which_the_plant_specific_material_status_is_valid" type="string"/>
-        <element label="Date of the last price change" max_length="50" name="date_of_the_last_price_change" type="glide_date_time"/>
+        <element label="Date of the last price change" max_length="50" name="date_of_the_last_price_change" type="string"/>
         <element label="Default storage location for external procurement" max_length="50" name="default_storage_location_for_external_procurement" type="string"/>
         <element label="Division" max_length="50" name="division" type="string"/>
         <element label="Erp source" max_length="50" name="erp_source" type="string"/>
@@ -110,7 +110,7 @@
         <element label="Unit of issue" max_length="50" name="unit_of_issue" type="string"/>
         <element label="Unit of mearsure group oil natural gas" max_length="50" name="unit_of_mearsure_group_oil_natural_gas" type="string"/>
         <element label="Unit of measure for maximum packing length width height" max_length="50" name="unit_of_measure_for_maximum_packing_length_width_height" type="string"/>
-        <element label="Utc time stamp in short form yyyymmddhhmmss" max_length="50" name="utc_time_stamp_in_short_form_yyyymmddhhmmss" type="glide_date_time"/>
+        <element label="Utc time stamp in short form yyyymmddhhmmss" max_length="50" name="utc_time_stamp_in_short_form_yyyymmddhhmmss" type="string"/>
         <element label="Valuated unrestricted use stock" max_length="50" name="valuated_unrestricted_use_stock" type="string"/>
         <element label="Valuation area" max_length="50" name="valuation_area" type="string"/>
         <element label="Valuation category" max_length="50" name="valuation_category" type="string"/>

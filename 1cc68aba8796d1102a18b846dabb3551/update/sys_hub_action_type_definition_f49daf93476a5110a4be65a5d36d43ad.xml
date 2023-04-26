@@ -10,209 +10,7 @@
         <category/>
         <copied_from>402256bb976599106ef838a71153af4e</copied_from>
         <copied_from_name>Segregate Material data</copied_from_name>
-        <description>&lt;p&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;The action "Segregate Material Data" is designed to assist SAP subflows. Its purpose is to take a JSON input and separate it into an array of&amp;nbsp;objects that can be added to an import set table.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inputs&amp;nbsp;&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Material Object&amp;nbsp;&lt;/strong&gt;: This input takes JSON data.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt;&amp;nbsp;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Material -&lt;/strong&gt;&amp;nbsp;This output provides the segregated response in table format.&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MARC&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;ul style="list-style-type: square;"&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material No&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant-Specific Material Status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchasing Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of issue&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material: MRP profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Controller&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Procurement Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Base quantity&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Profit Center&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in Transit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Production unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Issue Storage Location&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Serial Number Profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measure Group (Oil, Natural Gas,..)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Conversion Group (Oil, Natural Gas,..)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material freight group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from which the plant-specific material status is valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Assignment UoM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock transfer sales value (plant to plant) for VO material&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in transfer (plant to plant)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Data Division MARC&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Default storage location for external procurement&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MARA&lt;/span&gt;&lt;/strong&gt;
-&lt;ul style="list-style-type: square;"&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material No.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Created On&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;br /&gt; Material Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Base Unit of Measure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchase Order Unit of Measure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Size/dimensions&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Basic Material&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Industry Standard Description (such as ANSI or ISO)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchasing Value Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Gross Weight&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Net Weight&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Weight Unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Volume&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Volume Unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Container requirements&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage conditions&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Hazardous material number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Division&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Procurement rule&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Source of Supply&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Length&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Width&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Dimension for Length/Width/Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Product Hierarchy&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage percentage&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Net contents&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Manufacturer number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Dangerous Goods Indicator Profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Is Locked&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Relevant for Hazardous Substances&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Handling Unit Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measure for Maximum Packing Length/Width/Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material freight group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Loading Units&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Packaging Code&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Dangerous Goods Packaging Status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Return Code&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Return to Logistics Level&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Assignment UoM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Product Category&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Packaging Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Name of Person Who Created the Object&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Category&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; MAKT&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Description&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;MARD&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage Location&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Maintenance status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuated Unrestricted-Use Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in Quality Inspection&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total Stock of All Restricted Batches&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Blocked Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Blocked Stock Returns&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for whose stock in current year&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for stock in quality inspection in current year&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for restricted-use stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage location MRP indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage Bin&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Profit Center&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Created On&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Special procurement type at storage location level&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Data Division MARD&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;MBEW&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Area&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total Valuated Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Value of Total Valuated Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price control indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Standard price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total valuated stock in previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Value of total valuated stock in previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Standard price in the previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price unit of previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Fiscal Year of Current Period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Current period (posting period)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Category&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Previous price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date of the last price change&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date as of which the price is valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;UTC Time Stamp in Short Form (YYYYMMDDhhmmss)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future planned price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 1&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 2&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 3&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 1 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 2 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 3 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Is Costed with Quantity Structure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Previous planned price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Current Planned Price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical Inventory Blocking Indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Produced in-house&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; ATTYP&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Activation Status of a Repository Object&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Domain value key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Version of the entry (not used)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Short Text for Fixed Values&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language-specific values for domains, lower limit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language-specific values for domains, upper limit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Values for Domains: Single Value / Upper Limit&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;T006A&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;External Unit of Measurement in Commercial Format (3-Char)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;External Unit of Measurement in Technical Format (6-Char)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement Text (Maximum 10 Characters)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement Text (Maximum 30 Characters)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;ZT134T&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Description of material type&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; T023T&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Group Desc&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt;&amp;nbsp;This output provides the total number of rows in the SAP system.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+        <description/>
         <ih_action>false</ih_action>
         <internal_name>segregate_material_data</internal_name>
         <label_cache>[{"name":"{{action.mat_obj}}","label":"action➛Material object","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD099daf93846a5110388f8a01da077dc4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8918dfde-883f-41ba-80e1-bafdebccbbf9"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_MATERIAL}}","label":"step➛Pre Processing script➛Material Tables","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDcd9daf938c6a5110d4dc1ec42770f6ef","child_label":"Tables","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"ET_MATERIAL","child_uiUniqueId":"07e35fca-b368-4b45-8f80-b98bf82c43cc","uiUniqueId":"3c2376dd-e619-4d86-bb51-557519551623"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_TOTAL_ROWS}}","label":"step➛Pre Processing script➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"a0b2520f-2f97-41bc-b2f0-81501067c509"}}]</label_cache>
@@ -229,15 +27,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f49daf93476a5110a4be65a5d36d43ad</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Segregate Material Response</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f49daf93476a5110a4be65a5d36d43ad</sys_update_name>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:42</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:01:03</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -450,7 +248,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -485,7 +283,7 @@
         <internal_type display_value="String">string</internal_type>
         <label/>
         <mandatory>true</mandatory>
-        <max_length>65000</max_length>
+        <max_length>8000</max_length>
         <model display_value="Pre Processing script">8d9daf93476a5110a4be65a5d36d43dc</model>
         <model_id>8d9daf93476a5110a4be65a5d36d43dc</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -509,14 +307,14 @@
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-20 18:09:26</sys_created_on>
         <sys_id>c19daf93476a5110a4be65a5d36d43ec</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:37</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:00:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1327,17 +1125,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Segregate Material Response">f49daf93476a5110a4be65a5d36d43ad</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"df6da22147f6951096fcb777746d43a5","name":"plan","plan_signature":null}}</plan>
-        <snapshot>654d6f718352e9502aac11b6feaad3b6</snapshot>
+        <snapshot>7506bd23475a69105e5faca2026d43b0</snapshot>
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-27 13:15:30</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df6da22147f6951096fcb777746d43a5</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:43</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:01:06</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1349,209 +1147,7 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;The action "Segregate Material Data" is designed to assist SAP subflows. Its purpose is to take a JSON input and separate it into an array of&amp;nbsp;objects that can be added to an import set table.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inputs&amp;nbsp;&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Material Object&amp;nbsp;&lt;/strong&gt;: This input takes JSON data.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt;&amp;nbsp;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Material -&lt;/strong&gt;&amp;nbsp;This output provides the segregated response in table format.&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MARC&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;ul style="list-style-type: square;"&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material No&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant-Specific Material Status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchasing Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of issue&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material: MRP profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Controller&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Procurement Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Base quantity&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Profit Center&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in Transit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Production unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Issue Storage Location&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MRP Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Serial Number Profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measure Group (Oil, Natural Gas,..)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Conversion Group (Oil, Natural Gas,..)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material freight group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from which the plant-specific material status is valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Assignment UoM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock transfer sales value (plant to plant) for VO material&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in transfer (plant to plant)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Data Division MARC&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Default storage location for external procurement&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;MARA&lt;/span&gt;&lt;/strong&gt;
-&lt;ul style="list-style-type: square;"&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material No.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Created On&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;br /&gt; Material Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Base Unit of Measure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchase Order Unit of Measure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Size/dimensions&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Basic Material&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Industry Standard Description (such as ANSI or ISO)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Purchasing Value Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Gross Weight&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Net Weight&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Weight Unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Volume&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Volume Unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Container requirements&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage conditions&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Hazardous material number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Division&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Procurement rule&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Source of Supply&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Length&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Width&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Dimension for Length/Width/Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Product Hierarchy&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage percentage&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Net contents&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Manufacturer number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Dangerous Goods Indicator Profile&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Is Locked&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Relevant for Hazardous Substances&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Handling Unit Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measure for Maximum Packing Length/Width/Height&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material freight group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Loading Units&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Packaging Code&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Dangerous Goods Packaging Status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Return Code&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Return to Logistics Level&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Assignment UoM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Product Category&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Packaging Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Name of Person Who Created the Object&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Category&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; MAKT&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Description&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;MARD&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage Location&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Maintenance status&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuated Unrestricted-Use Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Stock in Quality Inspection&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total Stock of All Restricted Batches&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Blocked Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Blocked Stock Returns&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for whose stock in current year&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for stock in quality inspection in current year&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical inventory indicator for restricted-use stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage location MRP indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Storage Bin&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Profit Center&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Created On&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Plant&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Special procurement type at storage location level&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Data Division MARD&lt;br /&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;MBEW&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Client&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Number&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Area&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total Valuated Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Value of Total Valuated Stock&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price control indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Standard price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price unit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Total valuated stock in previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Value of total valuated stock in previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Standard price in the previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Price unit of previous period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Fiscal Year of Current Period&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Current period (posting period)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Valuation Category&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Previous price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date of the last price change&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date as of which the price is valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;UTC Time Stamp in Short Form (YYYYMMDDhhmmss)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future planned price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 1&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 2&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Future Planned Price 3&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 1 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 2 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Date from Which Future Planned Price 3 Is Valid&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Is Costed with Quantity Structure&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Previous planned price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Current Planned Price&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Physical Inventory Blocking Indicator&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Produced in-house&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; ATTYP&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Activation Status of a Repository Object&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Domain value key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Version of the entry (not used)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Short Text for Fixed Values&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language-specific values for domains, lower limit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language-specific values for domains, upper limit&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Values for Domains: Single Value / Upper Limit&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;T006A&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;External Unit of Measurement in Commercial Format (3-Char)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;External Unit of Measurement in Technical Format (6-Char)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement Text (Maximum 10 Characters)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Unit of Measurement Text (Maximum 30 Characters)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;ZT134T&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Language Key&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Type&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Description of material type&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt; T023T&lt;/strong&gt;&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material no.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Group&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;Material Group Desc&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class="ui-provider vx b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt;&amp;nbsp;This output provides the total number of rows in the SAP system.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+        <description/>
         <internal_name>segregate_material_data</internal_name>
         <label_cache>[{"name":"{{action.mat_obj}}","label":"action➛Material object","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD099daf93846a5110388f8a01da077dc4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8918dfde-883f-41ba-80e1-bafdebccbbf9"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_MATERIAL}}","label":"step➛Pre Processing script➛Material Tables","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDcd9daf938c6a5110d4dc1ec42770f6ef","child_label":"Tables","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"ET_MATERIAL","child_uiUniqueId":"07e35fca-b368-4b45-8f80-b98bf82c43cc","uiUniqueId":"3c2376dd-e619-4d86-bb51-557519551623"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_TOTAL_ROWS}}","label":"step➛Pre Processing script➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"a0b2520f-2f97-41bc-b2f0-81501067c509"}}]</label_cache>
         <master>true</master>
@@ -1566,15 +1162,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>05bda3d3476a5110a4be65a5d36d4383</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:40</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:00:59</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1787,7 +1383,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=Object</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1822,7 +1418,7 @@
         <internal_type display_value="String">string</internal_type>
         <label>material_obj</label>
         <mandatory>true</mandatory>
-        <max_length>65000</max_length>
+        <max_length>8000</max_length>
         <model display_value="Pre Processing script">29bda3d3476a5110a4be65a5d36d43db</model>
         <model_id>29bda3d3476a5110a4be65a5d36d43db</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -1846,14 +1442,14 @@
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-20 18:10:01</sys_created_on>
         <sys_id>61bda3d3476a5110a4be65a5d36d43f6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:41</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:01:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2526,7 +2122,7 @@
         <sys_updated_by>Mayank</sys_updated_by>
         <sys_updated_on>2022-10-20 18:10:02</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT IN294d6f718352e9502aac11b6feaad3b5"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT IN3906bd23475a69105e5faca2026d43af"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2022-10-20 11:10:02">b9bde3d3476a5110a4be65a5d36d4334</action_status_metadata_id>
         <condition>{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}!=0</condition>
@@ -2534,12 +2130,12 @@
         <label>Pre Processing step fails</label>
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>Mayank</sys_created_by>
-        <sys_created_on>2023-04-20 12:12:41</sys_created_on>
-        <sys_id>294d6f718352e9502aac11b6feaad3b5</sys_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 14:01:02</sys_created_on>
+        <sys_id>3906bd23475a69105e5faca2026d43af</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-20 12:12:41</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 14:01:02</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_05bda3d3476a5110a4be65a5d36d4383^sys_idNOT IN21bda3d3476a5110a4be65a5d36d43d9"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2663,6 +2259,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>f49daf93476a5110a4be65a5d36d43ad</sys_id>
         <latest_snapshot>05bda3d3476a5110a4be65a5d36d4383</latest_snapshot>
-        <compiler_build>glide-tokyo-07-08-2022__patch7-02-16-2023_02-28-2023_1844.zip</compiler_build>
+        <compiler_build>glide-tokyo-07-08-2022__patch8-03-16-2023_03-24-2023_1357.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

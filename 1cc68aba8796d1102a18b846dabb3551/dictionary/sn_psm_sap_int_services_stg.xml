@@ -5,8 +5,8 @@
         <element attributes="edge_encryption_enabled=true" label="Base unit of measure" max_length="3" name="base_unit_of_measure" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Category of international article number ean" max_length="2" name="category_of_international_article_number_ean" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Client" max_length="3" name="client" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Date of last change" max_length="8" name="date_of_last_change" type="glide_date_time"/>
-        <element attributes="edge_encryption_enabled=true" label="Date on which record was created" max_length="8" name="date_on_which_record_was_created" type="glide_date_time"/>
+        <element label="Date of last change" max_length="50" name="date_of_last_change" type="string"/>
+        <element label="Date on which record was created" max_length="50" name="date_on_which_record_was_created" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Deletion indicator" max_length="1" name="deletion_indicator" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Denominator for conversion meins and iwein" max_length="5" name="denominator_for_conversion_meins_iwein" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Division" max_length="2" name="division" type="string"/>
