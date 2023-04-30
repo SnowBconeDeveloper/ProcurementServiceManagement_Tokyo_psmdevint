@@ -36,8 +36,8 @@
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_flow_9d6f0c9a87f925502a18b846dabb3534</sys_update_name>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-26 10:21:54</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-28 08:37:08</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=9d6f0c9a87f925502a18b846dabb3534"/>
@@ -205,14 +205,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:32</sys_created_on>
         <sys_id>a1945452873d25502a18b846dabb35a4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:46</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -372,14 +372,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:32</sys_created_on>
         <sys_id>a5945452873d25502a18b846dabb35ab</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:46</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -393,7 +393,7 @@
         <xml_view>false</xml_view>
     </sys_hub_flow_output>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=9d6f0c9a87f925502a18b846dabb3534"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT IN2f949452873d25502a18b846dabb3510,e00dd1e787d26110c04eb259dabb3540,e5a1ad2f87d26110c04eb259dabb3568,f9945452873d25502a18b846dabb35c9"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT IN2f949452873d25502a18b846dabb3510,55dcf79cc32ea5d01ab7b73a05013115,e00dd1e787d26110c04eb259dabb3540,e5a1ad2f87d26110c04eb259dabb3568,f9945452873d25502a18b846dabb35c9"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -408,10 +408,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>2f949452873d25502a18b846dabb3510</sys_id>
-        <sys_mod_count>82</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>d5a30276-3452-4437-8877-cc17d9fa1c95</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2f949452873d25502a18b846dabb3510"/>
@@ -460,18 +460,105 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>7b949452873d25502a18b846dabb3512</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-03-27 13:11:41</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:27</sys_updated_on>
         <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
-        <value>status=posted^erp_gr_number={{flow_variable.entry_sheet}}</value>
+        <value>erp_gr_number={{flow_variable.entry_sheet}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=2f949452873d25502a18b846dabb3510"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f949452873d25502a18b846dabb3510"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Create Service Goods Receipt">7b4a745c8335255067a211b6feaad3ff</action_type>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Create service goods receipt in SAP S4HANA">9d6f0c9a87f925502a18b846dabb3534</flow>
+        <order>21</order>
+        <parent_ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>55dcf79cc32ea5d01ab7b73a05013115</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
+        <ui_id>09df3efc-af99-4066-81f9-2fa9ff89c0d0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=55dcf79cc32ea5d01ab7b73a05013115"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55dcf79cc32ea5d01ab7b73a05013115</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>5ddcf79cc32ea5d01ab7b73a05013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:28</sys_updated_on>
+        <value>sn_shop_receipt</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>55dcf79cc32ea5d01ab7b73a05013115</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>95dcf79cc32ea5d01ab7b73a05013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:28</sys_updated_on>
+        <value>status=posted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=55dcf79cc32ea5d01ab7b73a05013115"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>55dcf79cc32ea5d01ab7b73a05013115</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>15dcf79cc32ea5d01ab7b73a05013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.psm_goods_receipt}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>55dcf79cc32ea5d01ab7b73a05013115</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>99dcf79cc32ea5d01ab7b73a05013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>55dcf79cc32ea5d01ab7b73a05013115</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:45:28</sys_created_on>
+        <sys_id>51dcf79cc32ea5d01ab7b73a05013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:45:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=55dcf79cc32ea5d01ab7b73a05013115"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=55dcf79cc32ea5d01ab7b73a05013115"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">7b4a745c8335255067a211b6feaad3ff</action_type>
         <action_type_parent/>
         <comment/>
         <display_text/>
@@ -482,10 +569,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:11:44</sys_created_on>
         <sys_id>e00dd1e787d26110c04eb259dabb3540</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>c75e592b-a33a-4767-85eb-9a8ce2780549</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e00dd1e787d26110c04eb259dabb3540"/>
@@ -497,11 +584,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:11:45</sys_created_on>
         <sys_id>280dd1e787d26110c04eb259dabb3542</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:28</sys_updated_on>
-        <value>{"children":[{"name":"EV_ENTRYSHEET","label":"Entry Sheet","type":"string","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"SERIAL_NO","label":"Seq No of Account Assgt","type":"string","read_only":false,"readonly":false},{"name":"GL_ACCOUNT","label":"G/L Account","type":"string","read_only":false,"readonly":false},{"name":"BUS_AREA","label":"Business Area","type":"string","read_only":false,"readonly":false},{"name":"COSTCENTER","label":"Cost Center","type":"string","read_only":false,"readonly":false},{"name":"SD_DOC","label":"Sales document","type":"string","read_only":false,"readonly":false},{"name":"ITM_NUMBER","label":"Sales Document Item","type":"string","read_only":false,"readonly":false},{"name":"ASSET_NO","label":"Asset","type":"string","read_only":false,"readonly":false},{"name":"SUB_NUMBER","label":"Sub-number","type":"string","read_only":false,"readonly":false},{"name":"ORDER","label":"Order","type":"string","read_only":false,"readonly":false},{"name":"CO_AREA","label":"Controlling Area","type":"string","read_only":false,"readonly":false},{"name":"TO_COSTCTR","label":"Posting to cost center?","type":"string","read_only":false,"readonly":false},{"name":"TO_ORDER","label":"Post to order","type":"string","read_only":false,"readonly":false},{"name":"TO_PROJECT","label":"Post to project","type":"string","read_only":false,"readonly":false},{"name":"COST_OBJ","label":"Cost Object","type":"string","read_only":false,"readonly":false},{"name":"PROF_SEG","label":"Profitab Segmt No","type":"string","read_only":false,"readonly":false},{"name":"PROFIT_CTR","label":"Profit Center","type":"string","read_only":false,"readonly":false},{"name":"WBS_ELEM","label":"WBS element","type":"string","read_only":false,"readonly":false},{"name":"NETWORK","label":"Network","type":"string","read_only":false,"readonly":false},{"name":"ROUTING_NO","label":"Opertn task list no","type":"string","read_only":false,"readonly":false},{"name":"RL_EST_KEY","label":"Real Estate Key","type":"string","read_only":false,"readonly":false},{"name":"COUNTER","label":"Counter","type":"string","read_only":false,"readonly":false},{"name":"PART_ACCT","label":"Partner","type":"string","read_only":false,"readonly":false},{"name":"CMMT_ITEM","label":"Commitment item [ CMMT_ITEM ]","type":"string","read_only":false,"readonly":false},{"name":"REC_IND","label":"Recovery Indicator","type":"string","read_only":false,"readonly":false},{"name":"FUNDS_CTR","label":"Funds center","type":"string","read_only":false,"readonly":false},{"name":"FUND","label":"Fund","type":"string","read_only":false,"readonly":false},{"name":"FUNC_AREA","label":"Functional Area [ FUNC_AREA ]","type":"string","read_only":false,"readonly":false},{"name":"GRANT_NBR","label":"Grant","type":"string","read_only":false,"readonly":false},{"name":"CMMT_ITEM_LONG","label":"Commitment item [ CMMT_ITEM_LONG ]","type":"string","read_only":false,"readonly":false},{"name":"FUNC_AREA_LONG","label":"Functional Area [ FUNC_AREA_LONG ]","type":"string","read_only":false,"readonly":false},{"name":"ACTIVITY","label":"Activity","type":"string","read_only":false,"readonly":false},{"name":"RES_DOC","label":"Earmarked Funds","type":"string","read_only":false,"readonly":false},{"name":"RES_ITEM","label":"Document item","type":"string","read_only":false,"readonly":false},{"name":"BUDGET_PERIOD","label":"Budget Period","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETACCOUNTASSIGNMENT","attributes":{"child_type":"object"},"label":"Account Assignments [ IT_ENTRYSHEETACCOUNTASSIGNMENT ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"SHEET_NO","label":"Entry Sheet","type":"string","read_only":false,"readonly":false},{"name":"TEXT_ID","label":"Text ID","type":"string","read_only":false,"readonly":false},{"name":"FORMAT_COL","label":"Tag column","type":"string","read_only":false,"readonly":false},{"name":"TEXT_LINE","label":"Text Line","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETHEADERTEXT","attributes":{"child_type":"object"},"label":"Long Text for Entry Sheet Header [ IT_ENTRYSHEETHEADERTEXT ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Internal line number","type":"string","read_only":false,"readonly":false},{"name":"EXT_LINE","label":"Line Number","type":"string","read_only":false,"readonly":false},{"name":"OUTL_LEVEL","label":"Hierarchy level","type":"integer","read_only":false,"readonly":false},{"name":"OUTL_NO","label":"Outline Level","type":"string","read_only":false,"readonly":false},{"name":"OUTL_IND","label":"Indicator: outline","type":"string","read_only":false,"readonly":false},{"name":"SUBPCKG_NO","label":"Package","type":"string","read_only":false,"readonly":false},{"name":"SERVICE","label":"Activity number","type":"string","read_only":false,"readonly":false},{"name":"SERV_TYPE","label":"Service Type","type":"string","read_only":false,"readonly":false},{"name":"EDITION","label":"Edition","type":"string","read_only":false,"readonly":false},{"name":"SSC_ITEM","label":"SSC Item","type":"string","read_only":false,"readonly":false},{"name":"EXT_SERV","label":"External Service No","type":"string","read_only":false,"readonly":false},{"name":"QUANTITY","label":"Quantity","type":"string","read_only":false,"readonly":false},{"name":"BASE_UOM","label":"Base Unit of Measure","type":"string","read_only":false,"readonly":false},{"name":"UOM_ISO","label":"ISO code","type":"string","read_only":false,"readonly":false},{"name":"OVF_TOL","label":"Overfulfillment Tol","type":"string","read_only":false,"readonly":false},{"name":"OVF_UNLIM","label":"Unlimited Overfulf","type":"string","read_only":false,"readonly":false},{"name":"PRICE_UNIT","label":"Price unit","type":"string","read_only":false,"readonly":false},{"name":"GR_PRICE","label":"Gross price","type":"string","read_only":false,"readonly":false},{"name":"FROM_LINE","label":"Lower Limit","type":"string","read_only":false,"readonly":false},{"name":"TO_LINE","label":"Upper Limit","type":"string","read_only":false,"readonly":false},{"name":"SHORT_TEXT","label":"Short Text","type":"string","read_only":false,"readonly":false},{"name":"DISTRIB","label":"Distrib Indicator","type":"string","read_only":false,"readonly":false},{"name":"PERS_NO","label":"Personnel Number [ PERS_NO ]","type":"string","read_only":false,"readonly":false},{"name":"WAGETYPE","label":"Wage Type","type":"string","read_only":false,"readonly":false},{"name":"PLN_PCKG","label":"P","type":"string","read_only":false,"readonly":false},{"name":"PLN_LINE","label":"I","type":"string","read_only":false,"readonly":false},{"name":"CON_PCKG","label":"Entry: Unplanned from contract [ CON_PCKG ]","type":"string","read_only":false,"readonly":false},{"name":"CON_LINE","label":"Entry: Unplanned from contract [ CON_LINE ]","type":"string","read_only":false,"readonly":false},{"name":"TMP_PCKG","label":"Entry: Unplanned service from model specifications [ TMP_PCKG ]","type":"string","read_only":false,"readonly":false},{"name":"TMP_LINE","label":"Entry: Unplanned service from model specifications [ TMP_LINE ]","type":"string","read_only":false,"readonly":false},{"name":"SSC_LIM","label":"SSC limits","type":"string","read_only":false,"readonly":false},{"name":"LIMIT_LINE","label":"Entry: Unplanned, limit line","type":"string","read_only":false,"readonly":false},{"name":"TARGET_VAL","label":"Target Value","type":"string","read_only":false,"readonly":false},{"name":"BASLINE_NO","label":"Alternative","type":"string","read_only":false,"readonly":false},{"name":"BASIC_LINE","label":"Basic Line","type":"string","read_only":false,"readonly":false},{"name":"ALTERNAT","label":"Alternative Line","type":"string","read_only":false,"readonly":false},{"name":"BIDDER","label":"Bidder's Line","type":"string","read_only":false,"readonly":false},{"name":"SUPP_LINE","label":"Supplementary Line","type":"string","read_only":false,"readonly":false},{"name":"OPEN_QTY","label":"Line with Open Qty","type":"string","read_only":false,"readonly":false},{"name":"INFORM","label":"Informatory Line","type":"string","read_only":false,"readonly":false},{"name":"BLANKET","label":"Blanket Line","type":"string","read_only":false,"readonly":false},{"name":"EVENTUAL","label":"Contingency Line","type":"string","read_only":false,"readonly":false},{"name":"TAX_CODE","label":"Tax Code","type":"string","read_only":false,"readonly":false},{"name":"TAXJURCODE","label":"Tax Jurisdiction","type":"string","read_only":false,"readonly":false},{"name":"PRICE_CHG","label":"Price Change in Entry Sheet Allowed","type":"string","read_only":false,"readonly":false},{"name":"MATL_GROUP","label":"Material Group","type":"string","read_only":false,"readonly":false},{"name":"DATE","label":"Date","type":"date","read_only":false,"readonly":false},{"name":"BEGINTIME","label":"Start time","type":"string","read_only":false,"readonly":false},{"name":"ENDTIME","label":"End time","type":"string","read_only":false,"readonly":false},{"name":"EXTPERS_NO","label":"Personnel Number [ EXTPERS_NO ]","type":"string","read_only":false,"readonly":false},{"name":"FORMULA","label":"Formula","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL1","label":"Formula Value","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL2","label":"Formula value [ FORM_VAL2 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL3","label":"Formula value [ FORM_VAL3 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL4","label":"Formula value [ FORM_VAL4 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL5","label":"Formula value [ FORM_VAL5 ]","type":"string","read_only":false,"readonly":false},{"name":"USERF1_NUM","label":"User Field [ USERF1_NUM ]","type":"string","read_only":false,"readonly":false},{"name":"USERF2_NUM","label":"User Field [ USERF2_NUM ]","type":"string","read_only":false,"readonly":false},{"name":"USERF1_TXT","label":"User Field [ USERF1_TXT ]","type":"string","read_only":false,"readonly":false},{"name":"USERF2_TXT","label":"User Field [ USERF2_TXT ]","type":"string","read_only":false,"readonly":false},{"name":"HI_LINE_NO","label":"Hierarchically superior line number","type":"string","read_only":false,"readonly":false},{"name":"EXTREFKEY","label":"External Reference Key for Service","type":"string","read_only":false,"readonly":false},{"name":"DELETE_IND","label":"Deletion Indicator","type":"string","read_only":false,"readonly":false},{"name":"PER_SDATE","label":"PoP Start Date","type":"date","read_only":false,"readonly":false},{"name":"PER_EDATE","label":"PoP End Date","type":"date","read_only":false,"readonly":false},{"name":"EXTERNAL_ITEM_ID","label":"SRM Reference Key","type":"string","read_only":false,"readonly":false},{"name":"SERVICE_ITEM_KEY","label":"Item ID","type":"string","read_only":false,"readonly":false},{"name":"NET_VALUE","label":"Net value","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSERVICES","attributes":{"child_type":"object"},"label":"Services [ IT_ENTRYSHEETSERVICES ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Internal line number","type":"string","read_only":false,"readonly":false},{"name":"TEXT_ID","label":"Text ID","type":"string","read_only":false,"readonly":false},{"name":"FORMAT_COL","label":"Tag column","type":"string","read_only":false,"readonly":false},{"name":"TEXT_LINE","label":"Text Line","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSERVICESTEXTS","attributes":{"child_type":"object"},"label":"Long Texts for Services [ IT_ENTRYSHEETSERVICESTEXTS ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Line","type":"string","read_only":false,"readonly":false},{"name":"SERNO_LINE","label":"Seq No Acc Assgt","type":"string","read_only":false,"readonly":false},{"name":"PERCENTAGE","label":"Percentage","type":"string","read_only":false,"readonly":false},{"name":"SERIAL_NO","label":"Seq No of Account Assgt","type":"string","read_only":false,"readonly":false},{"name":"QUANTITY","label":"Quantity","type":"string","read_only":false,"readonly":false},{"name":"NET_VALUE","label":"Net Value","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSRVACCASSVALUES","attributes":{"child_type":"object"},"label":"Value/Link to Service Account Assignment [ IT_ENTRYSHEETSRVACCASSVALUES ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"TYPE","label":"Message type","type":"string","read_only":false,"readonly":false},{"name":"ID","label":"Message Class","type":"string","read_only":false,"readonly":false},{"name":"NUMBER","label":"Message Number","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE","label":"Message Text","type":"string","read_only":false,"readonly":false},{"name":"LOG_NO","label":"Log number","type":"string","read_only":false,"readonly":false},{"name":"LOG_MSG_NO","label":"Message serial no","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V1","label":"Message Variable [ MESSAGE_V1 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V2","label":"Message Variable [ MESSAGE_V2 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V3","label":"Message Variable [ MESSAGE_V3 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V4","label":"Message Variable [ MESSAGE_V4 ]","type":"string","read_only":false,"readonly":false},{"name":"PARAMETER","label":"Parameter Name","type":"string","read_only":false,"readonly":false},{"name":"ROW","label":"Lines in parameter","type":"integer","read_only":false,"readonly":false},{"name":"FIELD","label":"Field name","type":"string","read_only":false,"readonly":false},{"name":"SYSTEM","label":"Logical system (source of message)","type":"string","read_only":false,"readonly":false}],"name":"IT_RETURN","attributes":{"child_type":"object"},"label":"Processing Errors That Occurred [ IT_RETURN ]","type":"array.object","read_only":false,"readonly":false}],"type":"object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}}</value>
-        <variable display_value="Goods Receipt">005ab45c8335255067a211b6feaad33f</variable>
+        <sys_updated_on>2023-04-28 07:45:27</sys_updated_on>
+        <value>{"children":[],"type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}}</value>
+        <variable display_value="">005ab45c8335255067a211b6feaad33f</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_instance</document>
@@ -515,57 +602,8 @@
         <sys_updated_by>Varun</sys_updated_by>
         <sys_updated_on>2023-04-25 14:53:28</sys_updated_on>
         <value/>
-        <variable display_value="Connection Alias">bb4ab45c8335255067a211b6feaad306</variable>
+        <variable display_value="">bb4ab45c8335255067a211b6feaad306</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=e00dd1e787d26110c04eb259dabb3540"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conn_alias</field>
-        <id>e00dd1e787d26110c04eb259dabb3540</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:11:45</sys_created_on>
-        <sys_id>200dd1e787d26110c04eb259dabb3542</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:28</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{subflow.connection_alias}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>dynamic_hidden_input_goods_receipt</field>
-        <id>e00dd1e787d26110c04eb259dabb3540</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:11:45</sys_created_on>
-        <sys_id>a40dd1e787d26110c04eb259dabb3542</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:11:45</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>IT_ENTRYSHEETSERVICES</field>
-        <id>e00dd1e787d26110c04eb259dabb3540</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:11:45</sys_created_on>
-        <sys_id>6c0dd1e787d26110c04eb259dabb3541</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:32:01</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{00444761-2dc3-4380-8871-20dcea845162.service_gr_services}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>IV_ENTRYSHEETHEADER</field>
-        <id>e00dd1e787d26110c04eb259dabb3540</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:11:45</sys_created_on>
-        <sys_id>e00dd1e787d26110c04eb259dabb3542</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:32:01</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{00444761-2dc3-4380-8871-20dcea845162.service_gr_record}}</value>
-    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=e00dd1e787d26110c04eb259dabb3540"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e00dd1e787d26110c04eb259dabb3540"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
@@ -582,10 +620,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:32:01</sys_created_on>
         <sys_id>e5a1ad2f87d26110c04eb259dabb3568</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>00444761-2dc3-4380-8871-20dcea845162</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e5a1ad2f87d26110c04eb259dabb3568"/>
@@ -656,10 +694,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>f9945452873d25502a18b846dabb35c9</sys_id>
-        <sys_mod_count>82</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>eb2dabdc-ffbc-4a16-9535-018228bdab6c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f9945452873d25502a18b846dabb35c9"/>
@@ -693,10 +731,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-21 04:06:34</sys_created_on>
         <sys_id>66974f8a879e21102a18b846dabb35c5</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=66974f8a879e21102a18b846dabb35c5"/>
@@ -848,10 +886,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:34</sys_created_on>
         <sys_id>02945452873d25502a18b846dabb35fd</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>4997813d-efc3-4322-be76-38d26a67206d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -922,10 +960,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:34</sys_created_on>
         <sys_id>0a945452873d25502a18b846dabb35d5</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>eaee31b8-065b-4d26-8d08-d6a6fcea2b1d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -969,10 +1007,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>16949452873d25502a18b846dabb3504</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>a7710646-e848-49f1-a9dd-253adc6b8320</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1016,10 +1054,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>37949452873d25502a18b846dabb3517</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>d56e4bf0-2402-4d65-96d1-470c958db872</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1064,10 +1102,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>3b949452873d25502a18b846dabb3513</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>5e79dd12-1678-418a-887c-0026be8a9d32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1117,7 +1155,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>23</order>
+        <order>24</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>f913693f-135b-426f-a80c-277188a95ba9</parent_ui_id>
@@ -1125,10 +1163,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>3b949452873d25502a18b846dabb3581</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:26</sys_updated_on>
         <ui_id>a9886d32-ea6d-4f7b-9849-96d3a415727b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1159,10 +1197,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>3d945452873d25502a18b846dabb35cc</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>c46e2177-7f6f-4dc1-9784-ed7a426e3a4a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1208,10 +1246,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>4e949452873d25502a18b846dabb3500</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>089ac20f-81ae-4737-932f-40891102c143</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1255,10 +1293,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>56949452873d25502a18b846dabb350a</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>f591a416-91e4-4965-bd4a-a77c390a1b13</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1303,10 +1341,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:35</sys_created_on>
         <sys_id>5ce71cfe8706a5102a18b846dabb3507</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1351,10 +1389,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>73949452873d25502a18b846dabb3575</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>960ac4c4-53f8-4309-97f3-0bc0fe99ce83</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1389,7 +1427,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>21</order>
+        <order>22</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</parent_ui_id>
@@ -1397,10 +1435,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>77949452873d25502a18b846dabb357b</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>f913693f-135b-426f-a80c-277188a95ba9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1431,10 +1469,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 09:32:20</sys_created_on>
         <sys_id>8ba827aa8742a5102a18b846dabb358b</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>a16fb80e-236f-4afb-b0cd-0b91712595c9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1486,7 +1524,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>24</order>
+        <order>25</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -1494,10 +1532,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>96468c0487d2e9102a18b846dabb35a1</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:26</sys_updated_on>
         <ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1528,10 +1566,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:35</sys_created_on>
         <sys_id>96949452873d25502a18b846dabb3507</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>56fd5097-643d-4d83-b6a6-af7f88306f16</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1562,10 +1600,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>b7949452873d25502a18b846dabb3578</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>26bb188a-a364-4b28-83b5-c854aea24398</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1597,10 +1635,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:33</sys_created_on>
         <sys_id>b9945452873d25502a18b846dabb35d1</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:47</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
         <ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1636,7 +1674,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>25</order>
+        <order>26</order>
         <outputs_assigned>status,error_message</outputs_assigned>
         <outputs_to_assign/>
         <outputs_to_assign/>
@@ -1645,10 +1683,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>d2468c0487d2e9102a18b846dabb35a4</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:26</sys_updated_on>
         <ui_id>2d79fe47-41b8-4607-b1d9-941808caa7c6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1683,7 +1721,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>26</order>
+        <order>27</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</parent_ui_id>
@@ -1691,10 +1729,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:07</sys_created_on>
         <sys_id>de468c0487d2e9102a18b846dabb35a7</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:26</sys_updated_on>
         <ui_id>6d1b4640-245c-49df-aafa-d76224da32bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1725,10 +1763,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>f3949452873d25502a18b846dabb3572</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:25</sys_updated_on>
         <ui_id>56892a7f-8bb7-4c02-8fee-3c9d2e769978</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1751,7 +1789,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>22</order>
+        <order>23</order>
         <outputs_assigned>status,error_message</outputs_assigned>
         <outputs_to_assign/>
         <outputs_to_assign/>
@@ -1760,10 +1798,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-27 13:11:41</sys_created_on>
         <sys_id>f3949452873d25502a18b846dabb357e</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:48</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:26</sys_updated_on>
         <ui_id>11fca524-4d7c-4325-a0bb-da2d615d0c2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2094,7 +2132,7 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9d6f0c9a87f925502a18b846dabb3534"/>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9d6f0c9a87f925502a18b846dabb3534^sys_idNOT INa666639a87352950c04eb259dabb3563"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@232ba0</plan>
+        <plan>com.snc.process_flow.engine.ProcessPlan@b5f8b4</plan>
         <plan_id display_value="Create service goods receipt in SAP S4HANA">9d6f0c9a87f925502a18b846dabb3534</plan_id>
         <snapshot>9f56ef5a87352950c04eb259dabb3531</snapshot>
         <sys_created_by>varun</sys_created_by>
@@ -2102,11 +2140,11 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a666639a87352950c04eb259dabb3563</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:46</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:24</sys_updated_on>
     </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2136,7 +2174,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9f56ef5a87352950c04eb259dabb3531</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2144,7 +2182,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=9f56ef5a87352950c04eb259dabb3531"/>
@@ -2312,14 +2350,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:04</sys_created_on>
         <sys_id>e356ef5a87352950c04eb259dabb357a</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2396,14 +2434,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:05</sys_created_on>
         <sys_id>e356ef5a87352950c04eb259dabb3587</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2500,7 +2538,7 @@
         <xml_view>false</xml_view>
     </sys_hub_flow_output>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=9f56ef5a87352950c04eb259dabb3531"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT IN2166239a87352950c04eb259dabb3597,4066239a87352950c04eb259dabb3502,a23d1de787d26110c04eb259dabb350e,a5b1616f87d26110c04eb259dabb35aa"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT IN2166239a87352950c04eb259dabb3597,4066239a87352950c04eb259dabb3502,a23d1de787d26110c04eb259dabb350e,a5b1616f87d26110c04eb259dabb35aa,d33df3dcc32ea5d01ab7b73a05013123"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -2515,10 +2553,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:13</sys_created_on>
         <sys_id>2166239a87352950c04eb259dabb3597</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>d5a30276-3452-4437-8877-cc17d9fa1c95</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2166239a87352950c04eb259dabb3597"/>
@@ -2567,11 +2605,11 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:13</sys_created_on>
         <sys_id>e966239a87352950c04eb259dabb3598</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-03-28 04:28:13</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
         <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
-        <value>status=posted^erp_gr_number={{flow_variable.entry_sheet}}</value>
+        <value>erp_gr_number={{flow_variable.entry_sheet}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=2166239a87352950c04eb259dabb3597"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=2166239a87352950c04eb259dabb3597"/>
@@ -2589,10 +2627,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:07</sys_created_on>
         <sys_id>4066239a87352950c04eb259dabb3502</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <ui_id>eb2dabdc-ffbc-4a16-9535-018228bdab6c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4066239a87352950c04eb259dabb3502"/>
@@ -2613,9 +2651,8 @@
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=4066239a87352950c04eb259dabb3502"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Create Service Goods Receipt">7b4a745c8335255067a211b6feaad3ff</action_type>
-        <action_type_parent display_value="Create Service Goods Receipt">35f1b0148335255067a211b6feaad3c9</action_type_parent>
+        <action_type display_value="">7b4a745c8335255067a211b6feaad3ff</action_type>
+        <action_type_parent display_value="">35f1b0148335255067a211b6feaad3c9</action_type_parent>
         <comment/>
         <display_text/>
         <flow display_value="Create service goods receipt in SAP S4HANA">9f56ef5a87352950c04eb259dabb3531</flow>
@@ -2625,10 +2662,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:12:41</sys_created_on>
         <sys_id>a23d1de787d26110c04eb259dabb350e</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>c75e592b-a33a-4767-85eb-9a8ce2780549</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a23d1de787d26110c04eb259dabb350e"/>
@@ -2644,7 +2681,7 @@
         <sys_updated_by>Varun</sys_updated_by>
         <sys_updated_on>2023-04-25 14:53:38</sys_updated_on>
         <value/>
-        <variable display_value="Connection Alias">bb4ab45c8335255067a211b6feaad306</variable>
+        <variable display_value="">bb4ab45c8335255067a211b6feaad306</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_action_instance</document>
@@ -2654,61 +2691,12 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:12:41</sys_created_on>
         <sys_id>e23d1de787d26110c04eb259dabb3510</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:38</sys_updated_on>
-        <value>{"children":[{"name":"EV_ENTRYSHEET","label":"Entry Sheet","type":"string","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"SERIAL_NO","label":"Seq No of Account Assgt","type":"string","read_only":false,"readonly":false},{"name":"GL_ACCOUNT","label":"G/L Account","type":"string","read_only":false,"readonly":false},{"name":"BUS_AREA","label":"Business Area","type":"string","read_only":false,"readonly":false},{"name":"COSTCENTER","label":"Cost Center","type":"string","read_only":false,"readonly":false},{"name":"SD_DOC","label":"Sales document","type":"string","read_only":false,"readonly":false},{"name":"ITM_NUMBER","label":"Sales Document Item","type":"string","read_only":false,"readonly":false},{"name":"ASSET_NO","label":"Asset","type":"string","read_only":false,"readonly":false},{"name":"SUB_NUMBER","label":"Sub-number","type":"string","read_only":false,"readonly":false},{"name":"ORDER","label":"Order","type":"string","read_only":false,"readonly":false},{"name":"CO_AREA","label":"Controlling Area","type":"string","read_only":false,"readonly":false},{"name":"TO_COSTCTR","label":"Posting to cost center?","type":"string","read_only":false,"readonly":false},{"name":"TO_ORDER","label":"Post to order","type":"string","read_only":false,"readonly":false},{"name":"TO_PROJECT","label":"Post to project","type":"string","read_only":false,"readonly":false},{"name":"COST_OBJ","label":"Cost Object","type":"string","read_only":false,"readonly":false},{"name":"PROF_SEG","label":"Profitab Segmt No","type":"string","read_only":false,"readonly":false},{"name":"PROFIT_CTR","label":"Profit Center","type":"string","read_only":false,"readonly":false},{"name":"WBS_ELEM","label":"WBS element","type":"string","read_only":false,"readonly":false},{"name":"NETWORK","label":"Network","type":"string","read_only":false,"readonly":false},{"name":"ROUTING_NO","label":"Opertn task list no","type":"string","read_only":false,"readonly":false},{"name":"RL_EST_KEY","label":"Real Estate Key","type":"string","read_only":false,"readonly":false},{"name":"COUNTER","label":"Counter","type":"string","read_only":false,"readonly":false},{"name":"PART_ACCT","label":"Partner","type":"string","read_only":false,"readonly":false},{"name":"CMMT_ITEM","label":"Commitment item [ CMMT_ITEM ]","type":"string","read_only":false,"readonly":false},{"name":"REC_IND","label":"Recovery Indicator","type":"string","read_only":false,"readonly":false},{"name":"FUNDS_CTR","label":"Funds center","type":"string","read_only":false,"readonly":false},{"name":"FUND","label":"Fund","type":"string","read_only":false,"readonly":false},{"name":"FUNC_AREA","label":"Functional Area [ FUNC_AREA ]","type":"string","read_only":false,"readonly":false},{"name":"GRANT_NBR","label":"Grant","type":"string","read_only":false,"readonly":false},{"name":"CMMT_ITEM_LONG","label":"Commitment item [ CMMT_ITEM_LONG ]","type":"string","read_only":false,"readonly":false},{"name":"FUNC_AREA_LONG","label":"Functional Area [ FUNC_AREA_LONG ]","type":"string","read_only":false,"readonly":false},{"name":"ACTIVITY","label":"Activity","type":"string","read_only":false,"readonly":false},{"name":"RES_DOC","label":"Earmarked Funds","type":"string","read_only":false,"readonly":false},{"name":"RES_ITEM","label":"Document item","type":"string","read_only":false,"readonly":false},{"name":"BUDGET_PERIOD","label":"Budget Period","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETACCOUNTASSIGNMENT","attributes":{"child_type":"object"},"label":"Account Assignments [ IT_ENTRYSHEETACCOUNTASSIGNMENT ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"SHEET_NO","label":"Entry Sheet","type":"string","read_only":false,"readonly":false},{"name":"TEXT_ID","label":"Text ID","type":"string","read_only":false,"readonly":false},{"name":"FORMAT_COL","label":"Tag column","type":"string","read_only":false,"readonly":false},{"name":"TEXT_LINE","label":"Text Line","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETHEADERTEXT","attributes":{"child_type":"object"},"label":"Long Text for Entry Sheet Header [ IT_ENTRYSHEETHEADERTEXT ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Internal line number","type":"string","read_only":false,"readonly":false},{"name":"EXT_LINE","label":"Line Number","type":"string","read_only":false,"readonly":false},{"name":"OUTL_LEVEL","label":"Hierarchy level","type":"integer","read_only":false,"readonly":false},{"name":"OUTL_NO","label":"Outline Level","type":"string","read_only":false,"readonly":false},{"name":"OUTL_IND","label":"Indicator: outline","type":"string","read_only":false,"readonly":false},{"name":"SUBPCKG_NO","label":"Package","type":"string","read_only":false,"readonly":false},{"name":"SERVICE","label":"Activity number","type":"string","read_only":false,"readonly":false},{"name":"SERV_TYPE","label":"Service Type","type":"string","read_only":false,"readonly":false},{"name":"EDITION","label":"Edition","type":"string","read_only":false,"readonly":false},{"name":"SSC_ITEM","label":"SSC Item","type":"string","read_only":false,"readonly":false},{"name":"EXT_SERV","label":"External Service No","type":"string","read_only":false,"readonly":false},{"name":"QUANTITY","label":"Quantity","type":"string","read_only":false,"readonly":false},{"name":"BASE_UOM","label":"Base Unit of Measure","type":"string","read_only":false,"readonly":false},{"name":"UOM_ISO","label":"ISO code","type":"string","read_only":false,"readonly":false},{"name":"OVF_TOL","label":"Overfulfillment Tol","type":"string","read_only":false,"readonly":false},{"name":"OVF_UNLIM","label":"Unlimited Overfulf","type":"string","read_only":false,"readonly":false},{"name":"PRICE_UNIT","label":"Price unit","type":"string","read_only":false,"readonly":false},{"name":"GR_PRICE","label":"Gross price","type":"string","read_only":false,"readonly":false},{"name":"FROM_LINE","label":"Lower Limit","type":"string","read_only":false,"readonly":false},{"name":"TO_LINE","label":"Upper Limit","type":"string","read_only":false,"readonly":false},{"name":"SHORT_TEXT","label":"Short Text","type":"string","read_only":false,"readonly":false},{"name":"DISTRIB","label":"Distrib Indicator","type":"string","read_only":false,"readonly":false},{"name":"PERS_NO","label":"Personnel Number [ PERS_NO ]","type":"string","read_only":false,"readonly":false},{"name":"WAGETYPE","label":"Wage Type","type":"string","read_only":false,"readonly":false},{"name":"PLN_PCKG","label":"P","type":"string","read_only":false,"readonly":false},{"name":"PLN_LINE","label":"I","type":"string","read_only":false,"readonly":false},{"name":"CON_PCKG","label":"Entry: Unplanned from contract [ CON_PCKG ]","type":"string","read_only":false,"readonly":false},{"name":"CON_LINE","label":"Entry: Unplanned from contract [ CON_LINE ]","type":"string","read_only":false,"readonly":false},{"name":"TMP_PCKG","label":"Entry: Unplanned service from model specifications [ TMP_PCKG ]","type":"string","read_only":false,"readonly":false},{"name":"TMP_LINE","label":"Entry: Unplanned service from model specifications [ TMP_LINE ]","type":"string","read_only":false,"readonly":false},{"name":"SSC_LIM","label":"SSC limits","type":"string","read_only":false,"readonly":false},{"name":"LIMIT_LINE","label":"Entry: Unplanned, limit line","type":"string","read_only":false,"readonly":false},{"name":"TARGET_VAL","label":"Target Value","type":"string","read_only":false,"readonly":false},{"name":"BASLINE_NO","label":"Alternative","type":"string","read_only":false,"readonly":false},{"name":"BASIC_LINE","label":"Basic Line","type":"string","read_only":false,"readonly":false},{"name":"ALTERNAT","label":"Alternative Line","type":"string","read_only":false,"readonly":false},{"name":"BIDDER","label":"Bidder's Line","type":"string","read_only":false,"readonly":false},{"name":"SUPP_LINE","label":"Supplementary Line","type":"string","read_only":false,"readonly":false},{"name":"OPEN_QTY","label":"Line with Open Qty","type":"string","read_only":false,"readonly":false},{"name":"INFORM","label":"Informatory Line","type":"string","read_only":false,"readonly":false},{"name":"BLANKET","label":"Blanket Line","type":"string","read_only":false,"readonly":false},{"name":"EVENTUAL","label":"Contingency Line","type":"string","read_only":false,"readonly":false},{"name":"TAX_CODE","label":"Tax Code","type":"string","read_only":false,"readonly":false},{"name":"TAXJURCODE","label":"Tax Jurisdiction","type":"string","read_only":false,"readonly":false},{"name":"PRICE_CHG","label":"Price Change in Entry Sheet Allowed","type":"string","read_only":false,"readonly":false},{"name":"MATL_GROUP","label":"Material Group","type":"string","read_only":false,"readonly":false},{"name":"DATE","label":"Date","type":"date","read_only":false,"readonly":false},{"name":"BEGINTIME","label":"Start time","type":"string","read_only":false,"readonly":false},{"name":"ENDTIME","label":"End time","type":"string","read_only":false,"readonly":false},{"name":"EXTPERS_NO","label":"Personnel Number [ EXTPERS_NO ]","type":"string","read_only":false,"readonly":false},{"name":"FORMULA","label":"Formula","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL1","label":"Formula Value","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL2","label":"Formula value [ FORM_VAL2 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL3","label":"Formula value [ FORM_VAL3 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL4","label":"Formula value [ FORM_VAL4 ]","type":"string","read_only":false,"readonly":false},{"name":"FORM_VAL5","label":"Formula value [ FORM_VAL5 ]","type":"string","read_only":false,"readonly":false},{"name":"USERF1_NUM","label":"User Field [ USERF1_NUM ]","type":"string","read_only":false,"readonly":false},{"name":"USERF2_NUM","label":"User Field [ USERF2_NUM ]","type":"string","read_only":false,"readonly":false},{"name":"USERF1_TXT","label":"User Field [ USERF1_TXT ]","type":"string","read_only":false,"readonly":false},{"name":"USERF2_TXT","label":"User Field [ USERF2_TXT ]","type":"string","read_only":false,"readonly":false},{"name":"HI_LINE_NO","label":"Hierarchically superior line number","type":"string","read_only":false,"readonly":false},{"name":"EXTREFKEY","label":"External Reference Key for Service","type":"string","read_only":false,"readonly":false},{"name":"DELETE_IND","label":"Deletion Indicator","type":"string","read_only":false,"readonly":false},{"name":"PER_SDATE","label":"PoP Start Date","type":"date","read_only":false,"readonly":false},{"name":"PER_EDATE","label":"PoP End Date","type":"date","read_only":false,"readonly":false},{"name":"EXTERNAL_ITEM_ID","label":"SRM Reference Key","type":"string","read_only":false,"readonly":false},{"name":"SERVICE_ITEM_KEY","label":"Item ID","type":"string","read_only":false,"readonly":false},{"name":"NET_VALUE","label":"Net value","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSERVICES","attributes":{"child_type":"object"},"label":"Services [ IT_ENTRYSHEETSERVICES ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Internal line number","type":"string","read_only":false,"readonly":false},{"name":"TEXT_ID","label":"Text ID","type":"string","read_only":false,"readonly":false},{"name":"FORMAT_COL","label":"Tag column","type":"string","read_only":false,"readonly":false},{"name":"TEXT_LINE","label":"Text Line","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSERVICESTEXTS","attributes":{"child_type":"object"},"label":"Long Texts for Services [ IT_ENTRYSHEETSERVICESTEXTS ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"PCKG_NO","label":"Package number","type":"string","read_only":false,"readonly":false},{"name":"LINE_NO","label":"Line","type":"string","read_only":false,"readonly":false},{"name":"SERNO_LINE","label":"Seq No Acc Assgt","type":"string","read_only":false,"readonly":false},{"name":"PERCENTAGE","label":"Percentage","type":"string","read_only":false,"readonly":false},{"name":"SERIAL_NO","label":"Seq No of Account Assgt","type":"string","read_only":false,"readonly":false},{"name":"QUANTITY","label":"Quantity","type":"string","read_only":false,"readonly":false},{"name":"NET_VALUE","label":"Net Value","type":"string","read_only":false,"readonly":false}],"name":"IT_ENTRYSHEETSRVACCASSVALUES","attributes":{"child_type":"object"},"label":"Value/Link to Service Account Assignment [ IT_ENTRYSHEETSRVACCASSVALUES ]","type":"array.object","read_only":false,"readonly":false},{"children":[{"name":"TYPE","label":"Message type","type":"string","read_only":false,"readonly":false},{"name":"ID","label":"Message Class","type":"string","read_only":false,"readonly":false},{"name":"NUMBER","label":"Message Number","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE","label":"Message Text","type":"string","read_only":false,"readonly":false},{"name":"LOG_NO","label":"Log number","type":"string","read_only":false,"readonly":false},{"name":"LOG_MSG_NO","label":"Message serial no","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V1","label":"Message Variable [ MESSAGE_V1 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V2","label":"Message Variable [ MESSAGE_V2 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V3","label":"Message Variable [ MESSAGE_V3 ]","type":"string","read_only":false,"readonly":false},{"name":"MESSAGE_V4","label":"Message Variable [ MESSAGE_V4 ]","type":"string","read_only":false,"readonly":false},{"name":"PARAMETER","label":"Parameter Name","type":"string","read_only":false,"readonly":false},{"name":"ROW","label":"Lines in parameter","type":"integer","read_only":false,"readonly":false},{"name":"FIELD","label":"Field name","type":"string","read_only":false,"readonly":false},{"name":"SYSTEM","label":"Logical system (source of message)","type":"string","read_only":false,"readonly":false}],"name":"IT_RETURN","attributes":{"child_type":"object"},"label":"Processing Errors That Occurred [ IT_RETURN ]","type":"array.object","read_only":false,"readonly":false}],"type":"object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}}</value>
-        <variable display_value="Goods Receipt">005ab45c8335255067a211b6feaad33f</variable>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <value>{"children":[],"type":"dynamic_object","attributes":{"dynamic":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b985631-fc6c-4101-9c7a-a1e09acf632e"}}</value>
+        <variable display_value="">005ab45c8335255067a211b6feaad33f</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=a23d1de787d26110c04eb259dabb350e"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conn_alias</field>
-        <id>a23d1de787d26110c04eb259dabb350e</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:12:41</sys_created_on>
-        <sys_id>ea3d1de787d26110c04eb259dabb350f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:38</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{subflow.connection_alias}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>dynamic_hidden_input_goods_receipt</field>
-        <id>a23d1de787d26110c04eb259dabb350e</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:12:41</sys_created_on>
-        <sys_id>623d1de787d26110c04eb259dabb3510</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:12:41</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>IT_ENTRYSHEETSERVICES</field>
-        <id>a23d1de787d26110c04eb259dabb350e</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:12:41</sys_created_on>
-        <sys_id>2a3d1de787d26110c04eb259dabb350f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:32:17</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{00444761-2dc3-4380-8871-20dcea845162.service_gr_services}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>IV_ENTRYSHEETHEADER</field>
-        <id>a23d1de787d26110c04eb259dabb350e</id>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-04-25 12:12:41</sys_created_on>
-        <sys_id>ae3d1de787d26110c04eb259dabb350f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:32:17</sys_updated_on>
-        <table>var__m_sys_hub_action_input_7b4a745c8335255067a211b6feaad3ff</table>
-        <value>{{00444761-2dc3-4380-8871-20dcea845162.service_gr_record}}</value>
-    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=a23d1de787d26110c04eb259dabb350e"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=a23d1de787d26110c04eb259dabb350e"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
@@ -2725,10 +2713,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-25 12:32:17</sys_created_on>
         <sys_id>a5b1616f87d26110c04eb259dabb35aa</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>00444761-2dc3-4380-8871-20dcea845162</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a5b1616f87d26110c04eb259dabb35aa"/>
@@ -2785,6 +2773,94 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=a5b1616f87d26110c04eb259dabb35aa"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=a5b1616f87d26110c04eb259dabb35aa"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Create service goods receipt in SAP S4HANA">9f56ef5a87352950c04eb259dabb3531</flow>
+        <order>21</order>
+        <parent_ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>d33df3dcc32ea5d01ab7b73a05013123</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
+        <ui_id>09df3efc-af99-4066-81f9-2fa9ff89c0d0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d33df3dcc32ea5d01ab7b73a05013123"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d33df3dcc32ea5d01ab7b73a05013123</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>1f3df3dcc32ea5d01ab7b73a05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <value>status=posted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d33df3dcc32ea5d01ab7b73a05013123</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>df3df3dcc32ea5d01ab7b73a05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <value>sn_shop_receipt</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d33df3dcc32ea5d01ab7b73a05013123"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d33df3dcc32ea5d01ab7b73a05013123</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>9b3df3dcc32ea5d01ab7b73a05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.psm_goods_receipt}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d33df3dcc32ea5d01ab7b73a05013123</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>173df3dcc32ea5d01ab7b73a05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>d33df3dcc32ea5d01ab7b73a05013123</id>
+        <sys_created_by>Varun</sys_created_by>
+        <sys_created_on>2023-04-28 07:47:15</sys_created_on>
+        <sys_id>d73df3dcc32ea5d01ab7b73a05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-28 07:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d33df3dcc32ea5d01ab7b73a05013123"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d33df3dcc32ea5d01ab7b73a05013123"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9f56ef5a87352950c04eb259dabb3531^sys_idNOT IN27a783ca879e21102a18b846dabb358c"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -2800,10 +2876,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-21 04:06:54</sys_created_on>
         <sys_id>27a783ca879e21102a18b846dabb358c</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <ui_id>ddeb6dcc-34d3-40f9-848e-f5bd33ad15d2</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=27a783ca879e21102a18b846dabb358c"/>
@@ -2954,10 +3030,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>3356ef5a87352950c04eb259dabb35db</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>56fd5097-643d-4d83-b6a6-af7f88306f16</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2988,10 +3064,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>3356ef5a87352950c04eb259dabb35ee</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>26bb188a-a364-4b28-83b5-c854aea24398</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3014,7 +3090,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>25</order>
+        <order>26</order>
         <outputs_assigned>status,error_message</outputs_assigned>
         <outputs_to_assign/>
         <outputs_to_assign/>
@@ -3023,10 +3099,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>3e56804487d2e9102a18b846dabb3548</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>2d79fe47-41b8-4607-b1d9-941808caa7c6</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3069,10 +3145,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 09:32:34</sys_created_on>
         <sys_id>62b8e7aa8742a5102a18b846dabb359c</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>a16fb80e-236f-4afb-b0cd-0b91712595c9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3133,10 +3209,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7756ef5a87352950c04eb259dabb35b8</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>4997813d-efc3-4322-be76-38d26a67206d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3198,7 +3274,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>22</order>
+        <order>23</order>
         <outputs_assigned>status,error_message</outputs_assigned>
         <outputs_to_assign/>
         <outputs_to_assign/>
@@ -3207,10 +3283,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7b56ef5a87352950c04eb259dabb35f3</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>11fca524-4d7c-4325-a0bb-da2d615d0c2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3254,10 +3330,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:05</sys_created_on>
         <sys_id>7f56ef5a87352950c04eb259dabb35b0</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>32d06444-46cb-4cf4-b730-5c4a090d683a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3301,10 +3377,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>7f56ef5a87352950c04eb259dabb35e0</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>5e79dd12-1678-418a-887c-0026be8a9d32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3363,10 +3439,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-10 12:58:51</sys_created_on>
         <sys_id>94f7dcfe8706a5102a18b846dabb3519</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3402,7 +3478,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>26</order>
+        <order>27</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</parent_ui_id>
@@ -3410,10 +3486,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>b656804487d2e9102a18b846dabb354c</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>6d1b4640-245c-49df-aafa-d76224da32bc</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3444,10 +3520,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>b756ef5a87352950c04eb259dabb35e4</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>d56e4bf0-2402-4d65-96d1-470c958db872</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3492,10 +3568,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35dd</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>f591a416-91e4-4965-bd4a-a77c390a1b13</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3540,10 +3616,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35ea</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>960ac4c4-53f8-4309-97f3-0bc0fe99ce83</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3578,7 +3654,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>21</order>
+        <order>22</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>ba7b015d-0391-4e98-8985-4702e78398e7</parent_ui_id>
@@ -3586,10 +3662,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>bf56ef5a87352950c04eb259dabb35f0</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>f913693f-135b-426f-a80c-277188a95ba9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3612,7 +3688,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>23</order>
+        <order>24</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>f913693f-135b-426f-a80c-277188a95ba9</parent_ui_id>
@@ -3620,10 +3696,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>c866ef5a87352950c04eb259dabb35f6</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>a9886d32-ea6d-4f7b-9849-96d3a415727b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3646,7 +3722,7 @@
         <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>24</order>
+        <order>25</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -3654,10 +3730,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-04-14 08:54:25</sys_created_on>
         <sys_id>f256804487d2e9102a18b846dabb352d</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:42</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>bdc46ab0-4735-44fb-bc52-3347db1bcd1a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3688,10 +3764,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>f356ef5a87352950c04eb259dabb35bf</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>a7710646-e848-49f1-a9dd-253adc6b8320</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3735,10 +3811,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>f356ef5a87352950c04eb259dabb35e8</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:19</sys_updated_on>
         <ui_id>56892a7f-8bb7-4c02-8fee-3c9d2e769978</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3769,10 +3845,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:05</sys_created_on>
         <sys_id>f756ef5a87352950c04eb259dabb35ac</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:40</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:17</sys_updated_on>
         <ui_id>c46e2177-7f6f-4dc1-9784-ed7a426e3a4a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3818,10 +3894,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>fb56ef5a87352950c04eb259dabb35b4</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>eaee31b8-065b-4d26-8d08-d6a6fcea2b1d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3866,10 +3942,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-28 04:28:06</sys_created_on>
         <sys_id>ff56ef5a87352950c04eb259dabb35bb</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:53:41</sys_updated_on>
+        <sys_updated_on>2023-04-28 07:47:18</sys_updated_on>
         <ui_id>089ac20f-81ae-4737-932f-40891102c143</ui_id>
         <workflow_inputs/>
         <workflow_reference/>

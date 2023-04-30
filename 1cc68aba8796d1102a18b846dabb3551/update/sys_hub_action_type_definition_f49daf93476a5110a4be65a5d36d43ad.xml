@@ -10,7 +10,216 @@
         <category/>
         <copied_from>402256bb976599106ef838a71153af4e</copied_from>
         <copied_from_name>Segregate Material data</copied_from_name>
-        <description/>
+        <description>&lt;p&gt;Segregates material JSON to array of object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Material object&lt;/strong&gt; - SAP material&amp;nbsp;JSON payload.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Material&amp;nbsp;&lt;/label&gt;&lt;/strong&gt;- Array of objects containing below fields:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MARC&lt;/strong&gt;&amp;nbsp;- Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material No&lt;/li&gt;
+&lt;li&gt;Plant&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Plant-Specific Material Status&lt;/li&gt;
+&lt;li&gt;Purchasing Group&lt;/li&gt;
+&lt;li&gt;Unit of issue&lt;/li&gt;
+&lt;li&gt;Material: MRP profile&lt;/li&gt;
+&lt;li&gt;MRP Type&lt;/li&gt;
+&lt;li&gt;MRP Controller&lt;/li&gt;
+&lt;li&gt;Procurement Type&lt;/li&gt;
+&lt;li&gt;Base quantity&lt;/li&gt;
+&lt;li&gt;Profit Center&lt;/li&gt;
+&lt;li&gt;Stock in Transit&lt;/li&gt;
+&lt;li&gt;Production unit&lt;/li&gt;
+&lt;li&gt;Issue Storage Location&lt;/li&gt;
+&lt;li&gt;MRP Group&lt;/li&gt;
+&lt;li&gt;Serial Number Profile&lt;/li&gt;
+&lt;li&gt;Unit of Measure Group (Oil, Natural Gas,..&lt;/li&gt;
+&lt;li&gt;Conversion Group (Oil, Natural Gas,..)&lt;/li&gt;
+&lt;li&gt;Material freight group&lt;/li&gt;
+&lt;li&gt;Date from which the plant-specific material status is valid&lt;/li&gt;
+&lt;li&gt;Assignment UoM&lt;/li&gt;
+&lt;li&gt;Stock transfer sales value (plant to plant) for VO material&lt;/li&gt;
+&lt;li&gt;Stock in transfer (plant to plant)&lt;/li&gt;
+&lt;li&gt;Data Division MARC&lt;/li&gt;
+&lt;li&gt;Default storage location for external procurement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MARA&lt;/strong&gt;- Objects containing these fields:&amp;nbsp;
+&lt;ul&gt;
+&lt;li&gt;Material No.&lt;/li&gt;
+&lt;li&gt;Created On&lt;/li&gt;
+&lt;li&gt;Material Type&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Base Unit of Measure&lt;/li&gt;
+&lt;li&gt;Purchase Order Unit of Measure&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Size/dimensions&lt;/li&gt;
+&lt;li&gt;Basic Material&lt;/li&gt;
+&lt;li&gt;Industry Standard Description (such as ANSI or ISO)&lt;/li&gt;
+&lt;li&gt;Purchasing Value Key&lt;/li&gt;
+&lt;li&gt;Gross Weight&lt;/li&gt;
+&lt;li&gt;Net Weight&lt;/li&gt;
+&lt;li&gt;Weight Unit&lt;/li&gt;
+&lt;li&gt;Volume&lt;/li&gt;
+&lt;li&gt;Volume Unit&lt;/li&gt;
+&lt;li&gt;Container requirements&lt;/li&gt;
+&lt;li&gt;Storage conditions&lt;/li&gt;
+&lt;li&gt;Hazardous material number&lt;/li&gt;
+&lt;li&gt;Division&lt;/li&gt;
+&lt;li&gt;Procurement rule&lt;/li&gt;
+&lt;li&gt;Source of Supply&lt;/li&gt;
+&lt;li&gt;Length&lt;/li&gt;
+&lt;li&gt;Width&lt;/li&gt;
+&lt;li&gt;Height&lt;/li&gt;
+&lt;li&gt;Unit of Dimension for Length/Width/Height&lt;/li&gt;
+&lt;li&gt;Product Hierarchy&lt;/li&gt;
+&lt;li&gt;Storage percentage&lt;/li&gt;
+&lt;li&gt;Net contents&lt;/li&gt;
+&lt;li&gt;Manufacturer number&lt;/li&gt;
+&lt;li&gt;Dangerous Goods Indicator Profile&lt;/li&gt;
+&lt;li&gt;Material Is Locked&lt;/li&gt;
+&lt;li&gt;Relevant for Hazardous Substances&lt;/li&gt;
+&lt;li&gt;Handling Unit Type&lt;/li&gt;
+&lt;li&gt;Unit of Measure for Maximum Packing Length/Width/Height&lt;/li&gt;
+&lt;li&gt;Material freight group&lt;/li&gt;
+&lt;li&gt;Loading Units&lt;/li&gt;
+&lt;li&gt;Packaging Code&lt;/li&gt;
+&lt;li&gt;Dangerous Goods Packaging Status&lt;/li&gt;
+&lt;li&gt;Return Code&lt;/li&gt;
+&lt;li&gt;Return to Logistics Level&lt;/li&gt;
+&lt;li&gt;Assignment UoM&lt;/li&gt;
+&lt;li&gt;Product Category&lt;/li&gt;
+&lt;li&gt;Packaging Material Type&lt;/li&gt;
+&lt;li&gt;Name of Person Who Created the Object&lt;/li&gt;
+&lt;li&gt;Material Category&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAKT&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material Description&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MARD&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Storage Location&lt;/li&gt;
+&lt;li&gt;Maintenance status&lt;/li&gt;
+&lt;li&gt;Valuated Unrestricted-Use Stock&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Stock in Quality Inspection&lt;/li&gt;
+&lt;li&gt;Total Stock of All Restricted Batches&lt;/li&gt;
+&lt;li&gt;Blocked Stock&lt;/li&gt;
+&lt;li&gt;Blocked Stock Returns&lt;/li&gt;
+&lt;li&gt;Physical inventory indicator for whose stock in current year&lt;/li&gt;
+&lt;li&gt;Phys. inventory ind. f. stock in qual. insp. in current year&lt;/li&gt;
+&lt;li&gt;Physical inventory indicator for restricted-use stock&lt;/li&gt;
+&lt;li&gt;Storage location MRP indicator&lt;/li&gt;
+&lt;li&gt;Storage Bin&lt;/li&gt;
+&lt;li&gt;Profit Center&lt;/li&gt;
+&lt;li&gt;Created On&lt;/li&gt;
+&lt;li&gt;Plant&lt;/li&gt;
+&lt;li&gt;Special procurement type at storage location level&lt;/li&gt;
+&lt;li&gt;Data Division MARD&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MBEW&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Valuation Area&lt;/li&gt;
+&lt;li&gt;Valuation Type&lt;/li&gt;
+&lt;li&gt;Total Valuated Stock&lt;/li&gt;
+&lt;li&gt;Value of Total Valuated Stock&lt;/li&gt;
+&lt;li&gt;Price control indicator&lt;/li&gt;
+&lt;li&gt;Standard price&lt;/li&gt;
+&lt;li&gt;Price unit&lt;/li&gt;
+&lt;li&gt;Total valuated stock in previous period&lt;/li&gt;
+&lt;li&gt;Value of total valuated stock in previous period&lt;/li&gt;
+&lt;li&gt;Standard price in the previous period&lt;/li&gt;
+&lt;li&gt;Price unit of previous period&lt;/li&gt;
+&lt;li&gt;Fiscal Year of Current Period&lt;/li&gt;
+&lt;li&gt;Current period (posting period)&lt;/li&gt;
+&lt;li&gt;Valuation Category&lt;/li&gt;
+&lt;li&gt;Previous price&lt;/li&gt;
+&lt;li&gt;Date of the last price change&lt;/li&gt;
+&lt;li&gt;Future price&lt;/li&gt;
+&lt;li&gt;Date as of which the price is valid&lt;/li&gt;
+&lt;li&gt;UTC Time Stamp in Short Form (YYYYMMDDhhmmss)&lt;/li&gt;
+&lt;li&gt;Future planned price&lt;/li&gt;
+&lt;li&gt;Future Planned Price 1&lt;/li&gt;
+&lt;li&gt;Future Planned Price 2&lt;/li&gt;
+&lt;li&gt;Future Planned Price 3&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 1 Is Valid&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 2 Is Valid&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 3 Is Valid&lt;/li&gt;
+&lt;li&gt;Material Is Costed with Quantity Structure&lt;/li&gt;
+&lt;li&gt;Previous planned price&lt;/li&gt;
+&lt;li&gt;Current Planned Price&lt;/li&gt;
+&lt;li&gt;Physical Inventory Blocking Indicator&lt;/li&gt;
+&lt;li&gt;Produced in-house&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ATTYP -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Activation Status of a Repository Object&lt;/li&gt;
+&lt;li&gt;Domain value key&lt;/li&gt;
+&lt;li&gt;Short Text for Fixed Values&lt;/li&gt;
+&lt;li&gt;Language-specific values for domains, lower limit&lt;/li&gt;
+&lt;li&gt;Language-specific values for domains, upper limit&lt;/li&gt;
+&lt;li&gt;Values for Domains: Single Value / Upper Limit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T006A -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Unit of Measurement&lt;/li&gt;
+&lt;li&gt;External Unit of Measurement in Commercial Format (3-Char)&lt;/li&gt;
+&lt;li&gt;External Unit of Measurement in Technical Format (6-Char)&lt;/li&gt;
+&lt;li&gt;Unit of Measurement Text (Maximum 10 Characters)&lt;/li&gt;
+&lt;li&gt;Unit of Measurement Text (Maximum 30 Characters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ZT134T -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Material Type&lt;/li&gt;
+&lt;li&gt;Description of material type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T023T -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Material Group Desc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows - &lt;/strong&gt;Return the total number of records present in SAP ECC&lt;/li&gt;
+&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status&amp;nbsp;&lt;/strong&gt;-&amp;nbsp;Object containing following fields:&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
         <internal_name>segregate_material_data</internal_name>
         <label_cache>[{"name":"{{action.mat_obj}}","label":"action➛Material object","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD099daf93846a5110388f8a01da077dc4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8918dfde-883f-41ba-80e1-bafdebccbbf9"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_MATERIAL}}","label":"step➛Pre Processing script➛Material Tables","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDcd9daf938c6a5110d4dc1ec42770f6ef","child_label":"Tables","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"ET_MATERIAL","child_uiUniqueId":"07e35fca-b368-4b45-8f80-b98bf82c43cc","uiUniqueId":"3c2376dd-e619-4d86-bb51-557519551623"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_TOTAL_ROWS}}","label":"step➛Pre Processing script➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"a0b2520f-2f97-41bc-b2f0-81501067c509"}}]</label_cache>
@@ -34,8 +243,8 @@
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f49daf93476a5110a4be65a5d36d43ad</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:01:03</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 12:23:05</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -1125,17 +1334,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Segregate Material Response">f49daf93476a5110a4be65a5d36d43ad</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"df6da22147f6951096fcb777746d43a5","name":"plan","plan_signature":null}}</plan>
-        <snapshot>7506bd23475a69105e5faca2026d43b0</snapshot>
+        <snapshot>5f8fc74583e221102aac11b6feaad341</snapshot>
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-27 13:15:30</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df6da22147f6951096fcb777746d43a5</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:01:06</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 12:23:06</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1147,7 +1356,216 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Segregates material JSON to array of object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Material object&lt;/strong&gt; - SAP material&amp;nbsp;JSON payload.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Material&amp;nbsp;&lt;/label&gt;&lt;/strong&gt;- Array of objects containing below fields:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MARC&lt;/strong&gt;&amp;nbsp;- Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material No&lt;/li&gt;
+&lt;li&gt;Plant&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Plant-Specific Material Status&lt;/li&gt;
+&lt;li&gt;Purchasing Group&lt;/li&gt;
+&lt;li&gt;Unit of issue&lt;/li&gt;
+&lt;li&gt;Material: MRP profile&lt;/li&gt;
+&lt;li&gt;MRP Type&lt;/li&gt;
+&lt;li&gt;MRP Controller&lt;/li&gt;
+&lt;li&gt;Procurement Type&lt;/li&gt;
+&lt;li&gt;Base quantity&lt;/li&gt;
+&lt;li&gt;Profit Center&lt;/li&gt;
+&lt;li&gt;Stock in Transit&lt;/li&gt;
+&lt;li&gt;Production unit&lt;/li&gt;
+&lt;li&gt;Issue Storage Location&lt;/li&gt;
+&lt;li&gt;MRP Group&lt;/li&gt;
+&lt;li&gt;Serial Number Profile&lt;/li&gt;
+&lt;li&gt;Unit of Measure Group (Oil, Natural Gas,..&lt;/li&gt;
+&lt;li&gt;Conversion Group (Oil, Natural Gas,..)&lt;/li&gt;
+&lt;li&gt;Material freight group&lt;/li&gt;
+&lt;li&gt;Date from which the plant-specific material status is valid&lt;/li&gt;
+&lt;li&gt;Assignment UoM&lt;/li&gt;
+&lt;li&gt;Stock transfer sales value (plant to plant) for VO material&lt;/li&gt;
+&lt;li&gt;Stock in transfer (plant to plant)&lt;/li&gt;
+&lt;li&gt;Data Division MARC&lt;/li&gt;
+&lt;li&gt;Default storage location for external procurement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MARA&lt;/strong&gt;- Objects containing these fields:&amp;nbsp;
+&lt;ul&gt;
+&lt;li&gt;Material No.&lt;/li&gt;
+&lt;li&gt;Created On&lt;/li&gt;
+&lt;li&gt;Material Type&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Base Unit of Measure&lt;/li&gt;
+&lt;li&gt;Purchase Order Unit of Measure&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Size/dimensions&lt;/li&gt;
+&lt;li&gt;Basic Material&lt;/li&gt;
+&lt;li&gt;Industry Standard Description (such as ANSI or ISO)&lt;/li&gt;
+&lt;li&gt;Purchasing Value Key&lt;/li&gt;
+&lt;li&gt;Gross Weight&lt;/li&gt;
+&lt;li&gt;Net Weight&lt;/li&gt;
+&lt;li&gt;Weight Unit&lt;/li&gt;
+&lt;li&gt;Volume&lt;/li&gt;
+&lt;li&gt;Volume Unit&lt;/li&gt;
+&lt;li&gt;Container requirements&lt;/li&gt;
+&lt;li&gt;Storage conditions&lt;/li&gt;
+&lt;li&gt;Hazardous material number&lt;/li&gt;
+&lt;li&gt;Division&lt;/li&gt;
+&lt;li&gt;Procurement rule&lt;/li&gt;
+&lt;li&gt;Source of Supply&lt;/li&gt;
+&lt;li&gt;Length&lt;/li&gt;
+&lt;li&gt;Width&lt;/li&gt;
+&lt;li&gt;Height&lt;/li&gt;
+&lt;li&gt;Unit of Dimension for Length/Width/Height&lt;/li&gt;
+&lt;li&gt;Product Hierarchy&lt;/li&gt;
+&lt;li&gt;Storage percentage&lt;/li&gt;
+&lt;li&gt;Net contents&lt;/li&gt;
+&lt;li&gt;Manufacturer number&lt;/li&gt;
+&lt;li&gt;Dangerous Goods Indicator Profile&lt;/li&gt;
+&lt;li&gt;Material Is Locked&lt;/li&gt;
+&lt;li&gt;Relevant for Hazardous Substances&lt;/li&gt;
+&lt;li&gt;Handling Unit Type&lt;/li&gt;
+&lt;li&gt;Unit of Measure for Maximum Packing Length/Width/Height&lt;/li&gt;
+&lt;li&gt;Material freight group&lt;/li&gt;
+&lt;li&gt;Loading Units&lt;/li&gt;
+&lt;li&gt;Packaging Code&lt;/li&gt;
+&lt;li&gt;Dangerous Goods Packaging Status&lt;/li&gt;
+&lt;li&gt;Return Code&lt;/li&gt;
+&lt;li&gt;Return to Logistics Level&lt;/li&gt;
+&lt;li&gt;Assignment UoM&lt;/li&gt;
+&lt;li&gt;Product Category&lt;/li&gt;
+&lt;li&gt;Packaging Material Type&lt;/li&gt;
+&lt;li&gt;Name of Person Who Created the Object&lt;/li&gt;
+&lt;li&gt;Material Category&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAKT&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material Description&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MARD&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Storage Location&lt;/li&gt;
+&lt;li&gt;Maintenance status&lt;/li&gt;
+&lt;li&gt;Valuated Unrestricted-Use Stock&lt;/li&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Stock in Quality Inspection&lt;/li&gt;
+&lt;li&gt;Total Stock of All Restricted Batches&lt;/li&gt;
+&lt;li&gt;Blocked Stock&lt;/li&gt;
+&lt;li&gt;Blocked Stock Returns&lt;/li&gt;
+&lt;li&gt;Physical inventory indicator for whose stock in current year&lt;/li&gt;
+&lt;li&gt;Phys. inventory ind. f. stock in qual. insp. in current year&lt;/li&gt;
+&lt;li&gt;Physical inventory indicator for restricted-use stock&lt;/li&gt;
+&lt;li&gt;Storage location MRP indicator&lt;/li&gt;
+&lt;li&gt;Storage Bin&lt;/li&gt;
+&lt;li&gt;Profit Center&lt;/li&gt;
+&lt;li&gt;Created On&lt;/li&gt;
+&lt;li&gt;Plant&lt;/li&gt;
+&lt;li&gt;Special procurement type at storage location level&lt;/li&gt;
+&lt;li&gt;Data Division MARD&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MBEW&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Material Number&lt;/li&gt;
+&lt;li&gt;Valuation Area&lt;/li&gt;
+&lt;li&gt;Valuation Type&lt;/li&gt;
+&lt;li&gt;Total Valuated Stock&lt;/li&gt;
+&lt;li&gt;Value of Total Valuated Stock&lt;/li&gt;
+&lt;li&gt;Price control indicator&lt;/li&gt;
+&lt;li&gt;Standard price&lt;/li&gt;
+&lt;li&gt;Price unit&lt;/li&gt;
+&lt;li&gt;Total valuated stock in previous period&lt;/li&gt;
+&lt;li&gt;Value of total valuated stock in previous period&lt;/li&gt;
+&lt;li&gt;Standard price in the previous period&lt;/li&gt;
+&lt;li&gt;Price unit of previous period&lt;/li&gt;
+&lt;li&gt;Fiscal Year of Current Period&lt;/li&gt;
+&lt;li&gt;Current period (posting period)&lt;/li&gt;
+&lt;li&gt;Valuation Category&lt;/li&gt;
+&lt;li&gt;Previous price&lt;/li&gt;
+&lt;li&gt;Date of the last price change&lt;/li&gt;
+&lt;li&gt;Future price&lt;/li&gt;
+&lt;li&gt;Date as of which the price is valid&lt;/li&gt;
+&lt;li&gt;UTC Time Stamp in Short Form (YYYYMMDDhhmmss)&lt;/li&gt;
+&lt;li&gt;Future planned price&lt;/li&gt;
+&lt;li&gt;Future Planned Price 1&lt;/li&gt;
+&lt;li&gt;Future Planned Price 2&lt;/li&gt;
+&lt;li&gt;Future Planned Price 3&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 1 Is Valid&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 2 Is Valid&lt;/li&gt;
+&lt;li&gt;Date from Which Future Planned Price 3 Is Valid&lt;/li&gt;
+&lt;li&gt;Material Is Costed with Quantity Structure&lt;/li&gt;
+&lt;li&gt;Previous planned price&lt;/li&gt;
+&lt;li&gt;Current Planned Price&lt;/li&gt;
+&lt;li&gt;Physical Inventory Blocking Indicator&lt;/li&gt;
+&lt;li&gt;Produced in-house&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ATTYP -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Activation Status of a Repository Object&lt;/li&gt;
+&lt;li&gt;Domain value key&lt;/li&gt;
+&lt;li&gt;Short Text for Fixed Values&lt;/li&gt;
+&lt;li&gt;Language-specific values for domains, lower limit&lt;/li&gt;
+&lt;li&gt;Language-specific values for domains, upper limit&lt;/li&gt;
+&lt;li&gt;Values for Domains: Single Value / Upper Limit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T006A -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Unit of Measurement&lt;/li&gt;
+&lt;li&gt;External Unit of Measurement in Commercial Format (3-Char)&lt;/li&gt;
+&lt;li&gt;External Unit of Measurement in Technical Format (6-Char)&lt;/li&gt;
+&lt;li&gt;Unit of Measurement Text (Maximum 10 Characters)&lt;/li&gt;
+&lt;li&gt;Unit of Measurement Text (Maximum 30 Characters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ZT134T -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Language Key&lt;/li&gt;
+&lt;li&gt;Material Type&lt;/li&gt;
+&lt;li&gt;Description of material type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T023T -&amp;nbsp;&lt;/strong&gt;Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Material no.&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Material Group Desc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows - &lt;/strong&gt;Return the total number of records present in SAP ECC&lt;/li&gt;
+&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status&amp;nbsp;&lt;/strong&gt;-&amp;nbsp;Object containing following fields:&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>segregate_material_data</internal_name>
         <label_cache>[{"name":"{{action.mat_obj}}","label":"action➛Material object","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD099daf93846a5110388f8a01da077dc4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8918dfde-883f-41ba-80e1-bafdebccbbf9"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_MATERIAL}}","label":"step➛Pre Processing script➛Material Tables","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDcd9daf938c6a5110d4dc1ec42770f6ef","child_label":"Tables","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"ET_MATERIAL","child_uiUniqueId":"07e35fca-b368-4b45-8f80-b98bf82c43cc","uiUniqueId":"3c2376dd-e619-4d86-bb51-557519551623"}},{"name":"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].ET_TOTAL_ROWS}}","label":"step➛Pre Processing script➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"a0b2520f-2f97-41bc-b2f0-81501067c509"}}]</label_cache>
         <master>true</master>
@@ -1162,15 +1580,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>05bda3d3476a5110a4be65a5d36d4383</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:00:59</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 12:23:03</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -2122,7 +2540,7 @@
         <sys_updated_by>Mayank</sys_updated_by>
         <sys_updated_on>2022-10-20 18:10:02</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT IN3906bd23475a69105e5faca2026d43af"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT INdf8fc74583e221102aac11b6feaad340"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2022-10-20 11:10:02">b9bde3d3476a5110a4be65a5d36d4334</action_status_metadata_id>
         <condition>{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}!=0</condition>
@@ -2130,12 +2548,12 @@
         <label>Pre Processing step fails</label>
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-04-25 14:01:02</sys_created_on>
-        <sys_id>3906bd23475a69105e5faca2026d43af</sys_id>
+        <sys_created_by>Mayank</sys_created_by>
+        <sys_created_on>2023-04-30 12:23:04</sys_created_on>
+        <sys_id>df8fc74583e221102aac11b6feaad340</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:01:02</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 12:23:04</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_05bda3d3476a5110a4be65a5d36d4383^sys_idNOT IN21bda3d3476a5110a4be65a5d36d43d9"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2259,6 +2677,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>f49daf93476a5110a4be65a5d36d43ad</sys_id>
         <latest_snapshot>05bda3d3476a5110a4be65a5d36d4383</latest_snapshot>
-        <compiler_build>glide-tokyo-07-08-2022__patch8-03-16-2023_03-24-2023_1357.zip</compiler_build>
+        <compiler_build>glide-tokyo-07-08-2022__patch7a-03-27-2023_04-04-2023_1511.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
