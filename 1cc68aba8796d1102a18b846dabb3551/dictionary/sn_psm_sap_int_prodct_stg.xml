@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="6f239679c355e11068187addd40131f2" extends="sys_import_set_row" label="Materials" max_length="40" name="sn_psm_sap_int_prodct_stg" type="collection">
-        <element label="Assignment uom" max_length="50" name="assignment_uom" type="string"/>
+        <element label="Assignment Unit of Measurement" max_length="50" name="assignment_uom" type="string"/>
         <element label="Base quantity" max_length="50" name="base_quantity" type="string"/>
         <element label="Base unit of measure" max_length="50" name="base_unit_of_measure" type="string"/>
         <element label="Base unit of measure description" max_length="50" name="base_unit_of_measure_desc" type="string"/>
@@ -42,7 +42,7 @@
         <element label="Language" max_length="50" name="language" type="string"/>
         <element label="Length" max_length="50" name="length" type="string"/>
         <element label="Loading units" max_length="50" name="loading_units" type="string"/>
-        <element label="Load without packaging material vso" max_length="50" name="load_without_packaging_material_vso" type="string"/>
+        <element label="Load without packaging material Vehicle Space Optimization" max_length="50" name="load_without_packaging_material_vso" type="string"/>
         <element label="Maintenance status" max_length="50" name="maintenance_status" type="string"/>
         <element label="Manufacturer number" max_length="50" name="manufacturer_number" type="string"/>
         <element label="Material category" max_length="50" name="material_category" type="string"/>
@@ -53,13 +53,13 @@
         <element label="Material group desc" max_length="50" name="material_group_desc" type="string"/>
         <element label="Material is costed with quantity structure" max_length="50" name="material_is_costed_with_quantity_structure" type="string"/>
         <element label="Material is locked" max_length="50" name="material_is_locked" type="string"/>
-        <element label="Material mrp profile" max_length="50" name="material_mrp_profile" type="string"/>
+        <element label="Material Material Requirements Planning Profile" max_length="50" name="material_mrp_profile" type="string"/>
         <element label="Material number" max_length="50" name="material_number" type="string"/>
         <element label="Material type" max_length="50" name="material_type" type="string"/>
         <element label="Material type desc" max_length="50" name="material_type_desc" type="string"/>
         <element label="Mrp controller" max_length="50" name="mrp_controller" type="string"/>
-        <element label="Mrp group" max_length="50" name="mrp_group" type="string"/>
-        <element label="Mrp type" max_length="50" name="mrp_type" type="string"/>
+        <element label="Material Requirements Planning Group" max_length="50" name="mrp_group" type="string"/>
+        <element label="Material Requirements Planning Type" max_length="50" name="mrp_type" type="string"/>
         <element label="Name of person who created the object" max_length="50" name="name_of_person_who_created_the_object" type="string"/>
         <element label="Net contents" max_length="50" name="net_contents" type="string"/>
         <element label="Net weight" max_length="50" name="net_weight" type="string"/>
@@ -67,7 +67,7 @@
         <element label="Packaging material type" max_length="50" name="packaging_material_type" type="string"/>
         <element label="Physical inventory blocking indicator" max_length="50" name="physical_inventory_blocking_indicator" type="string"/>
         <element label="Physical inventory indicator for restricted use stock" max_length="50" name="physical_inventory_indicator_for_restricted_use_stock" type="string"/>
-        <element label="Physical inventory indicator for whse stock in current year" max_length="50" name="physical_inventory_indicator_for_whse_stock_in_current_year" type="string"/>
+        <element label="Physical inventory indicator for ware house stock in current year" max_length="50" name="physical_inventory_indicator_for_whse_stock_in_current_year" type="string"/>
         <element label="Phys Inventory ind F Stock in qual Insp In current year" max_length="50" name="phys_inventory_ind_f_stock_in_qual_insp_in_current_year" type="string"/>
         <element label="Plant field" max_length="50" name="plant_field" type="string"/>
         <element label="Plant specific material status" max_length="50" name="plant_specific_material_status" type="string"/>
@@ -97,11 +97,11 @@
         <element label="Stock in quality inspection" max_length="50" name="stock_in_quality_inspection" type="string"/>
         <element label="Stock in transfer plant to plant" max_length="50" name="stock_in_transfer_plant_to_plant" type="string"/>
         <element label="Stock in transit" max_length="50" name="stock_in_transit" type="string"/>
-        <element label="Stock transfer sales value plant to plant for vo material" max_length="50" name="stock_transfer_sales_value_plant_to_plant_for_vo_material" type="string"/>
+        <element label="Stock transfer sales value plant to plant for valuation order material" max_length="50" name="stock_transfer_sales_value_plant_to_plant_for_vo_material" type="string"/>
         <element label="Storage bin" max_length="50" name="storage_bin" type="string"/>
         <element label="Storage conditions" max_length="50" name="storage_conditions" type="string"/>
         <element label="Storage location" max_length="50" name="storage_location" type="string"/>
-        <element label="Storage location mrp indicator" max_length="50" name="storage_location_mrp_indicator" type="string"/>
+        <element label="Storage Location Material Requirements Planning Indicator" max_length="50" name="storage_location_mrp_indicator" type="string"/>
         <element label="Storage percentage" max_length="50" name="storage_percentage" type="string"/>
         <element label="Total stock of all restricted batches" max_length="50" name="total_stock_of_all_restricted_batches" type="string"/>
         <element label="Total valuated stock" max_length="50" name="total_valuated_stock" type="string"/>

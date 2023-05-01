@@ -13,7 +13,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Mrp group</column_label>
+        <column_label>Material Requirements Planning Group</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -52,13 +52,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-01-13 09:52:13</sys_created_on>
-        <sys_name>Mrp group</sys_name>
+        <sys_name>Material Requirements Planning Group</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_dictionary_sn_psm_sap_int_prodct_stg_mrp_group</sys_update_name>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-04-22 08:22:00</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-05-01 10:34:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
