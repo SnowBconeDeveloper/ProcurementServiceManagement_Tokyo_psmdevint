@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="a1cf0ac4c3aa6550b6e89a0705013173" sys_domain="global" table="sn_psm_sap_int_services_stg" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>71cf0ec4c3aa6550b6e89a070501319c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>erp_source</element>
+            <position>1</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>39cf0ec4c3aa6550b6e89a070501319c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>category_of_international_article_number_ean</element>
+            <position>2</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>b9cf0ec4c3aa6550b6e89a070501319c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>denominator_for_conversion_meins_iwein</element>
+            <position>3</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>3dcf0ec4c3aa6550b6e89a070501319c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>general_purchasing_status_for_service</element>
+            <position>4</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>bdcf0ec4c3aa6550b6e89a070501319c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_of_person_who_created_the_object</element>
+            <position>5</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>31cf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_short_text</element>
+            <position>6</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>b1cf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>authorization_group</element>
+            <position>7</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>35cf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>material_group</element>
+            <position>8</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>86cf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>primary_language_for_object_texts</element>
+            <position>9</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0acf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>client</element>
+            <position>10</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8acf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>division</element>
+            <position>11</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0ecf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hierarchy_service_number</element>
+            <position>12</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8ecf0ec4c3aa6550b6e89a070501319d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>numerator_for_conversion_of_meins_into_iwein</element>
+            <position>13</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>02cf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description_of_service_type</element>
+            <position>14</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>82cf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_unit_of_measure</element>
+            <position>15</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>06cf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>deletion_indicator</element>
+            <position>16</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>86cf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>17</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0acf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>formula_number</element>
+            <position>18</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8acf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_of_person_who_changed_object</element>
+            <position>19</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0ecf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_category</element>
+            <position>20</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8ecf0ec4c3aa6550b6e89a070501319e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity_number</element>
+            <position>21</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>02cf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>edition_of_service_type</element>
+            <position>22</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>82cf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>international_article_number_ean_upc</element>
+            <position>23</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>06cf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>package_number</element>
+            <position>24</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>86cf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_text_change_allowed</element>
+            <position>25</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0acf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>tax_indicator_for_service_purchasing</element>
+            <position>26</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8acf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valuation_class</element>
+            <position>27</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>0ecf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>standard_service_catalog_item</element>
+            <position>28</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>8ecf0ec4c3aa6550b6e89a070501319f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_for_work</element>
+            <position>29</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:32</sys_created_on>
+            <sys_id>02cf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>tax_tariff_code</element>
+            <position>30</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>82cf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wage_type</element>
+            <position>31</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>06cf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>validity_date_for_purchasing_status</element>
+            <position>32</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>86cf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>33</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>0acf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>uniform_resource_locator</element>
+            <position>34</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>8acf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>35</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>0ecf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_of_last_change</element>
+            <position>36</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>8ecf0ec4c3aa6550b6e89a07050131a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>37</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>02cf0ec4c3aa6550b6e89a07050131a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_on_which_record_was_created</element>
+            <position>38</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>82cf0ec4c3aa6550b6e89a07050131a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>39</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:33</sys_created_on>
+            <sys_id>06cf0ec4c3aa6550b6e89a07050131a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:33</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>international_article_number_universal_product_code</element>
+            <position>40</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-30 06:44:42</sys_created_on>
+            <sys_id>22124289c3262110b6e89a0705013151</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-30 06:44:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>category_of_international_article_number</element>
+            <position>41</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-30 06:46:57</sys_created_on>
+            <sys_id>7792ca89c3262110b6e89a07050131cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-30 06:46:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>denominator_for_conversion</element>
+            <position>42</position>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-30 11:07:03</sys_created_on>
+            <sys_id>a92efa0147e261105e5faca2026d431f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_psm_sap_int_services_stg" sys_domain="global" view="Default view">a1cf0ac4c3aa6550b6e89a0705013173</sys_ui_section>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-30 11:07:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sn_psm_sap_int_services_stg</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>krishna</sys_created_by>
+            <sys_created_on>2023-04-27 05:10:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a1cf0ac4c3aa6550b6e89a0705013173</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_psm_sap_int_services_stg</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+            <sys_update_name>sys_ui_section_a1cf0ac4c3aa6550b6e89a0705013173</sys_update_name>
+            <sys_updated_by>krishna</sys_updated_by>
+            <sys_updated_on>2023-04-27 05:10:31</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

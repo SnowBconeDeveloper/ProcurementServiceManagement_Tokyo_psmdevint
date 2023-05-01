@@ -7,10 +7,70 @@
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Procurement">eb6ae34983a6211067a211b6feaad312</category>
         <copied_from>d180fa64479b111096fcb777746d431d</copied_from>
         <copied_from_name>Segregate Service Master Respons</copied_from_name>
-        <description/>
+        <description>&lt;p&gt;Segregates services JSON object to array of object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JSON String&lt;/strong&gt;&amp;nbsp;- SAP services JSON payload.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delimiter&lt;/strong&gt; - Character that separate strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Service Master&amp;nbsp;&lt;/label&gt;&lt;/strong&gt;- Array of objects containing below fields:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Service Master Data&amp;nbsp;- Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Activity Number&lt;/li&gt;
+&lt;li&gt;Date on Which Record Was Created&lt;/li&gt;
+&lt;li&gt;Name of Person Who Created the Object&lt;/li&gt;
+&lt;li&gt;Date of Last Change&lt;/li&gt;
+&lt;li&gt;Name of person who changed object&lt;/li&gt;
+&lt;li&gt;Deletion Indicator&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Base Unit of Measure&lt;/li&gt;
+&lt;li&gt;Numerator for conversion of meins into iwein&lt;/li&gt;
+&lt;li&gt;Service Category&lt;/li&gt;
+&lt;li&gt;Package number&lt;/li&gt;
+&lt;li&gt;International Article Number&lt;/li&gt;
+&lt;li&gt;Category of International Article Number&lt;/li&gt;
+&lt;li&gt;Division&lt;/li&gt;
+&lt;li&gt;Authorization Group&lt;/li&gt;
+&lt;li&gt;General Purchasing Status for Serviceq&lt;/li&gt;
+&lt;li&gt;Validity Date for Purchasing Status&lt;/li&gt;
+&lt;li&gt;Valuation Class&lt;/li&gt;
+&lt;li&gt;Hierarchy Service Number&lt;/li&gt;
+&lt;li&gt;Primary language for object texts&lt;/li&gt;
+&lt;li&gt;Wage type&lt;/li&gt;
+&lt;li&gt;Short Description of Service Type&lt;/li&gt;
+&lt;li&gt;Edition of Service Type&lt;/li&gt;
+&lt;li&gt;Standard Service Catalog Item&lt;/li&gt;
+&lt;li&gt;Tax Indicator for Service (Purchasing)&lt;/li&gt;
+&lt;li&gt;Denominator for Conversion&lt;/li&gt;
+&lt;li&gt;Unit for Work&lt;/li&gt;
+&lt;li&gt;Formula Number&lt;/li&gt;
+&lt;li&gt;Uniform resource locator&lt;/li&gt;
+&lt;li&gt;Tax Tariff Code&lt;/li&gt;
+&lt;li&gt;Short Text Change Allowed&lt;/li&gt;
+&lt;li&gt;Service Short Text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows - &lt;/strong&gt;Return the total number of records present in SAP Payload.&lt;/li&gt;
+&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status&amp;nbsp;&lt;/strong&gt;-&amp;nbsp;Object containing following fields:&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
         <internal_name>segregate_service_master_response</internal_name>
         <label_cache>[{"name":"{{action.json_string}}","label":"action➛JSON String","type":"action","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c82a8edc-5102-4027-a79c-fa3f620779e9"}},{"name":"{{action.delimiter}}","label":"action➛Delimiter","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ea593f51-819a-4bb6-bed7-ce84cb98dac3"}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].service_master}}","label":"step➛Script step➛Service Master","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD3d0867f97ed355107c83363626796120","child_label":"Service Master Data","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Service_Master_Data","child_uiUniqueId":"10843d92-9d18-46dd-a0b6-0d7fb7f56e5a","uiUniqueId":"d28514ba-0fe9-484b-91ac-88542c459474"}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].total_rows}}","label":"step➛Script step➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"9c0e644f-9187-4dac-b6df-a75bdbeb6c17"}}]</label_cache>
@@ -34,8 +94,8 @@
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_980827f947d3551096fcb777746d43c3</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 13:16:57</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-04-30 17:08:00</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -1311,17 +1371,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Segregate Service Master Response">980827f947d3551096fcb777746d43c3</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ce88aff947d3551096fcb777746d4346","name":"plan","plan_signature":null}}</plan>
-        <snapshot>40b2986787842550a3e3cbb4dabb359e</snapshot>
+        <snapshot>c08bb305832a211067a211b6feaad36f</snapshot>
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2022-11-22 08:43:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ce88aff947d3551096fcb777746d4346</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-01-03 10:25:55</sys_updated_on>
+        <sys_updated_by>Krishna</sys_updated_by>
+        <sys_updated_on>2023-04-30 15:35:07</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1330,10 +1390,70 @@
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Procurement">eb6ae34983a6211067a211b6feaad312</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Segregates services JSON object to array of object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JSON String&lt;/strong&gt;&amp;nbsp;- SAP services JSON payload.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delimiter&lt;/strong&gt; - Character that separate strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Service Master&amp;nbsp;&lt;/label&gt;&lt;/strong&gt;- Array of objects containing below fields:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Service Master Data&amp;nbsp;- Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Client&lt;/li&gt;
+&lt;li&gt;Activity Number&lt;/li&gt;
+&lt;li&gt;Date on Which Record Was Created&lt;/li&gt;
+&lt;li&gt;Name of Person Who Created the Object&lt;/li&gt;
+&lt;li&gt;Date of Last Change&lt;/li&gt;
+&lt;li&gt;Name of person who changed object&lt;/li&gt;
+&lt;li&gt;Deletion Indicator&lt;/li&gt;
+&lt;li&gt;Material Group&lt;/li&gt;
+&lt;li&gt;Base Unit of Measure&lt;/li&gt;
+&lt;li&gt;Numerator for conversion of meins into iwein&lt;/li&gt;
+&lt;li&gt;Service Category&lt;/li&gt;
+&lt;li&gt;Package number&lt;/li&gt;
+&lt;li&gt;International Article Number&lt;/li&gt;
+&lt;li&gt;Category of International Article Number&lt;/li&gt;
+&lt;li&gt;Division&lt;/li&gt;
+&lt;li&gt;Authorization Group&lt;/li&gt;
+&lt;li&gt;General Purchasing Status for Serviceq&lt;/li&gt;
+&lt;li&gt;Validity Date for Purchasing Status&lt;/li&gt;
+&lt;li&gt;Valuation Class&lt;/li&gt;
+&lt;li&gt;Hierarchy Service Number&lt;/li&gt;
+&lt;li&gt;Primary language for object texts&lt;/li&gt;
+&lt;li&gt;Wage type&lt;/li&gt;
+&lt;li&gt;Short Description of Service Type&lt;/li&gt;
+&lt;li&gt;Edition of Service Type&lt;/li&gt;
+&lt;li&gt;Standard Service Catalog Item&lt;/li&gt;
+&lt;li&gt;Tax Indicator for Service (Purchasing)&lt;/li&gt;
+&lt;li&gt;Denominator for Conversion&lt;/li&gt;
+&lt;li&gt;Unit for Work&lt;/li&gt;
+&lt;li&gt;Formula Number&lt;/li&gt;
+&lt;li&gt;Uniform resource locator&lt;/li&gt;
+&lt;li&gt;Tax Tariff Code&lt;/li&gt;
+&lt;li&gt;Short Text Change Allowed&lt;/li&gt;
+&lt;li&gt;Service Short Text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows - &lt;/strong&gt;Return the total number of records present in SAP Payload.&lt;/li&gt;
+&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status&amp;nbsp;&lt;/strong&gt;-&amp;nbsp;Object containing following fields:&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>segregate_service_master_response</internal_name>
         <label_cache>[{"name":"{{action.json_string}}","label":"action➛JSON String","type":"action","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c82a8edc-5102-4027-a79c-fa3f620779e9"}},{"name":"{{action.delimiter}}","label":"action➛Delimiter","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ea593f51-819a-4bb6-bed7-ce84cb98dac3"}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].service_master}}","label":"step➛Script step➛Service Master","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD3d0867f97ed355107c83363626796120","child_label":"Service Master Data","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Service_Master_Data","child_uiUniqueId":"10843d92-9d18-46dd-a0b6-0d7fb7f56e5a","uiUniqueId":"d28514ba-0fe9-484b-91ac-88542c459474"}},{"name":"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].total_rows}}","label":"step➛Script step➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"9c0e644f-9187-4dac-b6df-a75bdbeb6c17"}}]</label_cache>
         <master>true</master>
@@ -1348,15 +1468,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bf682ff947d3551096fcb777746d4339</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-04-17 08:07:02</sys_updated_on>
+        <sys_updated_by>Krishna</sys_updated_by>
+        <sys_updated_on>2023-04-30 16:44:36</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -2471,7 +2591,7 @@
         <sys_updated_by>krishna</sys_updated_by>
         <sys_updated_on>2022-11-22 08:43:27</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=bb786ff947d3551096fcb777746d437e^sys_idNOT IN324857348352e5502aac11b6feaad389"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=bb786ff947d3551096fcb777746d437e^sys_idNOT IN266b8011c3ee211031c77addd4013177"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2022-11-22 00:43:27">bb786ff947d3551096fcb777746d437e</action_status_metadata_id>
         <condition>{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.code}}=0</condition>
@@ -2479,12 +2599,12 @@
         <label>Script step fails</label>
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[4abe81d1-4117-4736-b02b-6c263930bcb8].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>krishna</sys_created_by>
-        <sys_created_on>2023-04-17 08:07:05</sys_created_on>
-        <sys_id>324857348352e5502aac11b6feaad389</sys_id>
+        <sys_created_by>Krishna</sys_created_by>
+        <sys_created_on>2023-04-30 16:44:37</sys_created_on>
+        <sys_id>266b8011c3ee211031c77addd4013177</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-04-17 08:07:05</sys_updated_on>
+        <sys_updated_by>Krishna</sys_updated_by>
+        <sys_updated_on>2023-04-30 16:44:37</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_bf682ff947d3551096fcb777746d4339^sys_idNOT IN02782ff947d3551096fcb777746d43e8,3026157c8723d110a3e3cbb4dabb35ed"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2631,6 +2751,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>980827f947d3551096fcb777746d43c3</sys_id>
         <latest_snapshot>bf682ff947d3551096fcb777746d4339</latest_snapshot>
-        <compiler_build>glide-tokyo-07-08-2022__patch7-02-16-2023_02-28-2023_1844.zip</compiler_build>
+        <compiler_build>glide-tokyo-07-08-2022__patch7a-03-27-2023_04-04-2023_1511.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

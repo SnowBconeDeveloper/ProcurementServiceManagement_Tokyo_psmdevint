@@ -7,7 +7,7 @@
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Procurement">eb6ae34983a6211067a211b6feaad312</category>
         <copied_from>402256bb976599106ef838a71153af4e</copied_from>
         <copied_from_name>Segregate Material data</copied_from_name>
         <description>&lt;p&gt;Segregates material JSON to array of object.&lt;/p&gt;
@@ -236,7 +236,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f49daf93476a5110a4be65a5d36d43ad</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Segregate Material Response</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
@@ -244,7 +244,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f49daf93476a5110a4be65a5d36d43ad</sys_update_name>
         <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-30 12:23:05</sys_updated_on>
+        <sys_updated_on>2023-04-30 16:25:50</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -457,7 +457,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -492,7 +492,7 @@
         <internal_type display_value="String">string</internal_type>
         <label/>
         <mandatory>true</mandatory>
-        <max_length>8000</max_length>
+        <max_length>65000</max_length>
         <model display_value="Pre Processing script">8d9daf93476a5110a4be65a5d36d43dc</model>
         <model_id>8d9daf93476a5110a4be65a5d36d43dc</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -516,14 +516,14 @@
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-20 18:09:26</sys_created_on>
         <sys_id>c19daf93476a5110a4be65a5d36d43ec</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:00:39</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 15:57:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -718,7 +718,7 @@
         <sys_created_on>2022-10-20 18:09:27</sys_created_on>
         <sys_id>459daf93476a5110a4be65a5d36d43f6</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material Tables</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -741,7 +741,7 @@
         <sys_created_on>2023-01-14 09:48:23</sys_created_on>
         <sys_id>7b9334c74758a11002367562846d43d8</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Total Rows</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1225,7 +1225,7 @@
         <sys_created_on>2022-10-20 18:09:26</sys_created_on>
         <sys_id>459daf93476a5110a4be65a5d36d43da</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material object</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1250,7 +1250,7 @@
         <sys_created_on>2022-10-20 18:09:27</sys_created_on>
         <sys_id>519def93476a5110a4be65a5d36d4313</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1273,7 +1273,7 @@
         <sys_created_on>2022-10-20 18:09:27</sys_created_on>
         <sys_id>999def93476a5110a4be65a5d36d4317</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1296,7 +1296,7 @@
         <sys_created_on>2022-10-20 18:09:27</sys_created_on>
         <sys_id>999def93476a5110a4be65a5d36d431b</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Total Rows</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1319,7 +1319,7 @@
         <sys_created_on>2022-10-20 18:09:27</sys_created_on>
         <sys_id>d59def93476a5110a4be65a5d36d430c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1334,17 +1334,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Segregate Material Response">f49daf93476a5110a4be65a5d36d43ad</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"df6da22147f6951096fcb777746d43a5","name":"plan","plan_signature":null}}</plan>
-        <snapshot>5f8fc74583e221102aac11b6feaad341</snapshot>
+        <snapshot>24b07b4983e6211067a211b6feaad33d</snapshot>
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-27 13:15:30</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df6da22147f6951096fcb777746d43a5</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-30 12:23:06</sys_updated_on>
+        <sys_updated_on>2023-04-30 14:47:54</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1353,7 +1353,7 @@
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Procurement">eb6ae34983a6211067a211b6feaad312</category>
         <copied_from/>
         <copied_from_name/>
         <description>&lt;p&gt;Segregates material JSON to array of object.&lt;/p&gt;
@@ -1580,7 +1580,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>05bda3d3476a5110a4be65a5d36d4383</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1588,7 +1588,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-30 12:23:03</sys_updated_on>
+        <sys_updated_on>2023-04-30 14:47:52</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1801,7 +1801,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1836,7 +1836,7 @@
         <internal_type display_value="String">string</internal_type>
         <label>material_obj</label>
         <mandatory>true</mandatory>
-        <max_length>8000</max_length>
+        <max_length>65000</max_length>
         <model display_value="Pre Processing script">29bda3d3476a5110a4be65a5d36d43db</model>
         <model_id>29bda3d3476a5110a4be65a5d36d43db</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -1860,14 +1860,14 @@
         <sys_created_by>Mayank</sys_created_by>
         <sys_created_on>2022-10-20 18:10:01</sys_created_on>
         <sys_id>61bda3d3476a5110a4be65a5d36d43f6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 14:01:00</sys_updated_on>
+        <sys_updated_by>Mayank</sys_updated_by>
+        <sys_updated_on>2023-04-30 15:57:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2062,7 +2062,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>75bde3d3476a5110a4be65a5d36d430f</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Total Rows</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2085,7 +2085,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>7dbde3d3476a5110a4be65a5d36d430b</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material Tables</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2540,7 +2540,7 @@
         <sys_updated_by>Mayank</sys_updated_by>
         <sys_updated_on>2022-10-20 18:10:02</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT INdf8fc74583e221102aac11b6feaad340"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b9bde3d3476a5110a4be65a5d36d4334^sys_idNOT INde808459832a211067a211b6feaad306"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2022-10-20 11:10:02">b9bde3d3476a5110a4be65a5d36d4334</action_status_metadata_id>
         <condition>{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}!=0</condition>
@@ -2549,11 +2549,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[bca804ab-5e8f-4c35-9cdd-dfbe4828fd24].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>Mayank</sys_created_by>
-        <sys_created_on>2023-04-30 12:23:04</sys_created_on>
-        <sys_id>df8fc74583e221102aac11b6feaad340</sys_id>
+        <sys_created_on>2023-04-30 15:57:06</sys_created_on>
+        <sys_id>de808459832a211067a211b6feaad306</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>Mayank</sys_updated_by>
-        <sys_updated_on>2023-04-30 12:23:04</sys_updated_on>
+        <sys_updated_on>2023-04-30 15:57:06</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_05bda3d3476a5110a4be65a5d36d4383^sys_idNOT IN21bda3d3476a5110a4be65a5d36d43d9"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2569,7 +2569,7 @@
         <sys_created_on>2022-10-20 18:10:01</sys_created_on>
         <sys_id>21bda3d3476a5110a4be65a5d36d43d9</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material object</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2594,7 +2594,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>b1bde3d3476a5110a4be65a5d36d432a</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Material</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2617,7 +2617,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>b1bde3d3476a5110a4be65a5d36d432e</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Total Rows</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2640,7 +2640,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>b9bde3d3476a5110a4be65a5d36d431f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2663,7 +2663,7 @@
         <sys_created_on>2022-10-20 18:10:02</sys_created_on>
         <sys_id>b9bde3d3476a5110a4be65a5d36d4325</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
