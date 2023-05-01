@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_nlu_language">
+    <sys_cs_nlu_language action="INSERT_OR_UPDATE">
+        <enabled>false</enabled>
+        <language display_value="Danish">a44f0fd1c3e6611068187addd40131c2</language>
+        <sys_class_name>sys_cs_nlu_language</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-01 07:00:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2c4f0fd1c3e6611068187addd40131c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_cs_nlu_language_2c4f0fd1c3e6611068187addd40131c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-01 07:00:16</sys_updated_on>
+    </sys_cs_nlu_language>
+</record_update>
