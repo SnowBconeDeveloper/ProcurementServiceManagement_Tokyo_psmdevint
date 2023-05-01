@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD812eab816d6e2110993e78da8e1214b4</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>1cc68aba8796d1102a18b846dabb3551</scope_name>
+        <serialized_content>{"FlowDesigner:FD812eab816d6e2110993e78da8e1214b4":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD812eab816d6e2110993e78da8e1214b4.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"ERP Line Number\",\"mandatory\":\"false\",\"child_name\":\"erp_line_number_child0\",\"uiUniqueId\":\"f8ad5e8a-4995-4e65-9a91-de096982ff5d\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD812eab816d6e2110993e78da8e1214b4\",\"child_label\":\"ERP Line Number_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"0252e8f3-7a7b-40c7-b990-ea801fe3beff\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-04-30 14:36:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>452eab81c36e211031c77addd40131b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD812eab816d6e2110993e78da8e1214b4</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_complex_object_452eab81c36e211031c77addd40131b4</sys_update_name>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-04-30 14:36:44</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

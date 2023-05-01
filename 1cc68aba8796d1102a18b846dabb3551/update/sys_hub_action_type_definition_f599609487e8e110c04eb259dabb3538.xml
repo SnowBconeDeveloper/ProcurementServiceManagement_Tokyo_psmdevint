@@ -7,56 +7,57 @@
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Goods Receipt">0f279dd0871a2d102a18b846dabb356c</category>
         <copied_from/>
         <copied_from_name/>
         <description>&lt;p&gt;Creates header object for service goods receipt action.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Service GR Header&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Service GR Header&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Service Goods Receipt Header &lt;/label&gt;&lt;/strong&gt;- Objects containing below fields:&lt;/div&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Service Goods Receipt Header&lt;/strong&gt; - Objects containing below fields:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Entry Sheet Number&lt;/li&gt;
+      &lt;li&gt;External entry sheet number&lt;/li&gt;
+      &lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
+      &lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
+      &lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
+      &lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Period&lt;/li&gt;
+      &lt;li&gt;End of period&lt;/li&gt;
+      &lt;li&gt;Package number&lt;/li&gt;
+      &lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Purchasing Document Number&lt;/li&gt;
+      &lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
+      &lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Points score for on-time delivery&lt;/li&gt;
+      &lt;li&gt;Points score for quality of services&lt;/li&gt;
+      &lt;li&gt;Document Date in Document&lt;/li&gt;
+      &lt;li&gt;Posting Date in the Document&lt;/li&gt;
+      &lt;li&gt;Reference Document Number&lt;/li&gt;
+      &lt;li&gt;Account Assignment Category&lt;/li&gt;
+      &lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
+      &lt;li&gt;User field: Service entry sheet&lt;/li&gt;
+      &lt;li&gt;Acceptance indicator&lt;/li&gt;
+      &lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
+      &lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;Entry Sheet Number&lt;/li&gt;
-&lt;li&gt;External entry sheet number&lt;/li&gt;
-&lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
-&lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
-&lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
-&lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
-&lt;li&gt;Period&lt;/li&gt;
-&lt;li&gt;End of period&lt;/li&gt;
-&lt;li&gt;Package number&lt;/li&gt;
-&lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
-&lt;li&gt;Purchasing Document Number&lt;/li&gt;
-&lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
-&lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
-&lt;li&gt;Points score for on-time delivery&lt;/li&gt;
-&lt;li&gt;Points score for quality of services&lt;/li&gt;
-&lt;li&gt;Document Date in Document&lt;/li&gt;
-&lt;li&gt;Posting Date in the Document&lt;/li&gt;
-&lt;li&gt;Reference Document Number&lt;/li&gt;
-&lt;li&gt;Account Assignment Category&lt;/li&gt;
-&lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
-&lt;li&gt;User field: Service entry sheet&lt;/li&gt;
-&lt;li&gt;Acceptance indicator&lt;/li&gt;
-&lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
-&lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
-&lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;Action Status&lt;/strong&gt; - Object containing following fields:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
         <internal_name>generate_ecc_service_goods_receipt_header_object</internal_name>
         <label_cache>[{"name":"{{action.conn_alias.sys_id}}","label":"action➛Connection Alias➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{action.GOODSMVT_HEADER}}","label":"action➛Material Document Header","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD86fb592c716c21500b406cc8e723c00c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8c89c62d-bcae-4dc3-b984-918d01645cb0"}},{"name":"{{action.GOODSMVT_ITEM}}","label":"action➛Material Document Item","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDc6fb1d2c756c21501a08d622e01ab98e","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Item","child_uiUniqueId":"932377c0-9a17-4033-93c0-665bd3a42852","uiUniqueId":"72dba4ec-e0c2-4c38-93d6-d7a1235f22b7"}},{"name":"{{action.GM_CODE}}","label":"action➛Transaction Code for Goods Movement","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ea6ee794-2e59-4dd5-905f-9c9a43d7665e"}},{"name":"{{action.additional_fields}}","label":"action➛Additional Fields","type":"action","ref":"","reference_display":"","base_type":"dynamic_template","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","dynamic":"true","uiUniqueId":"3d19d2bb-46c0-4850-9b1f-93a639a578b9"}},{"name":"{{action.select_bapi}}","label":"action➛Select BAPI","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Standard BAPI","value":"BAPI_GOODSMVT_CREATE","order":0.0},{"label":"Custom BAPI","value":"ZSN_BAPI_GOODSMVT_CREATE","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"661a024e-6057-4cca-8113-793e39010abc"}},{"name":"{{action.GOODSMVT_ITEM.Item.STGE_LOC}}","label":"action➛Material Document Item➛Item➛Storage Location","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.HEADERDATA}}","label":"action➛Invoice Header","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDb1d5ed24ddac2150953c465ae00874a3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"4f9b9f70-c554-4773-acb1-b5c3f108874b"}},{"name":"{{action.ITEMDATA}}","label":"action➛Invoice Lines","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD86d5ed24adac215088b64c45bd99d6a5","child_label":"Line","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Item","child_uiUniqueId":"3abde0e3-dd20-4ad8-acd2-0ed09cf2dccf","uiUniqueId":"a4307878-b18d-47f7-9709-4a6f7367ab84"}},{"name":"{{action.connection_alias}}","label":"action➛Connection Alias","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.header_data_of_entry_sheet}}","label":"action➛Header Data of Entry Sheet","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.services}}","label":"action➛Services","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.conn_alias}}","label":"action➛Connection Alias","type":"action","ref":"","reference_display":"Connection &amp; Credential Aliases","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"b4826eac-3d9b-4f75-a8b4-960143e6e2c5"}},{"name":"{{action.IT_ENTRYSHEETSERVICES.Item}}","label":"action➛Services➛Item","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.IV_ENTRYSHEETHEADER}}","label":"action➛Header Data of Entry Sheet","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.IT_ENTRYSHEETSERVICES}}","label":"action➛Services","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.gr_header.sys_created_on}}","label":"action➛Service GR Header➛Created","type":"action","ref":"","reference_display":"Created","base_type":"glide_date_time","parent_table_name":"sn_shop_receipt","column_name":"sys_created_on","choices":null,"attributes":{}},{"name":"{{action.gr_header.purchase_order_line.supplier_product.product_model.display_name}}","label":"action➛Service GR Header➛Purchase order line➛Supplier product➛Product model➛Display name","type":"action","ref":"","reference_display":"Display name","base_type":"string","parent_table_name":"cmdb_model","column_name":"display_name","choices":null,"attributes":{}},{"name":"{{action.gr_header.purchase_order_line.purchase_order.erp_number}}","label":"action➛Service GR Header➛Purchase order line➛Purchase order➛ERP number","type":"action","ref":"","reference_display":"ERP number","base_type":"string","parent_table_name":"sn_shop_order","column_name":"erp_number","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.sys_created_on}}","label":"action➛Service GR Header➛Created","type":"action","ref":"","reference_display":"Created","base_type":"glide_date_time","parent_table_name":"sn_shop_receipt","column_name":"sys_created_on","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.purchase_order_line.supplier_product.product_model.display_name}}","label":"action➛Service GR Header➛Purchase order line➛Supplier product➛Product model➛Display name","type":"action","ref":"","reference_display":"Display name","base_type":"string","parent_table_name":"cmdb_model","column_name":"display_name","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.purchase_order_line.purchase_order.erp_number}}","label":"action➛Service GR Header➛Purchase order line➛Purchase order➛ERP number","type":"action","ref":"","reference_display":"ERP number","base_type":"string","parent_table_name":"sn_shop_order","column_name":"erp_number","choices":null,"attributes":{}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"4c8bf680-9e04-4d9f-94ec-c3857931099e"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"5bea011d-a9a9-4116-ac0a-dda603cf9d80"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"9582f6f4-f967-4399-9e41-998e6c34b9f0"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6a0e4fd0-5517-4c0f-add3-154e644fb3a1"}},{"name":"{{step[d378c6d9-d11a-4fe2-a4ee-104c87c88e22].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3e874383-66dc-4a4f-858a-74a59ab15c92"}},{"name":"{{step[d378c6d9-d11a-4fe2-a4ee-104c87c88e22].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"79160a60-0022-4f09-8b11-5ad915ab32ba"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"49aa1ec3-541b-466f-a603-ca12b43501de"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f043f110-e9e0-4e34-a59c-e797b1991b21"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].err}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1c2aa1a1-7753-46c2-91e5-91eedfc16ae2"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"0ab51716-fa62-47b8-ab32-7ef35a06c279"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"ed738ce7-44ef-4b17-a1ee-a4eabc4e8abc"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1873a476-978f-4dfa-a51f-88295f9d3bd4"}},{"name":"{{step[1f4ee8d4-f548-436a-938a-273ee1791d02].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"08a12999-e135-4135-9a63-ae03c9b05a94"}},{"name":"{{step[1f4ee8d4-f548-436a-938a-273ee1791d02].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"42482c45-f603-45cb-9d70-afea2238116f"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"981322ad-15e5-489f-ae5c-055644659dae"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"2af62c2b-1662-4b03-b5a8-505c8c91c83a"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].error_message}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"78cc96b2-367d-4163-9977-79661a947986"}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[f85ea36f-c7e5-43e2-ab5e-66fff2f92104].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[f85ea36f-c7e5-43e2-ab5e-66fff2f92104].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].error_message}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].created}}","label":"step➛Preprocessing Script➛Created","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"efca4c32-607b-412b-82da-ccdfd1e0602f"}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].payload}}","label":"step➛Create SAP GR payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.code}}","label":"step➛Preprocessing Script➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.message}}","label":"step➛Preprocessing Script➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}","label":"step➛Create SAP GR payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.message}}","label":"step➛Create SAP GR payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].gr_header}}","label":"step➛Parse Payload➛GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDb88dac58ffe8e11081863fec0f57480f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"cdde9f7d-6d4d-43c0-8d09-7151e265ee6a"}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].created}}","label":"step➛Preprocessing Script➛Created","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"15fd3e09-a55f-424f-84e9-ae6e59c24250"}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].payload}}","label":"step➛Create Service GR payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].__step_status__.code}}","label":"step➛Preprocessing Script➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].__step_status__.message}}","label":"step➛Preprocessing Script➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].__step_status__.code}}","label":"step➛Create Service GR payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].__step_status__.message}}","label":"step➛Create Service GR payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].service_gr_header}}","label":"step➛Parse Payload➛Service GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7b9ae3fcbea0a510d6c69ab4f7ccf81b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"baaa4f16-c665-441f-8cd9-6c7c61337dc3"}}]</label_cache>
@@ -73,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f599609487e8e110c04eb259dabb3538</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Generate ECC Service GR Header Object</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
@@ -81,7 +82,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f599609487e8e110c04eb259dabb3538</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:35</sys_updated_on>
+        <sys_updated_on>2023-05-01 07:55:56</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -435,7 +436,7 @@
         <sys_created_on>2023-01-25 09:48:18</sys_created_on>
         <sys_id>391ddd6a87ace1102a18b846dabb359c</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Created</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -710,7 +711,7 @@
         <sys_created_on>2023-01-18 06:34:06</sys_created_on>
         <sys_id>708dac5887e8e110c04eb259dabb3515</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>GR Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1189,7 +1190,7 @@
         <sys_created_on>2023-01-18 06:34:05</sys_created_on>
         <sys_id>e48d6c5887e8e110c04eb259dabb35ca</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Service GR Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1214,7 +1215,7 @@
         <sys_created_on>2023-01-18 06:34:06</sys_created_on>
         <sys_id>7c8dac5887e8e110c04eb259dabb3520</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1237,7 +1238,7 @@
         <sys_created_on>2023-01-18 06:34:06</sys_created_on>
         <sys_id>f08dac5887e8e110c04eb259dabb3527</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1260,7 +1261,7 @@
         <sys_created_on>2023-01-18 06:52:23</sys_created_on>
         <sys_id>f0b17c5c87e8e110c04eb259dabb3531</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Service Goods Receipt Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1275,17 +1276,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Generate ECC Service GR Header Object">f599609487e8e110c04eb259dabb3538</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"4a23f0dc87e8e110c04eb259dabb35a4","name":"plan","plan_signature":null}}</plan>
-        <snapshot>b819e381c3ea211068187addd40131f3</snapshot>
+        <snapshot>b5debe558326611067a211b6feaad394</snapshot>
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-01-18 06:58:46</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a23f0dc87e8e110c04eb259dabb35a4</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:37</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-05-01 05:48:35</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1294,56 +1295,57 @@
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Goods Receipt">0f279dd0871a2d102a18b846dabb356c</category>
         <copied_from/>
         <copied_from_name/>
         <description>&lt;p&gt;Creates header object for service goods receipt action.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Service GR Header&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Service GR Header&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;div class="form-label"&gt;&lt;strong&gt;&lt;label class="control-label " data-for="ah_tooltipTop"&gt;Service Goods Receipt Header &lt;/label&gt;&lt;/strong&gt;- Objects containing below fields:&lt;/div&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Service Goods Receipt Header&lt;/strong&gt; - Objects containing below fields:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Entry Sheet Number&lt;/li&gt;
+      &lt;li&gt;External entry sheet number&lt;/li&gt;
+      &lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
+      &lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
+      &lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
+      &lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Period&lt;/li&gt;
+      &lt;li&gt;End of period&lt;/li&gt;
+      &lt;li&gt;Package number&lt;/li&gt;
+      &lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Purchasing Document Number&lt;/li&gt;
+      &lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
+      &lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Points score for on-time delivery&lt;/li&gt;
+      &lt;li&gt;Points score for quality of services&lt;/li&gt;
+      &lt;li&gt;Document Date in Document&lt;/li&gt;
+      &lt;li&gt;Posting Date in the Document&lt;/li&gt;
+      &lt;li&gt;Reference Document Number&lt;/li&gt;
+      &lt;li&gt;Account Assignment Category&lt;/li&gt;
+      &lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
+      &lt;li&gt;User field: Service entry sheet&lt;/li&gt;
+      &lt;li&gt;Acceptance indicator&lt;/li&gt;
+      &lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
+      &lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
+      &lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;Entry Sheet Number&lt;/li&gt;
-&lt;li&gt;External entry sheet number&lt;/li&gt;
-&lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
-&lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
-&lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
-&lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
-&lt;li&gt;Period&lt;/li&gt;
-&lt;li&gt;End of period&lt;/li&gt;
-&lt;li&gt;Package number&lt;/li&gt;
-&lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
-&lt;li&gt;Purchasing Document Number&lt;/li&gt;
-&lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
-&lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
-&lt;li&gt;Points score for on-time delivery&lt;/li&gt;
-&lt;li&gt;Points score for quality of services&lt;/li&gt;
-&lt;li&gt;Document Date in Document&lt;/li&gt;
-&lt;li&gt;Posting Date in the Document&lt;/li&gt;
-&lt;li&gt;Reference Document Number&lt;/li&gt;
-&lt;li&gt;Account Assignment Category&lt;/li&gt;
-&lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
-&lt;li&gt;User field: Service entry sheet&lt;/li&gt;
-&lt;li&gt;Acceptance indicator&lt;/li&gt;
-&lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
-&lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
-&lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;Action Status&lt;/strong&gt; - Object containing following fields:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr"&gt;&lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>generate_ecc_service_goods_receipt_header_object</internal_name>
         <label_cache>[{"name":"{{action.conn_alias.sys_id}}","label":"action➛Connection Alias➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{action.GOODSMVT_HEADER}}","label":"action➛Material Document Header","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD86fb592c716c21500b406cc8e723c00c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"8c89c62d-bcae-4dc3-b984-918d01645cb0"}},{"name":"{{action.GOODSMVT_ITEM}}","label":"action➛Material Document Item","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDc6fb1d2c756c21501a08d622e01ab98e","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Item","child_uiUniqueId":"932377c0-9a17-4033-93c0-665bd3a42852","uiUniqueId":"72dba4ec-e0c2-4c38-93d6-d7a1235f22b7"}},{"name":"{{action.GM_CODE}}","label":"action➛Transaction Code for Goods Movement","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"ea6ee794-2e59-4dd5-905f-9c9a43d7665e"}},{"name":"{{action.additional_fields}}","label":"action➛Additional Fields","type":"action","ref":"","reference_display":"","base_type":"dynamic_template","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","dynamic":"true","uiUniqueId":"3d19d2bb-46c0-4850-9b1f-93a639a578b9"}},{"name":"{{action.select_bapi}}","label":"action➛Select BAPI","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Standard BAPI","value":"BAPI_GOODSMVT_CREATE","order":0.0},{"label":"Custom BAPI","value":"ZSN_BAPI_GOODSMVT_CREATE","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"661a024e-6057-4cca-8113-793e39010abc"}},{"name":"{{action.GOODSMVT_ITEM.Item.STGE_LOC}}","label":"action➛Material Document Item➛Item➛Storage Location","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.HEADERDATA}}","label":"action➛Invoice Header","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDb1d5ed24ddac2150953c465ae00874a3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"4f9b9f70-c554-4773-acb1-b5c3f108874b"}},{"name":"{{action.ITEMDATA}}","label":"action➛Invoice Lines","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD86d5ed24adac215088b64c45bd99d6a5","child_label":"Line","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Item","child_uiUniqueId":"3abde0e3-dd20-4ad8-acd2-0ed09cf2dccf","uiUniqueId":"a4307878-b18d-47f7-9709-4a6f7367ab84"}},{"name":"{{action.connection_alias}}","label":"action➛Connection Alias","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.header_data_of_entry_sheet}}","label":"action➛Header Data of Entry Sheet","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.services}}","label":"action➛Services","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.conn_alias}}","label":"action➛Connection Alias","type":"action","ref":"","reference_display":"Connection &amp; Credential Aliases","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"b4826eac-3d9b-4f75-a8b4-960143e6e2c5"}},{"name":"{{action.IT_ENTRYSHEETSERVICES.Item}}","label":"action➛Services➛Item","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.IV_ENTRYSHEETHEADER}}","label":"action➛Header Data of Entry Sheet","type":"action","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":[],"attributes":{}},{"name":"{{action.IT_ENTRYSHEETSERVICES}}","label":"action➛Services","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.gr_header.sys_created_on}}","label":"action➛Service GR Header➛Created","type":"action","ref":"","reference_display":"Created","base_type":"glide_date_time","parent_table_name":"sn_shop_receipt","column_name":"sys_created_on","choices":null,"attributes":{}},{"name":"{{action.gr_header.purchase_order_line.supplier_product.product_model.display_name}}","label":"action➛Service GR Header➛Purchase order line➛Supplier product➛Product model➛Display name","type":"action","ref":"","reference_display":"Display name","base_type":"string","parent_table_name":"cmdb_model","column_name":"display_name","choices":null,"attributes":{}},{"name":"{{action.gr_header.purchase_order_line.purchase_order.erp_number}}","label":"action➛Service GR Header➛Purchase order line➛Purchase order➛ERP number","type":"action","ref":"","reference_display":"ERP number","base_type":"string","parent_table_name":"sn_shop_order","column_name":"erp_number","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.sys_created_on}}","label":"action➛Service GR Header➛Created","type":"action","ref":"","reference_display":"Created","base_type":"glide_date_time","parent_table_name":"sn_shop_receipt","column_name":"sys_created_on","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.purchase_order_line.supplier_product.product_model.display_name}}","label":"action➛Service GR Header➛Purchase order line➛Supplier product➛Product model➛Display name","type":"action","ref":"","reference_display":"Display name","base_type":"string","parent_table_name":"cmdb_model","column_name":"display_name","choices":null,"attributes":{}},{"name":"{{action.service_gr_header.purchase_order_line.purchase_order.erp_number}}","label":"action➛Service GR Header➛Purchase order line➛Purchase order➛ERP number","type":"action","ref":"","reference_display":"ERP number","base_type":"string","parent_table_name":"sn_shop_order","column_name":"erp_number","choices":null,"attributes":{}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"4c8bf680-9e04-4d9f-94ec-c3857931099e"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"5bea011d-a9a9-4116-ac0a-dda603cf9d80"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"9582f6f4-f967-4399-9e41-998e6c34b9f0"}},{"name":"{{step[37f82e51-8ee0-4087-929c-e942a1c0e935].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6a0e4fd0-5517-4c0f-add3-154e644fb3a1"}},{"name":"{{step[d378c6d9-d11a-4fe2-a4ee-104c87c88e22].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3e874383-66dc-4a4f-858a-74a59ab15c92"}},{"name":"{{step[d378c6d9-d11a-4fe2-a4ee-104c87c88e22].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"79160a60-0022-4f09-8b11-5ad915ab32ba"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"49aa1ec3-541b-466f-a603-ca12b43501de"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f043f110-e9e0-4e34-a59c-e797b1991b21"}},{"name":"{{step[81f4b7cd-3ed6-4de1-ad71-288c88eba49c].err}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1c2aa1a1-7753-46c2-91e5-91eedfc16ae2"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"0ab51716-fa62-47b8-ab32-7ef35a06c279"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"ed738ce7-44ef-4b17-a1ee-a4eabc4e8abc"}},{"name":"{{step[a7eae286-7999-4306-a90e-2e090dba2b5c].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1873a476-978f-4dfa-a51f-88295f9d3bd4"}},{"name":"{{step[1f4ee8d4-f548-436a-938a-273ee1791d02].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"08a12999-e135-4135-9a63-ae03c9b05a94"}},{"name":"{{step[1f4ee8d4-f548-436a-938a-273ee1791d02].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"42482c45-f603-45cb-9d70-afea2238116f"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"981322ad-15e5-489f-ae5c-055644659dae"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"2af62c2b-1662-4b03-b5a8-505c8c91c83a"}},{"name":"{{step[a1039de8-f17f-4c6c-85d3-3291e2f918b8].error_message}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"78cc96b2-367d-4163-9977-79661a947986"}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[95232e15-87ea-48f5-8cce-cb8d005f328a].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[f85ea36f-c7e5-43e2-ab5e-66fff2f92104].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[f85ea36f-c7e5-43e2-ab5e-66fff2f92104].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0c9fc57b-6dde-457d-bf29-aa5f4c4b944a].error_message}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].created}}","label":"step➛Preprocessing Script➛Created","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"efca4c32-607b-412b-82da-ccdfd1e0602f"}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].payload}}","label":"step➛Create SAP GR payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.code}}","label":"step➛Preprocessing Script➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.message}}","label":"step➛Preprocessing Script➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}","label":"step➛Create SAP GR payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.message}}","label":"step➛Create SAP GR payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].gr_header}}","label":"step➛Parse Payload➛GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDb88dac58ffe8e11081863fec0f57480f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"cdde9f7d-6d4d-43c0-8d09-7151e265ee6a"}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].created}}","label":"step➛Preprocessing Script➛Created","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"15fd3e09-a55f-424f-84e9-ae6e59c24250"}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].payload}}","label":"step➛Create Service GR payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].__step_status__.code}}","label":"step➛Preprocessing Script➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[98c2900c-c2b6-4c97-b5ef-16e1bec8fe21].__step_status__.message}}","label":"step➛Preprocessing Script➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].__step_status__.code}}","label":"step➛Create Service GR payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8c39b98c-1e4e-4c14-b551-0c341e8bebda].__step_status__.message}}","label":"step➛Create Service GR payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[598816b7-e501-42ff-94af-6ba00cf4f088].service_gr_header}}","label":"step➛Parse Payload➛Service GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7b9ae3fcbea0a510d6c69ab4f7ccf81b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"baaa4f16-c665-441f-8cd9-6c7c61337dc3"}}]</label_cache>
         <master>true</master>
@@ -1358,15 +1360,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9823b0dc87e8e110c04eb259dabb356e</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:33</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-05-01 06:08:20</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1720,7 +1722,7 @@
         <sys_created_on>2023-01-25 09:48:29</sys_created_on>
         <sys_id>682d11aa87ace1102a18b846dabb35df</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Created</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1995,7 +1997,7 @@
         <sys_created_on>2023-01-18 06:58:41</sys_created_on>
         <sys_id>8123b0dc87e8e110c04eb259dabb35d3</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>GR Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2417,20 +2419,20 @@
         <sys_updated_by>varun</sys_updated_by>
         <sys_updated_on>2023-01-18 06:58:42</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=8923b0dc87e8e110c04eb259dabb35fc^sys_idNOT IN7419e381c3ea211068187addd40131f3,f019e381c3ea211068187addd40131f3,f419e381c3ea211068187addd40131f3"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=8923b0dc87e8e110c04eb259dabb35fc^sys_idNOT IN0063439d8326611067a211b6feaad373,3b53439d8326611067a211b6feaad372,8c63439d8326611067a211b6feaad372"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-01-17 22:58:42">8923b0dc87e8e110c04eb259dabb35fc</action_status_metadata_id>
-        <condition>{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}!=0</condition>
+        <condition>{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}!=0</condition>
         <dont_treat_as_error>true</dont_treat_as_error>
-        <label>Create SAP GR payload step fails</label>
-        <order>2</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-04-30 14:14:34</sys_created_on>
-        <sys_id>7419e381c3ea211068187addd40131f3</sys_id>
+        <label>Parse Payload step fails</label>
+        <order>3</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-05-01 06:08:21</sys_created_on>
+        <sys_id>0063439d8326611067a211b6feaad373</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:34</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-05-01 06:08:21</sys_updated_on>
     </sys_hub_status_condition>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-01-17 22:58:42">8923b0dc87e8e110c04eb259dabb35fc</action_status_metadata_id>
@@ -2439,26 +2441,26 @@
         <label>Preprocessing Script step fails</label>
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[bb13f514-31d7-45ac-9326-2eaf426149c3].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-04-30 14:14:34</sys_created_on>
-        <sys_id>f019e381c3ea211068187addd40131f3</sys_id>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-05-01 06:08:21</sys_created_on>
+        <sys_id>3b53439d8326611067a211b6feaad372</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:34</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-05-01 06:08:21</sys_updated_on>
     </sys_hub_status_condition>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-01-17 22:58:42">8923b0dc87e8e110c04eb259dabb35fc</action_status_metadata_id>
-        <condition>{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}!=0</condition>
+        <condition>{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}!=0</condition>
         <dont_treat_as_error>true</dont_treat_as_error>
-        <label>Parse Payload step fails</label>
-        <order>3</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[02277803-f931-41a4-b2ac-0d79d4657da2].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-04-30 14:14:34</sys_created_on>
-        <sys_id>f419e381c3ea211068187addd40131f3</sys_id>
+        <label>Create SAP GR payload step fails</label>
+        <order>2</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[b3785ada-f236-4d0c-be9f-23f5fa9af030].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>varun</sys_created_by>
+        <sys_created_on>2023-05-01 06:08:21</sys_created_on>
+        <sys_id>8c63439d8326611067a211b6feaad372</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-30 14:14:34</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-05-01 06:08:21</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_9823b0dc87e8e110c04eb259dabb356e^sys_idNOT INb023b0dc87e8e110c04eb259dabb35aa"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2474,7 +2476,7 @@
         <sys_created_on>2023-01-18 06:58:41</sys_created_on>
         <sys_id>b023b0dc87e8e110c04eb259dabb35aa</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Service GR Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2499,7 +2501,7 @@
         <sys_created_on>2023-01-18 06:58:42</sys_created_on>
         <sys_id>0123b0dc87e8e110c04eb259dabb35f7</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name/>
+        <sys_name>Service Goods Receipt Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2522,7 +2524,7 @@
         <sys_created_on>2023-01-18 06:58:42</sys_created_on>
         <sys_id>0d23b0dc87e8e110c04eb259dabb35ec</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2545,7 +2547,7 @@
         <sys_created_on>2023-01-18 06:58:42</sys_created_on>
         <sys_id>0d23b0dc87e8e110c04eb259dabb35f2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
