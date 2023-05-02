@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>public</access>
+        <access>package_private</access>
         <active>true</active>
         <api_name>sn_psm_sap_int.PsmSapUtils</api_name>
         <caller_access/>
@@ -279,8 +279,9 @@ PsmSapUtils.prototype = {
             ServiceLineNum: lineNumber
         };
     },
-    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
+    generateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO, isCancelLine) {
         var updateLine = (gs.nil(isUpdatePO) || isUpdatePO == false) ? false : true;
+        var cancelLine = (gs.nil(isCancelLine) || isCancelLine == false) ? false : true;
 
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
@@ -304,9 +305,21 @@ PsmSapUtils.prototype = {
         var serialNumber = 1;
         var ServiceLineNum = 1;
         var grec;
-        grec = this.getGlideRecords('sn_shop_purchase_order_line', {
-            purchase_order: psm_po_sysId
-        }, ['number']);
+        if (cancelLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "closed_canceled"
+            }, ['number']);
+        } else if (updateLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "pending_submission"
+            }, ['number']);
+        } else {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId
+            }, ['number']);
+        }
         while (grec.next()) {
             var ERPLineNumber = '';
             if (grec.product_type == 'good') {
@@ -405,8 +418,9 @@ PsmSapUtils.prototype = {
             poserviceaccess: poServiceAccessValues
         };
     },
-    generateBlanketPOPayload: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
+    generateBlanketPOPayload: function(psm_po_sysId, itemInterval, erp, isUpdatePO, isCancelLine) {
         var updateLine = (gs.nil(isUpdatePO) || isUpdatePO == false) ? false : true;
+        var cancelLine = (gs.nil(isCancelLine) || isCancelLine == false) ? false : true;
 
         if (gs.nil(itemInterval))
             throw new Error('Function Parameter : ItemInterval cannot be blank');
@@ -429,9 +443,22 @@ PsmSapUtils.prototype = {
         var packageNumber = 1;
         var serialNumber = 1;
         var grec;
-        grec = this.getGlideRecords('sn_shop_purchase_order_line', {
-            purchase_order: psm_po_sysId
-        }, ['number']);
+        if (cancelLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "closed_canceled"
+            }, ['number']);
+        } else if (updateLine) {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId,
+                status: "pending_submission"
+            }, ['number']);
+        } else {
+            grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+                purchase_order: psm_po_sysId
+            }, ['number']);
+        }
+
         while (grec.next()) {
             var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
                 po_items: grec
@@ -573,13 +600,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>66</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
-        <sys_updated_by>shreenag.araga</sys_updated_by>
-        <sys_updated_on>2023-05-01 14:19:42</sys_updated_on>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-05-01 11:51:18</sys_updated_on>
     </sys_script_include>
 </record_update>
