@@ -35,7 +35,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5432985b8735e950c04eb259dabb35bb</sys_update_name>
         <sys_updated_by>satyasagar.palivela@snc</sys_updated_by>
-        <sys_updated_on>2023-05-02 13:57:24</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:38:03</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -178,10 +178,10 @@
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-30 15:35:03</sys_created_on>
         <sys_id>1532d85b8735e950c04eb259dabb3522</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-30 09:35:13</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1532d85b8735e950c04eb259dabb3522"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -192,9 +192,9 @@
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-30 15:35:04</sys_created_on>
         <sys_id>1932d85b8735e950c04eb259dabb3536</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-30 09:35:13</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:27</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     // ... code ...
       var payload =  JSON.parse(inputs.json);
@@ -206,7 +206,7 @@
       
        if(inputs.grec.product_type == 'handling_fee'){
         if(gs.nil(payload['MATL_GROUP'])){
-          payload['MATL_GROUP'] = 'p001';
+          payload['MATL_GROUP'] = 'P001';
         }
       }  
       
@@ -1962,17 +1962,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Generate Hana PO Line Object">5432985b8735e950c04eb259dabb35bb</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"8d72509b8735e950c04eb259dabb353e","name":"plan","plan_signature":null}}</plan>
-        <snapshot>ed29e605876e2110c04eb259dabb3547</snapshot>
+        <snapshot>fad3d4618762a110c04eb259dabb35b3</snapshot>
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-30 15:36:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8d72509b8735e950c04eb259dabb353e</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-30 09:35:20</sys_updated_on>
+        <sys_updated_on>2023-05-01 12:00:05</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2150,10 +2150,10 @@
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-30 15:36:01</sys_created_on>
         <sys_id>5b62dc5b8735e950c04eb259dabb35e8</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-30 09:35:17</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:30</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5b62dc5b8735e950c04eb259dabb35e8"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2164,9 +2164,9 @@
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-30 15:36:01</sys_created_on>
         <sys_id>1f62dc5b8735e950c04eb259dabb35fc</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-04-30 09:35:17</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:30</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     // ... code ...
       var payload =  JSON.parse(inputs.json);
@@ -2178,7 +2178,7 @@
       
        if(inputs.grec.product_type == 'handling_fee'){
         if(gs.nil(payload['MATL_GROUP'])){
-          payload['MATL_GROUP'] = 'p001';
+          payload['MATL_GROUP'] = 'P001';
         }
       }  
       
@@ -3791,7 +3791,21 @@
         <sys_updated_by>satya</sys_updated_by>
         <sys_updated_on>2023-03-30 15:36:02</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2762109b8735e950c04eb259dabb3523^sys_idNOT IN32d3d4618762a110c04eb259dabb35b3,36d3d4618762a110c04eb259dabb35b3,b2d3d4618762a110c04eb259dabb35b3"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2762109b8735e950c04eb259dabb3523^sys_idNOT IN0d52d60287262510c04eb259dabb35d0,3452d60287262510c04eb259dabb35d0,8d52d60287262510c04eb259dabb35d0"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2023-03-30 08:36:02">2762109b8735e950c04eb259dabb3523</action_status_metadata_id>
+        <condition>{{step[464d03bc-5951-477b-aafc-cdeead652d58].__step_status__.code}}!=0</condition>
+        <dont_treat_as_error>true</dont_treat_as_error>
+        <label>Create SAP PO Payload step fails</label>
+        <order>2</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[464d03bc-5951-477b-aafc-cdeead652d58].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"620ae830-f089-4bb7-b87a-596632299baf\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>satya</sys_created_by>
+        <sys_created_on>2023-05-03 10:29:30</sys_created_on>
+        <sys_id>0d52d60287262510c04eb259dabb35d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>satya</sys_updated_by>
+        <sys_updated_on>2023-05-03 10:29:30</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-03-30 08:36:02">2762109b8735e950c04eb259dabb3523</action_status_metadata_id>
         <condition>{{step[392cc591-d631-4793-9d42-02bb99f33d2c].__step_status__.code}}!=0</condition>
@@ -3800,11 +3814,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[392cc591-d631-4793-9d42-02bb99f33d2c].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"620ae830-f089-4bb7-b87a-596632299baf\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>satya</sys_created_by>
-        <sys_created_on>2023-05-01 11:59:59</sys_created_on>
-        <sys_id>32d3d4618762a110c04eb259dabb35b3</sys_id>
+        <sys_created_on>2023-05-03 10:29:30</sys_created_on>
+        <sys_id>3452d60287262510c04eb259dabb35d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-05-01 11:59:59</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:30</sys_updated_on>
     </sys_hub_status_condition>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-03-30 08:36:02">2762109b8735e950c04eb259dabb3523</action_status_metadata_id>
@@ -3814,25 +3828,11 @@
         <order>3</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[17143926-d252-47db-917f-9af23ad7f0ac].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"620ae830-f089-4bb7-b87a-596632299baf\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>satya</sys_created_by>
-        <sys_created_on>2023-05-01 11:59:59</sys_created_on>
-        <sys_id>36d3d4618762a110c04eb259dabb35b3</sys_id>
+        <sys_created_on>2023-05-03 10:29:30</sys_created_on>
+        <sys_id>8d52d60287262510c04eb259dabb35d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-05-01 11:59:59</sys_updated_on>
-    </sys_hub_status_condition>
-    <sys_hub_status_condition action="INSERT_OR_UPDATE">
-        <action_status_metadata_id display_value="Created 2023-03-30 08:36:02">2762109b8735e950c04eb259dabb3523</action_status_metadata_id>
-        <condition>{{step[464d03bc-5951-477b-aafc-cdeead652d58].__step_status__.code}}!=0</condition>
-        <dont_treat_as_error>true</dont_treat_as_error>
-        <label>Create SAP PO Payload step fails</label>
-        <order>2</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[464d03bc-5951-477b-aafc-cdeead652d58].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"620ae830-f089-4bb7-b87a-596632299baf\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>satya</sys_created_by>
-        <sys_created_on>2023-05-01 11:59:59</sys_created_on>
-        <sys_id>b2d3d4618762a110c04eb259dabb35b3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>satya</sys_updated_by>
-        <sys_updated_on>2023-05-01 11:59:59</sys_updated_on>
+        <sys_updated_on>2023-05-03 10:29:30</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_1962dc5b8735e950c04eb259dabb3527^sys_idNOT IN8f62dc5b8735e950c04eb259dabb35b9"/>
     <sys_documentation action="INSERT_OR_UPDATE">
