@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="SAP ECC Connection and Route Identification">301106b6c34c7d1068867b73e401319a</decision_table>
+        <label>Connection &amp; Credential Alias: sn_sap_ecc_rfc_spo.SAP_ECC, Route: SAP ECC RFC</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>shreenag.araga@snc</sys_created_by>
+        <sys_created_on>2023-07-19 06:45:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>34810ef6c34c7d1068867b73e4013151</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Connection &amp; Credential Alias: sn_sap_ecc_rfc_spo.SAP_ECC, Route: SAP ECC RFC</sys_name>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_decision_multi_result_34810ef6c34c7d1068867b73e4013151</sys_update_name>
+        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+        <sys_updated_on>2023-07-19 06:45:40</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=34810ef6c34c7d1068867b73e4013151"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>34810ef6c34c7d1068867b73e4013151</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>shreenag.araga@snc</sys_created_by>
+        <sys_created_on>2023-07-19 06:45:40</sys_created_on>
+        <sys_id>f0810ef6c34c7d1068867b73e4013152</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+        <sys_updated_on>2023-07-19 06:45:40</sys_updated_on>
+        <value>d0578871dbad8010ea4494d9db9619d9</value>
+        <variable display_value="Connection &amp; Credential Alias">e8810ef6c34c7d1068867b73e4013128</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>34810ef6c34c7d1068867b73e4013151</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>shreenag.araga@snc</sys_created_by>
+        <sys_created_on>2023-07-19 06:45:40</sys_created_on>
+        <sys_id>f8810ef6c34c7d1068867b73e4013152</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+        <sys_updated_on>2023-07-19 06:45:40</sys_updated_on>
+        <value>SAP ECC RFC</value>
+        <variable display_value="Route">e0810ef6c34c7d1068867b73e401313b</variable>
+    </sys_variable_value>
+</record_update>
