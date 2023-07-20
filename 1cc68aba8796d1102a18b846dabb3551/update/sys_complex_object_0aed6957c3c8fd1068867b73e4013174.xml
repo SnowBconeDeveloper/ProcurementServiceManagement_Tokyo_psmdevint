@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD46ed695782c8fd10e11630600ce97774</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>1cc68aba8796d1102a18b846dabb3551</scope_name>
+        <serialized_content>{"FlowDesigner:FD46ed695782c8fd10e11630600ce97774":{"PO_NUMBER":"String","PO_NUMBER.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Purchasing Document\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"221f520f-330f-4508-88d2-ff8610925fd6\"}"}},"FlowDesigner:FD46ed695782c8fd10e11630600ce97774.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"297a860c-304b-423e-9be2-0c7cf094f169\",\"default_value\":\"\",\"label\":\"Purchase Order Header\",\"mandatory\":\"false\",\"uiUniqueId\":\"bd0e17c3-b178-4cdf-a2af-92c7fa32406d\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD46ed695782c8fd10e11630600ce97774\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"7277842b-b91b-48fe-a4fa-c023cc16ec61\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>shreenag.araga@snc</sys_created_by>
+        <sys_created_on>2023-07-20 18:36:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0aed6957c3c8fd1068867b73e4013174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD46ed695782c8fd10e11630600ce97774</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_complex_object_0aed6957c3c8fd1068867b73e4013174</sys_update_name>
+        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+        <sys_updated_on>2023-07-20 18:36:58</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

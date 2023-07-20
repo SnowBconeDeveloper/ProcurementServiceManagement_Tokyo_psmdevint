@@ -650,19 +650,98 @@ PsmSapUtils.prototype = {
             poserviceaccess: poServiceAccessValues
         };
     },
+    generateIdocUpdateStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp) {
+        var updateLine = true;
+        if (gs.nil(itemInterval))
+            throw new Error('Function Parameter : ItemInterval cannot be blank');
+
+        if (gs.nil(psm_po_sysId))
+            throw new Error('Function Parameter : PO sysId cannot be blank');
+
+        if (gs.nil(erp))
+            throw new Error('Function Parameter : ERP cannot be blank');
+
+        var UtilityActionNames = this.getUtilityActionNames(erp);
+
+        var poLines = [];
+        var poAccounts = [];
+        var poSchedules = [];
+        var poAddresses = [];
+        var poServices = [];
+        var poServiceAccessValues = [];
+        var poItemNumber = itemInterval;
+        var grec;
+
+        grec = this.getGlideRecords('sn_shop_purchase_order_line', {
+            purchase_order: psm_po_sysId
+        }, ['number']);
+        while (grec.next()) {
+            var ERPLineNumber = '';
+            if (grec.product_type == 'good') {
+                var polObj = this.executeAction(UtilityActionNames['GenLinesActionName'], {
+                    po_items: grec
+                }).purchase_order_item;
+                var costCenter_POlines = this.dividePOLinesBasedOnCostCenter(grec, polObj);
+                costCenter_POlines.forEach(function(po_item) {
+                    po_item['PO_ITEM'] = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
+                    po_item.E1BPEKET[0].PO_ITEM = new sn_psm_sap_int.PsmSapUtils().checkPadding(poItemNumber, 5);
+                    po_item.E1BPEKET[0].QUANTITY = po_item["QUANTITY"];
+                    po_item["DISP_QUAN"] = po_item["QUANTITY"];
+                    ERPLineNumber += po_item['PO_ITEM'] + ',';
+                    var poAccountObj = new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAccountActionName'], {
+                        po_accounts: grec,
+                        po_item_number: po_item['PO_ITEM'],
+                    }).po_accounts;
+
+                    poAccountObj['COSTCENTER'] = po_item['temp_costcenter'];
+                    poAccountObj['QUANTITY'] = po_item["QUANTITY"].toString();
+                    delete po_item['temp_costcenter'];
+                    poLines.push(po_item);
+                    poAccounts.push(poAccountObj);
+                    poSchedules.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenScheduleActionName'], {
+                        po_schedule: grec,
+                        po_item_number: po_item['PO_ITEM']
+                    }).po_schedule);
+                    if (!(grec.request_line.location.office))
+                        poAddresses.push(new sn_psm_sap_int.PsmSapUtils().executeAction(UtilityActionNames['GenAddressActionName'], {
+                            po_address: grec,
+                            po_item_number: po_item['PO_ITEM']
+                        }).po_address);
+                    poItemNumber = parseInt(poItemNumber, 10) + parseInt(itemInterval, 10);
+
+                });
+            } else if (grec.product_type == 'service' || grec.product_type == 'handling_fee') {
+                gs.info("IDOC Message: Only Standard Purchase Order handled in IDOC.");
+            }
+            if (!updateLine || gs.nil(grec.erp_line_number)) {
+                grec.erp_line_number = ERPLineNumber.slice(0, -1);
+                grec.update();
+            }
+        }
+        return {
+            polines: poLines,
+            poaccounts: poAccounts,
+            poschedules: poSchedules,
+            poaddress: poAddresses,
+            poservices: poServices,
+            poserviceaccess: poServiceAccessValues
+        };
+    },
+
+
     type: 'PsmSapUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>102</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
         <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 19:19:08</sys_updated_on>
+        <sys_updated_on>2023-07-20 19:39:05</sys_updated_on>
     </sys_script_include>
 </record_update>
