@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD3755d31e93bf219030ff45eb7597f8ef</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>1cc68aba8796d1102a18b846dabb3551</scope_name>
+        <serialized_content>{"FlowDesigner:FD3755d31e93bf219030ff45eb7597f8ef":{"amount_received":{"amount":"String","amount.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Amount\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"060a62f5-8bdf-45e9-849d-f768bd33b487\"}"},"code":"String","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\",\"uiUniqueId\":\"2d919cf7-5717-4e02-907d-0f5481aa1f50\"}"}},"amount_received.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Amount Received\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"3573cba2-58a5-49b7-9c9d-3a6f14e11df3\"}"}},"FlowDesigner:FD3755d31e93bf219030ff45eb7597f8ef.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Currency Fields\",\"mandatory\":\"false\",\"uiUniqueId\":\"be9e64f8-52d3-41f2-a6bf-660b2c2db873\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD3755d31e93bf219030ff45eb7597f8ef\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>krishna</sys_created_by>
+        <sys_created_on>2023-07-05 13:19:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f755d31e83bf2190cde0ce40ceaad3ef</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>FD3755d31e93bf219030ff45eb7597f8ef</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_complex_object_f755d31e83bf2190cde0ce40ceaad3ef</sys_update_name>
+        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
+        <sys_updated_on>2023-07-20 08:33:29</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>
