@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>583adb34935cb950a3d2fefd1dba107d</answer>
+        <condition table="var__m_sys_decision_input_11791bf0935cb950a3d2fefd1dba10b5">u_call_type=IDOC^EQ<item endquery="false" field="u_call_type" goto="false" newquery="false" operator="=" or="false" value="IDOC"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="Connection Identification for SAP ECC">11791bf0935cb950a3d2fefd1dba10b5</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_11791bf0935cb950a3d2fefd1dba10b5</input_table>
+        <label>Connection Identification for SAP ECC_200</label>
+        <order>200</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>divya.piplani@snc</sys_created_by>
+        <sys_created_on>2023-07-25 18:20:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>603adb34935cb950a3d2fefd1dba1088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Connection Identification for SAP ECC_200</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sys_decision_question_603adb34935cb950a3d2fefd1dba1088</sys_update_name>
+        <sys_updated_by>divya.piplani@snc</sys_updated_by>
+        <sys_updated_on>2023-07-25 18:20:59</sys_updated_on>
+    </sys_decision_question>
+</record_update>

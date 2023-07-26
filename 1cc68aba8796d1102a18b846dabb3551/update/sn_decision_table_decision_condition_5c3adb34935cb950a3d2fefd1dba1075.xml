@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_decision_table_decision_condition">
+    <sn_decision_table_decision_condition action="INSERT_OR_UPDATE">
+        <decision_input display_value="Call Type">803a1b34935cb950a3d2fefd1dba10e6</decision_input>
+        <decision_table display_value="Connection Identification for SAP ECC">11791bf0935cb950a3d2fefd1dba10b5</decision_table>
+        <default_operator>=</default_operator>
+        <description>Type of call - RFC, IDOC etc.</description>
+        <field/>
+        <field_label/>
+        <field_parent_table/>
+        <label>Call Type</label>
+        <order>100</order>
+        <reference/>
+        <sys_class_name>sn_decision_table_decision_condition</sys_class_name>
+        <sys_created_by>divya.piplani@snc</sys_created_by>
+        <sys_created_on>2023-07-25 18:20:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5c3adb34935cb950a3d2fefd1dba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
+        <sys_update_name>sn_decision_table_decision_condition_5c3adb34935cb950a3d2fefd1dba1075</sys_update_name>
+        <sys_updated_by>divya.piplani@snc</sys_updated_by>
+        <sys_updated_on>2023-07-25 18:20:58</sys_updated_on>
+        <type display_value="String">747127c1bf3320001875647fcf0739e0</type>
+    </sn_decision_table_decision_condition>
+</record_update>
