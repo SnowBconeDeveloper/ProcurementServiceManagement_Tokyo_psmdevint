@@ -526,59 +526,6 @@ PsmSapUtils.prototype = {
     },
 
     //Functions used for IDOC Transactions
-    parseExecuteRFC: function(inputJsonReponse, inputDelimiter) {
-        if (Object.keys(inputJsonReponse).length == 0) {
-            throw new Error("Null Json passed.");
-        } else {
-            var responseCountObject, inputJsonCount;
-            inputDelimiter = inputDelimiter.toString().trim();
-            var inputData = inputJsonReponse.IT_DATA;
-            var responseJsonList = [];
-            responseCountObject = inputData[0];
-            inputJsonCount = (responseCountObject.WA).split(":")[1];
-            for (var iterator = 1; iterator < inputData.length; iterator++) {
-                var tempJson = [];
-                for (var loopingIterator = 0; loopingIterator < Object.keys(inputData[iterator]).length; loopingIterator++) {
-                    var parentKey = '';
-                    if (loopingIterator == 0) parentKey = "WA";
-                    else parentKey = "WA" + loopingIterator;
-                    if (gs.nil(JSON.stringify(inputData[iterator][parentKey])) || JSON.stringify(inputData[iterator][parentKey]) == 'null') {
-                        break;
-                    }
-                    var tempKeyValues = JSON.parse(JSON.stringify(inputData[iterator][parentKey])).toString().split(inputDelimiter);
-                    var tempArray = {};
-                    for (var tempArrayIterator = 0; tempArrayIterator < tempKeyValues.length; tempArrayIterator++) {
-                        var keyValuePair = tempKeyValues[tempArrayIterator];
-                        tempArray[(keyValuePair.split(":")[0])] = (keyValuePair.split(":")[1]);
-                        tempArray = this.trimInputs(tempArray);
-                    }
-                    if (!Object.keys(tempArray).length == 0) {
-                        tempJson.push(JSON.stringify(tempArray));
-                    }
-                }
-                responseJsonList.push(tempJson.join("").replace(/{}/g, "").replace(/}{/g, ","));
-            }
-            var returnArray = {};
-            returnArray["JSONOBJECT"] = (this.seggregateArr(responseJsonList));
-            returnArray["ROWCOUNT"] = inputJsonCount;
-            return returnArray;
-        }
-    },
-    trimInputs: function(inputs) {
-        for (var key in inputs) {
-            if (typeof(inputs[key]) == 'string') {
-                inputs[key] = inputs[key].trim();
-            }
-        }
-        return inputs;
-    },
-    seggregateArr: function(jsonString) {
-        var arr = [];
-        for (var i = 0; i < jsonString.length; i++) {
-            arr.push(JSON.parse(jsonString[i]));
-        }
-        return arr;
-    },
     generateIdocStandardPOPaylaod: function(psm_po_sysId, itemInterval, erp, isUpdatePO) {
         var updateLine = (gs.nil(isUpdatePO) || isUpdatePO == false) ? false : true;
         if (gs.nil(itemInterval))
@@ -735,13 +682,13 @@ PsmSapUtils.prototype = {
         <sys_created_by>satya</sys_created_by>
         <sys_created_on>2023-03-21 16:31:02</sys_created_on>
         <sys_id>ba98c21c87716d102a18b846dabb35e3</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>103</sys_mod_count>
         <sys_name>PsmSapUtils</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_script_include_ba98c21c87716d102a18b846dabb35e3</sys_update_name>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-20 19:39:05</sys_updated_on>
+        <sys_updated_by>divya.piplani@snc</sys_updated_by>
+        <sys_updated_on>2023-08-02 12:44:14</sys_updated_on>
     </sys_script_include>
 </record_update>
