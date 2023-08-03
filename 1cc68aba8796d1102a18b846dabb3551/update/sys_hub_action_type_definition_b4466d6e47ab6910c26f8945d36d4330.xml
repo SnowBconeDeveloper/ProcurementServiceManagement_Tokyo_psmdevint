@@ -68,7 +68,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b4466d6e47ab6910c26f8945d36d4330</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:34:35</sys_updated_on>
+        <sys_updated_on>2023-08-03 09:20:40</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -195,10 +195,10 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:36:44</sys_created_on>
         <sys_id>7c466d6e47ab6910c26f8945d36d4364</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:28:58</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:42:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c466d6e47ab6910c26f8945d36d4364"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -209,14 +209,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:36:45</sys_created_on>
         <sys_id>01466d6e47ab6910c26f8945d36d438b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:28:58</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:42:17</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
     var input_json = inputs.json_string;
     var delimeter_value = inputs.delimiter.toString().trim();
-    var responseArray = new sn_psm_sap_int.PsmSapUtils().parseExecuteRFC(input_json, delimeter_value);
+    var responseArray = new sn_psm_sap_int.IntegrationsUtilsSNC().parseExecuteRFC(input_json, delimeter_value);
     outputs.idoc_rfc_response = responseArray.JSONOBJECT;
     outputs.total_rows = responseArray.ROWCOUNT;
   
@@ -1142,14 +1142,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:36:45</sys_created_on>
         <sys_id>c5466d6e47ab6910c26f8945d36d4398</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:32:41</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:43:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1279,7 +1279,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_b4466d6e47ab6910c26f8945d36d4330_idoc_response_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-26 06:32:33</sys_updated_on>
         <url/>
@@ -1325,7 +1325,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_b4466d6e47ab6910c26f8945d36d4330_total_rows_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-26 06:32:32</sys_updated_on>
         <url/>
@@ -1336,17 +1336,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Segregate Idoc Response">b4466d6e47ab6910c26f8945d36d4330</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"d88a61a247eb6910c26f8945d36d435c","name":"plan","plan_signature":null}}</plan>
-        <snapshot>cd32427ac34c7d1068867b73e401311a</snapshot>
+        <snapshot>8a1c6fef93d4b590a3d2fefd1dba10d2</snapshot>
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:55:16</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d88a61a247eb6910c26f8945d36d435c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 06:48:43</sys_updated_on>
+        <sys_updated_by>divya.piplani@snc</sys_updated_by>
+        <sys_updated_on>2023-08-03 08:42:29</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1529,10 +1529,10 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:55:13</sys_created_on>
         <sys_id>a77a21a247eb6910c26f8945d36d43b9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:32:42</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:42:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a77a21a247eb6910c26f8945d36d43b9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1543,14 +1543,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:55:14</sys_created_on>
         <sys_id>f37a21a247eb6910c26f8945d36d43d2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:32:42</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:42:28</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
     var input_json = inputs.json_string;
     var delimeter_value = inputs.delimiter.toString().trim();
-    var responseArray = new sn_psm_sap_int.PsmSapUtils().parseExecuteRFC(input_json, delimeter_value);
+    var responseArray = new sn_psm_sap_int.IntegrationsUtilsSNC().parseExecuteRFC(input_json, delimeter_value);
     outputs.idoc_rfc_response = responseArray.JSONOBJECT;
     outputs.total_rows = responseArray.ROWCOUNT;
   
@@ -2302,14 +2302,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-06-23 13:55:14</sys_created_on>
         <sys_id>7b7a21a247eb6910c26f8945d36d43e9</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:32:43</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:43:41</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2509,7 +2509,7 @@
         <sys_updated_by>shreenag.araga@snc</sys_updated_by>
         <sys_updated_on>2023-06-23 13:55:14</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b77a61a247eb6910c26f8945d36d4309^sys_idNOT INd7a1cac99318f950a3d2fefd1dba10c2"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b77a61a247eb6910c26f8945d36d4309^sys_idNOT INb75ce3239318b590a3d2fefd1dba1032"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-06-23 06:55:14">b77a61a247eb6910c26f8945d36d4309</action_status_metadata_id>
         <condition>{{step[87883d34-4fa8-47c2-9a79-6e4d02702fdd].__step_status__.code}}!=0</condition>
@@ -2518,11 +2518,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[87883d34-4fa8-47c2-9a79-6e4d02702fdd].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[87883d34-4fa8-47c2-9a79-6e4d02702fdd].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>divya.piplani@snc</sys_created_by>
-        <sys_created_on>2023-07-26 06:32:43</sys_created_on>
-        <sys_id>d7a1cac99318f950a3d2fefd1dba10c2</sys_id>
+        <sys_created_on>2023-08-03 08:43:41</sys_created_on>
+        <sys_id>b75ce3239318b590a3d2fefd1dba1032</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-26 06:32:43</sys_updated_on>
+        <sys_updated_on>2023-08-03 08:43:41</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_a37a21a247eb6910c26f8945d36d43ac^sys_idNOT IN277a21a247eb6910c26f8945d36d43b7,ab7a21a247eb6910c26f8945d36d43b3"/>
     <sys_documentation action="INSERT_OR_UPDATE">
