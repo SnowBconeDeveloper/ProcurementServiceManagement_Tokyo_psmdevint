@@ -13,9 +13,9 @@
         <description/>
         <ih_action>false</ih_action>
         <internal_name>generate_ecc_idoc_po_accounts_object</internal_name>
-        <label_cache>[{"name":"{{action.serial_number}}","label":"action➛Serial Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e64983b7-60f9-45a9-8dbb-8b6ab82835b8"}},{"name":"{{action.po_item_number}}","label":"action➛PO Item Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a76a9976-da8f-4fc4-9cce-f1858f26049d"}},{"name":"{{action.po_accounts.general_ledger_account.gl_account}}","label":"action➛PO Accounts➛General ledger account➛Ledger account","type":"action","ref":"","reference_display":"Ledger account","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account","choices":null,"attributes":{}},{"name":"{{action.po_accounts}}","label":"action➛PO Accounts","type":"action","ref":"sn_shop_purchase_order_line","reference_display":"Purchase Order Line","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"079b52c4-fab4-46b7-9faa-bbeaff4b1a0d"}},{"name":"{{action.po_accounts.purchased_quantity}}","label":"action➛PO Accounts➛Purchased quantity","type":"action","ref":"","reference_display":"Purchased quantity","base_type":"decimal","parent_table_name":"sn_shop_purchase_order_line","column_name":"purchased_quantity","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].payload}}","label":"step➛Create SAP PO Payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].po_accounts}}","label":"step➛Parse Payload➛Purchase Order Accounts","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7986c6428bb7a9508c958d3bbe2e2df3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"3772b780-13c4-426c-9a00-bbc3f4a9f0db"}}]</label_cache>
+        <label_cache>[{"name":"{{action.po_accounts.purchased_quantity}}","label":"action➛PO Accounts➛Purchased quantity","type":"action","ref":"","reference_display":"Purchased quantity","base_type":"decimal","parent_table_name":"sn_shop_purchase_order_line","column_name":"purchased_quantity","choices":null,"attributes":{}},{"name":"{{action.serial_number}}","label":"action➛Serial Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e64983b7-60f9-45a9-8dbb-8b6ab82835b8"}},{"name":"{{action.po_item_number}}","label":"action➛PO Item Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a76a9976-da8f-4fc4-9cce-f1858f26049d"}},{"name":"{{action.po_accounts.general_ledger_account.gl_account}}","label":"action➛PO Accounts➛General ledger account➛Ledger account","type":"action","ref":"","reference_display":"Ledger account","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].payload}}","label":"step➛Create SAP PO Payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.code}}","label":"step➛Create SAP PO Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.message}}","label":"step➛Create SAP PO Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].po_accounts}}","label":"step➛Parse Payload➛Purchase Order Accounts","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7986c6428bb7a9508c958d3bbe2e2df3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"3772b780-13c4-426c-9a00-bbc3f4a9f0db"}}]</label_cache>
         <master_snapshot>e63bbc8e47b3e550c26f8945d36d43e1</master_snapshot>
-        <name>Generate ECC iDOC PO Accounts Object</name>
+        <name>Generate iDOC PO Accounts Object</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -28,14 +28,14 @@
         <sys_domain_path>/</sys_domain_path>
         <sys_id>67b9b44e47b3e550c26f8945d36d43f5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Generate ECC iDOC PO Accounts Object</sys_name>
+        <sys_name>Generate iDOC PO Accounts Object</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_67b9b44e47b3e550c26f8945d36d43f5</sys_update_name>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 18:49:47</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-04 07:26:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -122,7 +122,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=67b9b44e47b3e550c26f8945d36d43f5^sys_idNOT IN00c9f44e47b3e550c26f8945d36d4311,fbb9f44e47b3e550c26f8945d36d4308"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action>
+        <action display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action>
         <cid>f41787f7-23bd-42e0-8326-dac4de72ae37</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -379,14 +379,14 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_00c9f44e47b3e550c26f8945d36d4311_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>shreenag.araga@snc</sys_updated_by>
         <sys_updated_on>2023-07-19 10:31:39</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action>
+        <action display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action>
         <cid>7b05532c-0028-490f-b04e-09575c21c2ef</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -480,7 +480,7 @@
         <label>PO Item Number</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -564,7 +564,7 @@
         <label>Serial Number</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -648,7 +648,7 @@
         <label>PO Accounts</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -735,7 +735,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -758,14 +758,14 @@
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:21:00</sys_created_on>
         <sys_id>80c9f44e47b3e550c26f8945d36d433c</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 10:31:54</sys_updated_on>
+        <sys_updated_by>vishal</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:24:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -822,7 +822,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -909,7 +909,7 @@
         <label>Purchase Order Accounts</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
+        <model display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</model>
         <model_id>67b9b44e47b3e550c26f8945d36d43f5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5</name>
@@ -957,7 +957,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=67b9b44e47b3e550c26f8945d36d43f5"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=67b9b44e47b3e550c26f8945d36d43f5^sys_idNOT IN08c9f44e47b3e550c26f8945d36d434a"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action_type_id>
+        <action_type_id display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action_type_id>
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:21:00</sys_created_on>
         <sys_id>08c9f44e47b3e550c26f8945d36d434a</sys_id>
@@ -1012,7 +1012,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5_po_item_number_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:20:59</sys_updated_on>
         <url/>
@@ -1035,7 +1035,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:20:59</sys_updated_on>
         <url/>
@@ -1058,7 +1058,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_67b9b44e47b3e550c26f8945d36d43f5_serial_number_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:20:59</sys_updated_on>
         <url/>
@@ -1083,7 +1083,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5___action_status___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:21:00</sys_updated_on>
         <url/>
@@ -1106,7 +1106,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>shreenag.araga@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 12:57:24</sys_updated_on>
         <url/>
@@ -1129,7 +1129,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5___dont_treat_as_error___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:21:00</sys_updated_on>
         <url/>
@@ -1138,19 +1138,19 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_67b9b44e47b3e550c26f8945d36d43f5"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=67b9b44e47b3e550c26f8945d36d43f5^sys_idNOT IN884bfc8e47b3e550c26f8945d36d43d8"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action_id>
+        <action_id display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"884bfc8e47b3e550c26f8945d36d43d8","name":"plan","plan_signature":null}}</plan>
-        <snapshot>3cbf4cc493047510a3d2fefd1dba1032</snapshot>
+        <snapshot>a84774359318bd50a3d2fefd1dba100e</snapshot>
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:27:33</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>884bfc8e47b3e550c26f8945d36d43d8</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-09 09:08:51</sys_updated_on>
+        <sys_updated_by>Chiru.idoc</sys_updated_by>
+        <sys_updated_on>2023-07-28 09:03:03</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1164,28 +1164,28 @@
         <copied_from_name/>
         <description/>
         <internal_name>generate_ecc_idoc_po_accounts_object</internal_name>
-        <label_cache>[{"name":"{{action.serial_number}}","label":"action➛Serial Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e64983b7-60f9-45a9-8dbb-8b6ab82835b8"}},{"name":"{{action.po_item_number}}","label":"action➛PO Item Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a76a9976-da8f-4fc4-9cce-f1858f26049d"}},{"name":"{{action.po_accounts.general_ledger_account.gl_account}}","label":"action➛PO Accounts➛General ledger account➛Ledger account","type":"action","ref":"","reference_display":"Ledger account","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account","choices":null,"attributes":{}},{"name":"{{action.po_accounts}}","label":"action➛PO Accounts","type":"action","ref":"sn_shop_purchase_order_line","reference_display":"Purchase Order Line","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"079b52c4-fab4-46b7-9faa-bbeaff4b1a0d"}},{"name":"{{action.po_accounts.purchased_quantity}}","label":"action➛PO Accounts➛Purchased quantity","type":"action","ref":"","reference_display":"Purchased quantity","base_type":"decimal","parent_table_name":"sn_shop_purchase_order_line","column_name":"purchased_quantity","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].payload}}","label":"step➛Create SAP PO Payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].po_accounts}}","label":"step➛Parse Payload➛Purchase Order Accounts","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7986c6428bb7a9508c958d3bbe2e2df3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"3772b780-13c4-426c-9a00-bbc3f4a9f0db"}}]</label_cache>
+        <label_cache>[{"name":"{{action.po_accounts.purchased_quantity}}","label":"action➛PO Accounts➛Purchased quantity","type":"action","ref":"","reference_display":"Purchased quantity","base_type":"decimal","parent_table_name":"sn_shop_purchase_order_line","column_name":"purchased_quantity","choices":null,"attributes":{}},{"name":"{{action.serial_number}}","label":"action➛Serial Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e64983b7-60f9-45a9-8dbb-8b6ab82835b8"}},{"name":"{{action.po_item_number}}","label":"action➛PO Item Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a76a9976-da8f-4fc4-9cce-f1858f26049d"}},{"name":"{{action.po_accounts.general_ledger_account.gl_account}}","label":"action➛PO Accounts➛General ledger account➛Ledger account","type":"action","ref":"","reference_display":"Ledger account","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].payload}}","label":"step➛Create SAP PO Payload➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.code}}","label":"step➛Create SAP PO Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.message}}","label":"step➛Create SAP PO Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.code}}","label":"step➛Parse Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.message}}","label":"step➛Parse Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].po_accounts}}","label":"step➛Parse Payload➛Purchase Order Accounts","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD7986c6428bb7a9508c958d3bbe2e2df3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"3772b780-13c4-426c-9a00-bbc3f4a9f0db"}}]</label_cache>
         <master>true</master>
-        <name>Generate ECC iDOC PO Accounts Object</name>
+        <name>Generate iDOC PO Accounts Object</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Generate ECC iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</parent_action>
+        <parent_action display_value="Generate iDOC PO Accounts Object">67b9b44e47b3e550c26f8945d36d43f5</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:27:27</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e63bbc8e47b3e550c26f8945d36d43e1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-09 09:09:24</sys_updated_on>
+        <sys_updated_by>vishal</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:24:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1258,7 +1258,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=e63bbc8e47b3e550c26f8945d36d43e1^sys_idNOT IN3e3bbc8e47b3e550c26f8945d36d43fe,f23bfc8e47b3e550c26f8945d36d4305"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action>
+        <action display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action>
         <cid>7b05532c-0028-490f-b04e-09575c21c2ef</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -1312,7 +1312,7 @@
     <sys_hub_input_scripts action="delete_multiple" query="instance=3e3bbc8e47b3e550c26f8945d36d43fe"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_3e3bbc8e47b3e550c26f8945d36d43fe"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action>
+        <action display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action>
         <cid>f41787f7-23bd-42e0-8326-dac4de72ae37</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -1569,7 +1569,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_f23bfc8e47b3e550c26f8945d36d4305_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>shreenag.araga@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 12:57:27</sys_updated_on>
         <url/>
@@ -1616,7 +1616,7 @@
         <label>PO Accounts</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -1700,7 +1700,7 @@
         <label>Serial Number</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -1784,7 +1784,7 @@
         <label>PO Item Number</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -1871,7 +1871,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -1958,7 +1958,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -1981,14 +1981,14 @@
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:27:28</sys_created_on>
         <sys_id>8b3bfc8e47b3e550c26f8945d36d431f</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 10:31:55</sys_updated_on>
+        <sys_updated_by>vishal</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:24:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2045,7 +2045,7 @@
         <label>Purchase Order Accounts</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
+        <model display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</model>
         <model_id>e63bbc8e47b3e550c26f8945d36d43e1</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1</name>
@@ -2093,7 +2093,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=e63bbc8e47b3e550c26f8945d36d43e1"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=e63bbc8e47b3e550c26f8945d36d43e1^sys_idNOT IN073bfc8e47b3e550c26f8945d36d432d"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Generate ECC iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action_type_id>
+        <action_type_id display_value="Generate iDOC PO Accounts Object">e63bbc8e47b3e550c26f8945d36d43e1</action_type_id>
         <sys_created_by>divya.piplani@snc</sys_created_by>
         <sys_created_on>2023-07-04 07:27:29</sys_created_on>
         <sys_id>073bfc8e47b3e550c26f8945d36d432d</sys_id>
@@ -2101,21 +2101,7 @@
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:29</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=073bfc8e47b3e550c26f8945d36d432d^sys_idNOT IN0b45f63ec300bd1068867b73e40131c5,8345f63ec300bd1068867b73e40131c5"/>
-    <sys_hub_status_condition action="INSERT_OR_UPDATE">
-        <action_status_metadata_id display_value="Created 2023-07-04 00:27:29">073bfc8e47b3e550c26f8945d36d432d</action_status_metadata_id>
-        <condition>{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.code}}!=0</condition>
-        <dont_treat_as_error>true</dont_treat_as_error>
-        <label>Parse Payload step fails</label>
-        <order>2</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>shreenag.araga@snc</sys_created_by>
-        <sys_created_on>2023-07-19 10:31:55</sys_created_on>
-        <sys_id>0b45f63ec300bd1068867b73e40131c5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 10:31:55</sys_updated_on>
-    </sys_hub_status_condition>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=073bfc8e47b3e550c26f8945d36d432d^sys_idNOT IN53de54f3931cb590a3d2fefd1dba1070,d7de54f3931cb590a3d2fefd1dba1070"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-07-04 00:27:29">073bfc8e47b3e550c26f8945d36d432d</action_status_metadata_id>
         <condition>{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.code}}!=0</condition>
@@ -2123,12 +2109,26 @@
         <label>Create SAP PO Payload step fails</label>
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[7b05532c-0028-490f-b04e-09575c21c2ef].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>shreenag.araga@snc</sys_created_by>
-        <sys_created_on>2023-07-19 10:31:55</sys_created_on>
-        <sys_id>8345f63ec300bd1068867b73e40131c5</sys_id>
+        <sys_created_by>vishal</sys_created_by>
+        <sys_created_on>2023-08-03 12:24:17</sys_created_on>
+        <sys_id>53de54f3931cb590a3d2fefd1dba1070</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-19 10:31:55</sys_updated_on>
+        <sys_updated_by>vishal</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:24:17</sys_updated_on>
+    </sys_hub_status_condition>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2023-07-04 00:27:29">073bfc8e47b3e550c26f8945d36d432d</action_status_metadata_id>
+        <condition>{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.code}}!=0</condition>
+        <dont_treat_as_error>true</dont_treat_as_error>
+        <label>Parse Payload step fails</label>
+        <order>2</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[f41787f7-23bd-42e0-8326-dac4de72ae37].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>vishal</sys_created_by>
+        <sys_created_on>2023-08-03 12:24:17</sys_created_on>
+        <sys_id>d7de54f3931cb590a3d2fefd1dba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>vishal</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:24:17</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1^sys_idNOT IN723bbc8e47b3e550c26f8945d36d43f9,f63bbc8e47b3e550c26f8945d36d43fc,fa3bbc8e47b3e550c26f8945d36d43f5"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -2148,7 +2148,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1_po_item_number_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:27</sys_updated_on>
         <url/>
@@ -2171,7 +2171,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1_serial_number_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:27</sys_updated_on>
         <url/>
@@ -2194,7 +2194,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_e63bbc8e47b3e550c26f8945d36d43e1_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:27</sys_updated_on>
         <url/>
@@ -2219,7 +2219,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1___action_status___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:28</sys_updated_on>
         <url/>
@@ -2242,7 +2242,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1___dont_treat_as_error___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:28</sys_updated_on>
         <url/>
@@ -2265,7 +2265,7 @@
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_e63bbc8e47b3e550c26f8945d36d43e1_po_accounts_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
         <sys_updated_on>2023-07-04 07:27:28</sys_updated_on>
         <url/>
