@@ -15,7 +15,7 @@
         <internal_name>generate_ecc_idoc_gr_payload</internal_name>
         <label_cache>[{"name":"{{action.gr_record}}","label":"action➛GR Record","type":"action","ref":"","reference_display":"Receipt","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"8a921787-1806-44d9-a052-c0bb50f74445"}},{"name":"{{action.isreturn}}","label":"action➛IsReturn","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"e6d17d84-a9bb-43ef-a7b0-0267311c3153"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.code}}","label":"step➛Transform &amp; Prepare Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.message}}","label":"step➛Transform &amp; Prepare Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gm_code}}","label":"step➛Transform &amp; Prepare Payload➛GM Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3552d142-0feb-42ca-8424-df029ee4f652"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gr_line}}","label":"step➛Transform &amp; Prepare Payload➛GR Line","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD5b1d57d22bff2190fabe2650695e9159","child_label":"Lines","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"line","child_uiUniqueId":"b0d65e7e-cca1-49b2-9457-de1bd730403e","uiUniqueId":"219d8cf8-2845-4322-9e7d-56685ed8262e"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gr_header}}","label":"step➛Transform &amp; Prepare Payload➛GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDca09e8003c48f1106e898de24ce25ba1","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"c2c07bb8-2626-44f4-b474-28044b8f82d7"}}]</label_cache>
         <master_snapshot>46bd9fd283ff2190cde0ce40ceaad3f2</master_snapshot>
-        <name>Generate ECC iDOC GR Payload</name>
+        <name>Generate iDOC GR Payload</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -28,14 +28,14 @@
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6f1c979283ff2190cde0ce40ceaad3a0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Generate ECC iDOC GR Payload</sys_name>
+        <sys_name>Generate iDOC GR Payload</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_6f1c979283ff2190cde0ce40ceaad3a0</sys_update_name>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:16:44</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:41:40</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -172,7 +172,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=6f1c979283ff2190cde0ce40ceaad3a0^sys_idNOT IN9f9c5f9283ff2190cde0ce40ceaad35f"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action>
+        <action display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action>
         <cid>92c43ed6-fc9d-461c-987c-2d56626893d5</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -188,10 +188,10 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:51:02</sys_created_on>
         <sys_id>9f9c5f9283ff2190cde0ce40ceaad35f</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-10 11:19:50</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-08-04 04:34:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9f9c5f9283ff2190cde0ce40ceaad35f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -202,17 +202,17 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:51:02</sys_created_on>
         <sys_id>5f9c5f9283ff2190cde0ce40ceaad36f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-10 11:19:50</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-08-04 04:34:27</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-    outputs.gr_header = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_ecc_gr_header_object', {
+    outputs.gr_header = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_gr_header_object', {
         gr_header: inputs.gr_record
     }).goods_receipt_header;
 
     var gr_line = [];
-    var lineResult = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_idoc_gr_line_object', {
+    var lineResult = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_gr_line_object', {
         gr_line: inputs.gr_record,
         isreturn: inputs.IsReturn
     }).goods_receipt_line;
@@ -512,14 +512,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:53:13</sys_created_on>
         <sys_id>d71d57d283ff2190cde0ce40ceaad35f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:42</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -595,14 +595,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:53:13</sys_created_on>
         <sys_id>d71d57d283ff2190cde0ce40ceaad362</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:42</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -678,14 +678,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-07-10 11:15:49</sys_created_on>
         <sys_id>da09e800c348f11068867b73e40131a6</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:43</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -712,14 +712,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:53:13</sys_created_on>
         <sys_id>1f1d57d283ff2190cde0ce40ceaad361</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>GM Code</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:42</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -735,14 +735,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:53:13</sys_created_on>
         <sys_id>931d57d283ff2190cde0ce40ceaad365</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>GR Line</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:43</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -758,14 +758,14 @@
         <sys_created_by>shreenag.araga@snc</sys_created_by>
         <sys_created_on>2023-07-10 11:15:49</sys_created_on>
         <sys_id>9a09e800c348f11068867b73e40131a9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>GR Header</sys_name>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:43</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -810,7 +810,7 @@
         <label>IsReturn</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -894,7 +894,7 @@
         <label>GR Record</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -981,7 +981,7 @@
         <label>GR Header</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -1068,7 +1068,7 @@
         <label>GM Code</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -1155,7 +1155,7 @@
         <label>GR Line</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -1178,14 +1178,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-10 10:34:11</sys_created_on>
         <sys_id>a48fdc088308f590cde0ce40ceaad322</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:43</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1242,7 +1242,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -1329,7 +1329,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
+        <model display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</model>
         <model_id>6f1c979283ff2190cde0ce40ceaad3a0</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0</name>
@@ -1352,14 +1352,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-10 10:29:05</sys_created_on>
         <sys_id>fd5e58c48308f590cde0ce40ceaad3d9</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:56</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:37:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1377,7 +1377,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=6f1c979283ff2190cde0ce40ceaad3a0"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=6f1c979283ff2190cde0ce40ceaad3a0^sys_idNOT IN774c5b9283ff2190cde0ce40ceaad391"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action_type_id>
+        <action_type_id display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action_type_id>
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:49:42</sys_created_on>
         <sys_id>774c5b9283ff2190cde0ce40ceaad391</sys_id>
@@ -1567,19 +1567,19 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_6f1c979283ff2190cde0ce40ceaad3a0"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=6f1c979283ff2190cde0ce40ceaad3a0^sys_idNOT IN72bddfd283ff2190cde0ce40ceaad3bd"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action_id>
+        <action_id display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"72bddfd283ff2190cde0ce40ceaad3bd","name":"plan","plan_signature":null}}</plan>
-        <snapshot>0a442b43c3c0fd1068867b73e401315c</snapshot>
+        <snapshot>322e90b3931cb590a3d2fefd1dba1008</snapshot>
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>72bddfd283ff2190cde0ce40ceaad3bd</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-20 08:35:42</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-08-03 12:21:16</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1595,18 +1595,18 @@
         <internal_name>generate_ecc_idoc_gr_payload</internal_name>
         <label_cache>[{"name":"{{action.gr_record}}","label":"action➛GR Record","type":"action","ref":"","reference_display":"Receipt","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"8a921787-1806-44d9-a052-c0bb50f74445"}},{"name":"{{action.isreturn}}","label":"action➛IsReturn","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"e6d17d84-a9bb-43ef-a7b0-0267311c3153"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.code}}","label":"step➛Transform &amp; Prepare Payload➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.message}}","label":"step➛Transform &amp; Prepare Payload➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gm_code}}","label":"step➛Transform &amp; Prepare Payload➛GM Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3552d142-0feb-42ca-8424-df029ee4f652"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gr_line}}","label":"step➛Transform &amp; Prepare Payload➛GR Line","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD5b1d57d22bff2190fabe2650695e9159","child_label":"Lines","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"line","child_uiUniqueId":"b0d65e7e-cca1-49b2-9457-de1bd730403e","uiUniqueId":"219d8cf8-2845-4322-9e7d-56685ed8262e"}},{"name":"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].gr_header}}","label":"step➛Transform &amp; Prepare Payload➛GR Header","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FDca09e8003c48f1106e898de24ce25ba1","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"c2c07bb8-2626-44f4-b474-28044b8f82d7"}}]</label_cache>
         <master>true</master>
-        <name>Generate ECC iDOC GR Payload</name>
+        <name>Generate iDOC GR Payload</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Generate ECC iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</parent_action>
+        <parent_action display_value="Generate iDOC GR Payload">6f1c979283ff2190cde0ce40ceaad3a0</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:51</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>46bd9fd283ff2190cde0ce40ceaad3f2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1614,7 +1614,7 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-18 12:06:55</sys_updated_on>
+        <sys_updated_on>2023-08-03 12:21:15</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1723,7 +1723,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=46bd9fd283ff2190cde0ce40ceaad3f2^sys_idNOT IN46bd9fd283ff2190cde0ce40ceaad3ff"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</action>
+        <action display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</action>
         <cid>92c43ed6-fc9d-461c-987c-2d56626893d5</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -1739,10 +1739,10 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:52</sys_created_on>
         <sys_id>46bd9fd283ff2190cde0ce40ceaad3ff</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-10 11:20:47</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-08-04 04:38:00</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=46bd9fd283ff2190cde0ce40ceaad3ff"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1753,17 +1753,17 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:52</sys_created_on>
         <sys_id>16bddfd283ff2190cde0ce40ceaad327</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>shreenag.araga@snc</sys_updated_by>
-        <sys_updated_on>2023-07-10 11:20:47</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-08-04 04:38:00</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
-    outputs.gr_header = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_ecc_gr_header_object', {
+    outputs.gr_header = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_gr_header_object', {
         gr_header: inputs.gr_record
     }).goods_receipt_header;
 
     var gr_line = [];
-    var lineResult = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_ecc_idoc_gr_line_object', {
+    var lineResult = new sn_psm_sap_int.PsmSapUtils().executeAction('sn_psm_sap_int.generate_idoc_gr_line_object', {
         gr_line: inputs.gr_record,
         isreturn: inputs.IsReturn
     }).goods_receipt_line;
@@ -2361,7 +2361,7 @@
         <label>IsReturn</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2445,7 +2445,7 @@
         <label>GR Record</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2532,7 +2532,7 @@
         <label>GM Code</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2619,7 +2619,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2642,14 +2642,14 @@
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:53</sys_created_on>
         <sys_id>5abddfd283ff2190cde0ce40ceaad347</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:58</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:38:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2706,7 +2706,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2793,7 +2793,7 @@
         <label>GR Line</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2880,7 +2880,7 @@
         <label>GR Header</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
+        <model display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</model>
         <model_id>46bd9fd283ff2190cde0ce40ceaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_46bd9fd283ff2190cde0ce40ceaad3f2</name>
@@ -2928,7 +2928,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=46bd9fd283ff2190cde0ce40ceaad3f2"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=46bd9fd283ff2190cde0ce40ceaad3f2^sys_idNOT INd6bddfd283ff2190cde0ce40ceaad357"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Generate ECC iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</action_type_id>
+        <action_type_id display_value="Generate iDOC GR Payload">46bd9fd283ff2190cde0ce40ceaad3f2</action_type_id>
         <sys_created_by>krishna</sys_created_by>
         <sys_created_on>2023-07-05 13:55:53</sys_created_on>
         <sys_id>d6bddfd283ff2190cde0ce40ceaad357</sys_id>
@@ -2936,7 +2936,7 @@
         <sys_updated_by>krishna</sys_updated_by>
         <sys_updated_on>2023-07-05 13:55:53</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=d6bddfd283ff2190cde0ce40ceaad357^sys_idNOT INd4ec27e29354b190a3d2fefd1dba1073"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=d6bddfd283ff2190cde0ce40ceaad357^sys_idNOT IN72bdbf7f9398f590a3d2fefd1dba1083"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-07-05 06:55:53">d6bddfd283ff2190cde0ce40ceaad357</action_status_metadata_id>
         <condition>{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.code}}!=0</condition>
@@ -2945,11 +2945,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[92c43ed6-fc9d-461c-987c-2d56626893d5].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>krishna</sys_created_by>
-        <sys_created_on>2023-07-31 06:11:58</sys_created_on>
-        <sys_id>d4ec27e29354b190a3d2fefd1dba1073</sys_id>
+        <sys_created_on>2023-08-04 04:38:00</sys_created_on>
+        <sys_id>72bdbf7f9398f590a3d2fefd1dba1083</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>krishna</sys_updated_by>
-        <sys_updated_on>2023-07-31 06:11:58</sys_updated_on>
+        <sys_updated_on>2023-08-04 04:38:00</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_46bd9fd283ff2190cde0ce40ceaad3f2^sys_idNOT IN06bd9fd283ff2190cde0ce40ceaad3fd,8ebd9fd283ff2190cde0ce40ceaad3f9"/>
     <sys_documentation action="INSERT_OR_UPDATE">
