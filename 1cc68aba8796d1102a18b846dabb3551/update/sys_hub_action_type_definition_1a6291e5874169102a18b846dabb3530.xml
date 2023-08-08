@@ -13,69 +13,67 @@
         <description>&lt;p&gt;Creates payload objects for service goods receipt action.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Service GR Record&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Iteration Count&lt;/strong&gt; - Count to pass quantity based on erp number&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ERP Number&lt;/strong&gt; - ERP number&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service GR Record&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Iteration Count&lt;/strong&gt; - Count to pass quantity based on erp number&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ERP Number&lt;/strong&gt; - ERP number&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Service GR Record &lt;/strong&gt;- Objects containing below fields:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Entry Sheet Number&lt;/li&gt;
-      &lt;li&gt;External entry sheet number&lt;/li&gt;
-      &lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
-      &lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
-      &lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
-      &lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Period&lt;/li&gt;
-      &lt;li&gt;End of period&lt;/li&gt;
-      &lt;li&gt;Package number&lt;/li&gt;
-      &lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Purchasing Document Number&lt;/li&gt;
-      &lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
-      &lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Points score for on-time delivery&lt;/li&gt;
-      &lt;li&gt;Points score for quality of services&lt;/li&gt;
-      &lt;li&gt;Document Date in Document&lt;/li&gt;
-      &lt;li&gt;Posting Date in the Document&lt;/li&gt;
-      &lt;li&gt;Reference Document Number&lt;/li&gt;
-      &lt;li&gt;Account Assignment Category&lt;/li&gt;
-      &lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
-      &lt;li&gt;User field: Service entry sheet&lt;/li&gt;
-      &lt;li&gt;Acceptance indicator&lt;/li&gt;
-      &lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
-      &lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Service GR Record &lt;/strong&gt;- Objects containing below fields:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Entry Sheet Number&lt;/li&gt;
+&lt;li&gt;External entry sheet number&lt;/li&gt;
+&lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
+&lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
+&lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
+&lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
+&lt;li&gt;Period&lt;/li&gt;
+&lt;li&gt;End of period&lt;/li&gt;
+&lt;li&gt;Package number&lt;/li&gt;
+&lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
+&lt;li&gt;Purchasing Document Number&lt;/li&gt;
+&lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
+&lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
+&lt;li&gt;Points score for on-time delivery&lt;/li&gt;
+&lt;li&gt;Points score for quality of services&lt;/li&gt;
+&lt;li&gt;Document Date in Document&lt;/li&gt;
+&lt;li&gt;Posting Date in the Document&lt;/li&gt;
+&lt;li&gt;Reference Document Number&lt;/li&gt;
+&lt;li&gt;Account Assignment Category&lt;/li&gt;
+&lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
+&lt;li&gt;User field: Service entry sheet&lt;/li&gt;
+&lt;li&gt;Acceptance indicator&lt;/li&gt;
+&lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
+&lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
+&lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Service GR Services &lt;/strong&gt;- Array of objects containing below fields:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;strong&gt;Cost Center&lt;/strong&gt; - Objects containing these fields:
-        &lt;ul&gt;
-          &lt;li&gt;Name&lt;/li&gt;
-          &lt;li&gt;Controlling Area&lt;/li&gt;
-          &lt;li&gt;Cost Center&lt;/li&gt;
-          &lt;li&gt;Valid To Date&lt;/li&gt;
-          &lt;li&gt;Currency Key&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Service GR Services &lt;/strong&gt;- Array of objects containing below fields:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cost Center&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Name&lt;/li&gt;
+&lt;li&gt;Controlling Area&lt;/li&gt;
+&lt;li&gt;Cost Center&lt;/li&gt;
+&lt;li&gt;Valid To Date&lt;/li&gt;
+&lt;li&gt;Currency Key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt; Return the total number of records present in SAP Payload.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt; Return the total number of records present in SAP Payload.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
@@ -94,15 +92,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a6291e5874169102a18b846dabb3530</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Generate Hana Service GR Payload</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_1a6291e5874169102a18b846dabb3530</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-01 07:55:39</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:30</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -116,10 +114,10 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 09:10:33</sys_created_on>
         <sys_id>383a3a4f877529502a18b846dabb3568</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:52:44</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:16</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">432af64f877529502a18b846dabb35f0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1294,7 +1292,7 @@
         <sys_created_on>2023-02-16 03:28:07</sys_created_on>
         <sys_id>0b0911ad874169102a18b846dabb3592</sys_id>
         <sys_mod_count>6</sys_mod_count>
-        <sys_name>Service GR Services</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1317,7 +1315,7 @@
         <sys_created_on>2023-02-16 03:28:06</sys_created_on>
         <sys_id>470911ad874169102a18b846dabb3572</sys_id>
         <sys_mod_count>8</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1646,14 +1644,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>032a3a4f877529502a18b846dabb3501</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 05:22:42</sys_updated_on>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-25 12:52:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1733,14 +1731,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>432af64f877529502a18b846dabb35f0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 05:22:42</sys_updated_on>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-25 12:52:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1820,14 +1818,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>872af64f877529502a18b846dabb35fc</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 05:22:42</sys_updated_on>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-25 12:52:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1907,14 +1905,14 @@
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>c32af64f877529502a18b846dabb35f5</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 05:22:42</sys_updated_on>
+        <sys_updated_by>Varun</sys_updated_by>
+        <sys_updated_on>2023-04-25 12:56:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1947,13 +1945,13 @@
         <dont_treat_as_error>false</dont_treat_as_error>
         <label>Transform &amp; Prepare Payload</label>
         <order>1</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</status>
         <sys_created_by>varun</sys_created_by>
         <sys_created_on>2023-03-30 06:25:26</sys_created_on>
         <sys_id>86645a4f87b129502a18b846dabb35d6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:52:44</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:16</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_1a6291e5874169102a18b846dabb3530^sys_idNOT IN3d341169874169102a18b846dabb355b,4e341169874169102a18b846dabb355f,b5341169874169102a18b846dabb3557"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -1969,7 +1967,7 @@
         <sys_created_on>2023-02-16 03:07:00</sys_created_on>
         <sys_id>3d341169874169102a18b846dabb355b</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Iteration Count</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -1992,7 +1990,7 @@
         <sys_created_on>2023-02-16 03:07:00</sys_created_on>
         <sys_id>4e341169874169102a18b846dabb355f</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Erp Number</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2015,7 +2013,7 @@
         <sys_created_on>2023-02-16 03:07:00</sys_created_on>
         <sys_id>b5341169874169102a18b846dabb3557</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2040,7 +2038,7 @@
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>072af64f877529502a18b846dabb35f4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2063,7 +2061,7 @@
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>132a3a4f877529502a18b846dabb3505</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service GR Services</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2086,7 +2084,7 @@
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>432a3a4f877529502a18b846dabb3500</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2109,7 +2107,7 @@
         <sys_created_on>2023-03-30 09:10:26</sys_created_on>
         <sys_id>c72af64f877529502a18b846dabb35fb</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -2124,7 +2122,7 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Generate Hana Service GR Payload">1a6291e5874169102a18b846dabb3530</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"c77a99ed874169102a18b846dabb3542","name":"plan","plan_signature":null}}</plan>
-        <snapshot>a1f8fa1d83e2611067a211b6feaad3ca</snapshot>
+        <snapshot>4abdc0fbc32a25109541388f05013115</snapshot>
         <sys_created_by>Krishna</sys_created_by>
         <sys_created_on>2023-02-16 03:34:23</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -2133,8 +2131,8 @@
         <sys_mod_count>15</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 05:22:54</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:33</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2149,69 +2147,67 @@
         <description>&lt;p&gt;Creates payload objects for service goods receipt action.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Inputs &lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Service GR Record&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Iteration Count&lt;/strong&gt; - Count to pass quantity based on erp number&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ERP Number&lt;/strong&gt; - ERP number&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service GR Record&lt;/strong&gt; - References the receipt record.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Iteration Count&lt;/strong&gt; - Count to pass quantity based on erp number&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ERP Number&lt;/strong&gt; - ERP number&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Service GR Record &lt;/strong&gt;- Objects containing below fields:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Entry Sheet Number&lt;/li&gt;
-      &lt;li&gt;External entry sheet number&lt;/li&gt;
-      &lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
-      &lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
-      &lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
-      &lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Period&lt;/li&gt;
-      &lt;li&gt;End of period&lt;/li&gt;
-      &lt;li&gt;Package number&lt;/li&gt;
-      &lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Purchasing Document Number&lt;/li&gt;
-      &lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
-      &lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Points score for on-time delivery&lt;/li&gt;
-      &lt;li&gt;Points score for quality of services&lt;/li&gt;
-      &lt;li&gt;Document Date in Document&lt;/li&gt;
-      &lt;li&gt;Posting Date in the Document&lt;/li&gt;
-      &lt;li&gt;Reference Document Number&lt;/li&gt;
-      &lt;li&gt;Account Assignment Category&lt;/li&gt;
-      &lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
-      &lt;li&gt;User field: Service entry sheet&lt;/li&gt;
-      &lt;li&gt;Acceptance indicator&lt;/li&gt;
-      &lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
-      &lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
-      &lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Service GR Record &lt;/strong&gt;- Objects containing below fields:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Entry Sheet Number&lt;/li&gt;
+&lt;li&gt;External entry sheet number&lt;/li&gt;
+&lt;li&gt;Person Responsible (Internally)&lt;/li&gt;
+&lt;li&gt;Person Responsible (Externally)&lt;/li&gt;
+&lt;li&gt;Location Where Service Was Performed&lt;/li&gt;
+&lt;li&gt;Price Reference Date of Entry Sheet&lt;/li&gt;
+&lt;li&gt;Period&lt;/li&gt;
+&lt;li&gt;End of period&lt;/li&gt;
+&lt;li&gt;Package number&lt;/li&gt;
+&lt;li&gt;Short Text of Service Entry Sheet&lt;/li&gt;
+&lt;li&gt;Purchasing Document Number&lt;/li&gt;
+&lt;li&gt;Item Number of Purchasing Document&lt;/li&gt;
+&lt;li&gt;Block Release of Entry Sheet&lt;/li&gt;
+&lt;li&gt;Points score for on-time delivery&lt;/li&gt;
+&lt;li&gt;Points score for quality of services&lt;/li&gt;
+&lt;li&gt;Document Date in Document&lt;/li&gt;
+&lt;li&gt;Posting Date in the Document&lt;/li&gt;
+&lt;li&gt;Reference Document Number&lt;/li&gt;
+&lt;li&gt;Account Assignment Category&lt;/li&gt;
+&lt;li&gt;Technical Reference Field for External Entry Sheet Number&lt;/li&gt;
+&lt;li&gt;User field: Service entry sheet&lt;/li&gt;
+&lt;li&gt;Acceptance indicator&lt;/li&gt;
+&lt;li&gt;Indicator: Final Entry Sheet&lt;/li&gt;
+&lt;li&gt;Reference Document Number (for Dependencies see Long Text)&lt;/li&gt;
+&lt;li&gt;External Entry Sheet Number (Dependencies: See Long Text)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Service GR Services &lt;/strong&gt;- Array of objects containing below fields:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;strong&gt;Cost Center&lt;/strong&gt; - Objects containing these fields:
-        &lt;ul&gt;
-          &lt;li&gt;Name&lt;/li&gt;
-          &lt;li&gt;Controlling Area&lt;/li&gt;
-          &lt;li&gt;Cost Center&lt;/li&gt;
-          &lt;li&gt;Valid To Date&lt;/li&gt;
-          &lt;li&gt;Currency Key&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Service GR Services &lt;/strong&gt;- Array of objects containing below fields:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cost Center&lt;/strong&gt; - Objects containing these fields:
+&lt;ul&gt;
+&lt;li&gt;Name&lt;/li&gt;
+&lt;li&gt;Controlling Area&lt;/li&gt;
+&lt;li&gt;Cost Center&lt;/li&gt;
+&lt;li&gt;Valid To Date&lt;/li&gt;
+&lt;li&gt;Currency Key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt; Return the total number of records present in SAP Payload.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Total Rows -&lt;/strong&gt; Return the total number of records present in SAP Payload.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action Status &lt;/strong&gt;- Object containing following fields:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt; - If the request is executed successfully, code will be set to 0 but if the request failed, code will be set to 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>generate_hana_service_goods_receipt_payload</internal_name>
@@ -2228,15 +2224,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>466a19ed874169102a18b846dabb3502</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 06:09:16</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:28</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -2250,10 +2246,10 @@
         <sys_created_by>Krishna</sys_created_by>
         <sys_created_on>2023-02-16 03:34:13</sys_created_on>
         <sys_id>147a59ed874169102a18b846dabb353d</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_updated_by>Varun</sys_updated_by>
-        <sys_updated_on>2023-04-25 12:53:10</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:30</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">dc7a59ed874169102a18b846dabb3526</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3388,7 +3384,7 @@
         <sys_created_on>2023-02-16 03:34:11</sys_created_on>
         <sys_id>0c7a59ed874169102a18b846dabb350b</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Service GR Services</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -3411,7 +3407,7 @@
         <sys_created_on>2023-02-16 03:34:11</sys_created_on>
         <sys_id>847a59ed874169102a18b846dabb3504</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4034,20 +4030,20 @@
         <sys_updated_by>Krishna</sys_updated_by>
         <sys_updated_on>2023-02-16 03:34:13</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=e47a59ed874169102a18b846dabb3559^sys_idNOT INe19343dd8326611067a211b6feaad34b"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=e47a59ed874169102a18b846dabb3559^sys_idNOT IN86bdc0fbc32a25109541388f05013115"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2023-02-15 19:34:13">e47a59ed874169102a18b846dabb3559</action_status_metadata_id>
         <condition>{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.code}}!=0</condition>
         <dont_treat_as_error>false</dont_treat_as_error>
         <label>Transform &amp; Prepare Payload</label>
         <order>1</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
-        <sys_created_by>varun</sys_created_by>
-        <sys_created_on>2023-05-01 06:09:17</sys_created_on>
-        <sys_id>e19343dd8326611067a211b6feaad34b</sys_id>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[86fb02d0-ed42-40d7-9be1-3abbdc1588a9].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>krishna</sys_created_by>
+        <sys_created_on>2023-05-08 11:19:30</sys_created_on>
+        <sys_id>86bdc0fbc32a25109541388f05013115</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-05-01 06:09:17</sys_updated_on>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-05-08 11:19:30</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_466a19ed874169102a18b846dabb3502^sys_idNOT IN7f6a19ed874169102a18b846dabb35d2,7f6a19ed874169102a18b846dabb35d6,7f6a19ed874169102a18b846dabb35da"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -4063,7 +4059,7 @@
         <sys_created_on>2023-02-16 03:34:10</sys_created_on>
         <sys_id>7f6a19ed874169102a18b846dabb35d2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4086,7 +4082,7 @@
         <sys_created_on>2023-02-16 03:34:10</sys_created_on>
         <sys_id>7f6a19ed874169102a18b846dabb35d6</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Iteration Count</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4109,7 +4105,7 @@
         <sys_created_on>2023-02-16 03:34:10</sys_created_on>
         <sys_id>7f6a19ed874169102a18b846dabb35da</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Erp Number</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4134,7 +4130,7 @@
         <sys_created_on>2023-02-16 03:34:12</sys_created_on>
         <sys_id>507a59ed874169102a18b846dabb3535</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service GR Record</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4157,7 +4153,7 @@
         <sys_created_on>2023-02-16 03:34:12</sys_created_on>
         <sys_id>5c7a59ed874169102a18b846dabb352a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4180,7 +4176,7 @@
         <sys_created_on>2023-02-16 03:34:12</sys_created_on>
         <sys_id>5c7a59ed874169102a18b846dabb3530</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
@@ -4203,7 +4199,7 @@
         <sys_created_on>2023-02-16 03:34:12</sys_created_on>
         <sys_id>987a59ed874169102a18b846dabb3539</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service GR Services</sys_name>
+        <sys_name/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
         <sys_policy/>
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
