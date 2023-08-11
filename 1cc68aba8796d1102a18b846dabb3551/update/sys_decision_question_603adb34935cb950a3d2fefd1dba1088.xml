@@ -16,7 +16,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>603adb34935cb950a3d2fefd1dba1088</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Connection Identification for SAP ECC_200</sys_name>
         <sys_overrides/>
         <sys_package display_value="Sourcing and Procurement Operations Integration with SAP" source="sn_psm_sap_int">1cc68aba8796d1102a18b846dabb3551</sys_package>
@@ -24,6 +24,6 @@
         <sys_scope display_value="Sourcing and Procurement Operations Integration with SAP">1cc68aba8796d1102a18b846dabb3551</sys_scope>
         <sys_update_name>sys_decision_question_603adb34935cb950a3d2fefd1dba1088</sys_update_name>
         <sys_updated_by>divya.piplani@snc</sys_updated_by>
-        <sys_updated_on>2023-07-25 18:20:59</sys_updated_on>
+        <sys_updated_on>2023-08-11 03:56:08</sys_updated_on>
     </sys_decision_question>
 </record_update>
